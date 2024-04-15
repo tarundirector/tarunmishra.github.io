@@ -44,6 +44,10 @@
 ### ➡️ Relation Extraction using BERT with Word Attention | [Github](https://github.com/tarundirector/Relation-Extraction-using-BERT-with-Word-Attention)
 - Semantic relation classification, combining BERT-uncased-base model with a novel word attention mechanism.
 
+## 🚀 Skills
+- **Technical Skills: _ML / AI / DS:_** Python, SQL, R, Numpy, Pandas, Scikit-learn, PyTorch, Data Analysis, Data Visualization (PowerBI & Tableau), Statistical Analysis, Big Data, Data Pipelines, Data Engineering, Machine Learning **_Others:_** JavaScript, Java, C++, HTML, CSS, Microsoft Office Suite (Excel, Word, Powerpoint)
+- **Soft Skills:** Planning, Organisational, Communication, Energy, Curiosity, Adaptability, Team Player, Time Management, Flexibility, Problem-solving, Leadership, Collaboration, Calm under Pressure, Methodical Approach, Attention to Detail 
+
 ## 📝 Other Work Experience
 **Customer Assistant @ Corridor Cafe | Student’s Union (University of Manchester) (_10/2023 - Present_)**
 - Demonstrated strong organizational skills in a fast-paced catering environment, ensuring efficient order processing and inventory management while maintaining attention to detail.
