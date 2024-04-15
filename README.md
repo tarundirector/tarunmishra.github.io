@@ -61,7 +61,7 @@
   Honored for entrepreneurial excellence, securing a top 10 position among 500 teams in Central India's Largest B-Plan Competition, demonstrating strategic planning & strong presentation skills.
 
 ##### - Recipient Global Futures Scholarship at The University of Manchester
-    Awarded prestigious £8,000 Merit-Based Global Futures Scholarship for academic excellence in pursuing a Master's in Data Science at the University of Manchester.     
+  Awarded prestigious £8,000 Merit-Based Global Futures Scholarship for academic excellence in pursuing a Master's in Data Science at the University of Manchester.     
 
 ## Publications
 1. [A Comparative Study of Text Summarization Models: Pointer Generator, Google Pegasus and OpenAI GPT-3](https://drive.google.com/file/d/1eJHqbUUCyDC-JmfF5Fe9aJuuhHmxj60C/view) @ _Journal of Information and Computational Science · May, 2023_
