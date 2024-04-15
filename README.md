@@ -1,58 +1,68 @@
-# tarunmishra.github.io
+#  Data Science Enthusiast
 
-# Data Scientist
-
-#### Technical Skills: Python, SQL, AWS, Snowflake, MATLAB
+### Manchester, United Kingdom (Willing to Relocate)
+### [tarunpmishra2001@gmail.com](mailto:tarunpmishra2001@gmail.com)
+### [LinkedIn](https://www.linkedin.com/in/tarunpmishra/) | [Kaggle (Notebooks Expert) ](https://www.kaggle.com/tarundirector/code)
 
 ## Education
-- Ph.D., Physics | The University of Texas at Dallas (_May 2022_)
-- [Link to New Page](Ecommerce_SalesAnalysis.md)						       		
-- M.S., Physics	| The University of Texas at Dallas (_December 2019_)	 			        		
-- B.S., Physics | The University of Texas at Dallas (_May 2017_)
+##### - MSc Data Science (Computer Science And Data Informatics) | The University of Manchester (_09/2023 - 09/2024_, _Expected - Distinction_)
+  - Courses: Statistics & Machine Learning (Supervised & Unsupervised Learning), Data Engineering, Text Mining, Understanding Databases (SQL & NoSQL), Data & Their Environment, Cognitive Robotics and Computer Vision.
+  - Dissertation: Low-Rank Matrix Completion for facilitating tasks like network inference and image reconstruction.
+  - Industrial Project: Implemented an Effective Resource Planning System for Construction Projects at Bouygues E&S.
+
+##### - BEng Computer Engineering | Mumbai University (_04/2019 - 04/2023_, _CGPA - 9.45/10.0_)
+  - Relevant Courses: Data Warehousing & Mining, Probabilistic Graphical Models, Machine Learning, Big Data Analytics, Natural Language Processing, Blockchain, Social Media Analytics, Applied Data Science, Data Structures, Analysis of Algorithms, Project Management, Database Management System, Cloud Computing.     
+  - Dissertation: Developed a Python-based NLP (Natural Language Processing)-enabled RSS Scraper to gather news data and implemented a content-based and collaborative filtering recommendation model for [Techshots](https://www.techshotsapp.com/).     		
 
 ## Work Experience
-**Data Scientist @ Toyota Financial Services (_June 2022 - Present_)**
-- Uncovered and corrected missing step in production data pipeline which impacted over 70% of active accounts
-- Redeveloped loan originations model which resulted in 50% improvement in model performance and saving 1 million dollars in potential losses
+**Student Data Analyst @ Student’s Union (University of Manchester) | Manchester, UK (_02/2024 - Present_)**
+- Developed & optimized dashboards using PowerBI & DAX to analyze & visualize extensive data from campaigns & market research surveys, each involving over 2000 respondents, thereby impacting student experiences.
+- Collaborated with various stakeholders to extract, manage, transform, and clean data from multiple sources using M/Power Query, contributing to the delivery of impactful commercial and organizational insights.
 
-**Data Science Consultant @ Shawhin Talebi Ventures LLC (_December 2020 - Present_)**
-- Conducted data collection, processing, and analysis for novel study evaluating the impact of over 300 biometrics variables on human performance in hyper-realistic, live-fire training scenarios
-- Applied unsupervised deep learning approaches to longitudinal ICU data to discover novel sepsis sub-phenotypes
+**Data Science Intern @ Zeno Health (Workcell Solutions Pvt Ltd) | Mumbai, India (_05/2023 - 08/2023_)**
+- Leveraged Python & SQL to analyze vast customer data from 100+ stores, contributing to better decision-making in sales strategies through targeted marketing, resulting in a sales boost of over 1.5 lakhs INR.
+- Developed a Python script leveraging Pandas and NumPy to automate the generation of complex sales reports, thereby reducing manual effort and enhancing productivity by 50% within the sales team.
 
 ## Projects
-### Data-Driven EEG Band Discovery with Decision Trees
-[Publication](https://www.mdpi.com/1424-8220/22/8/3048)
+### Sales Analysis and Customer Segmentation
+[Report](Ecommerce_SalesAnalysis.md) | [Kaggle Notebook](https://www.kaggle.com/code/tarundirector/sales-analysis-and-customer-segmentation-eda#%5B2%5D-%F0%9F%94%8D-Dataset-Overview)
+- Effectively communicated complex data insights to non-technical stakeholders, facilitating informed decision-making and driving business growth.
+- Utilized data-driven approaches to solve business problems and optimize sales strategies.
+- Demonstrated strong problem-solving skills by analyzing sales trends and customer behavior patterns, translating technical findings into actionable recommendations.
 
-Developed objective strategy for discovering optimal EEG bands based on signal power spectra using **Python**. This data-driven approach led to better characterization of the underlying power spectrum by identifying bands that outperformed the more commonly used band boundaries by a factor of two. The proposed method provides a fully automated and flexible approach to capturing key signal components and possibly discovering new indices of brain activity.
+### Image Outpainting Using Wasserstein Generative Adversarial Network with Gradient Penalty
+[Research Paper (IEEE ICCMC Conference · 03/22)](https://ieeexplore.ieee.org/document/9753713) | [Github](https://github.com/tarundirector/Image-Outpainting-Using-Wasserstein-Generative-Adversarial-Network-with-Gradient-Penalty)
+- Achieved spatial correlation between generated and ground truth images, overcoming challenges associated with traditional GAN training instability for the task of Image Outpainting.
+- Incorporated TensorFlow, NumPy, pandas and OpenCV modules of python to accomplish this project.
 
-![EEG Band Discovery](/assets/img/eeg_band_discovery.jpeg)
+### Predictive Price Modeling for Airbnb Listings with Deployment
+[Github](https://github.com/tarundirector/airbnb-predictive-analysis)
+- Predicted listing prices through preprocessing, feature selection, model fitting & hyperparameter tuning.
+- Deployed a containerized web app on Heroku via a CI/CD pipeline powered by Docker & GitHub Actions.
 
-### Decoding Physical and Cognitive Impacts of Particulate Matter Concentrations at Ultra-Fine Scales
-[Publication](https://www.mdpi.com/1424-8220/22/11/4240)
+### Multi-Class Classification for Obesity Risk (Top 7%)
+[Kaggle](https://www.kaggle.com/code/tarundirector/multi-class-obesity-risk-eda)
 
-Used **Matlab** to train over 100 machine learning models which estimated particulate matter concentrations based on a suite of over 300 biometric variables. We found biometric variables can be used to accurately estimate particulate matter concentrations at ultra-fine spatial scales with high fidelity (r2 = 0.91) and that smaller particles are better estimated than larger ones. Inferring environmental conditions solely from biometric measurements allows us to disentangle key interactions between the environment and the body.
+### Sales Analytics Dashboard using Tableau
+[Live Dashboard](https://public.tableau.com/app/profile/tarun.mishra7740/viz/PizzaSalesDashboard_17070774157650/Home) | [Github](https://github.com/tarundirector/Analytics-and-Revenue-Insights-Dashboard-for-Pizza-Sales-using-Tableau?tab=readme-ov-file)
+- Ensured data accuracy by cross-verifying dashboard outputs with SQL queries using MS SQL.
 
-![Bike Study](/assets/img/bike_study.jpeg)
+### Relation Extraction using BERT with Word Attention
+[Github](https://github.com/tarundirector/Relation-Extraction-using-BERT-with-Word-Attention)
+- Semantic relation classification, combining BERT-uncased-base model with a novel word attention mechanism.
 
-## Talks & Lectures
-- Causality: The new science of an old question - GSP Seminar, Fall 2021
-- Guest Lecture: Dimensionality Reduction - Big Data and Machine Learning for Scientific Discovery (PHYS 5336), Spring 2021
-- Guest Lecture: Fourier and Wavelet Transforms - Scientific Computing (PHYS 5315), Fall 2020
-- A Brief Introduction to Optimization - GSP Seminar, Fall 2019
-- Weeks of Welcome Poster Competition - UTD, Fall 2019
-- A Brief Introduction to Networks - GSP Seminar, Spring 2019
+## Other Work Experience
+**Customer Assistant @ Corridor Cafe | Student’s Union (University of Manchester) (_10/2023 - Present_)**
+- Demonstrated strong organizational skills in a fast-paced catering environment, ensuring efficient order processing and inventory management while maintaining attention to detail.
+- Fostered effective communication and teamwork by collaborating with colleagues, customers, and management to create a positive and cohesive work environment conducive to achieving shared goals.
 
-- [Data Science YouTube](https://www.youtube.com/channel/UCa9gErQ9AE5jT2DZLjXBIdA)
+## Achievements
+##### - Top 10 at NIT (National Institute of Technology) Nagpur's Startup Conclave
+  Honored for entrepreneurial excellence, securing a top 10 position among 500 teams in Central India's Largest B-Plan Competition, demonstrating strategic planning & strong presentation skills.
+
+##### - Recipient Global Futures Scholarship at The University of Manchester
+    Awarded prestigious £8,000 Merit-Based Global Futures Scholarship for academic excellence in pursuing a Master's in Data Science at the University of Manchester.     
 
 ## Publications
-1. Talebi S., Lary D.J., Wijeratne L. OH., and Lary, T. Modeling Autonomic Pupillary Responses from External Stimuli Using Machine Learning (2019). DOI: 10.26717/BJSTR.2019.20.003446
-2. Wijeratne, L.O.; Kiv, D.R.; Aker, A.R.; Talebi, S.; Lary, D.J. Using Machine Learning for the Calibration of Airborne Particulate Sensors. Sensors 2020, 20, 99.
-3. Lary, D.J.; Schaefer, D.; Waczak, J.; Aker, A.; Barbosa, A.; Wijeratne, L.O.H.; Talebi, S.; Fernando, B.; Sadler, J.; Lary, T.; Lary, M.D. Autonomous Learning of New Environments with a Robotic Team Employing Hyper-Spectral Remote Sensing, Comprehensive In-Situ Sensing and Machine Learning. Sensors 2021, 21, 2240. https://doi.org/10.3390/s21062240
-4. Zhang, Y.; Wijeratne, L.O.H.; Talebi, S.; Lary, D.J. Machine Learning for Light Sensor Calibration. Sensors 2021, 21, 6259. https://doi.org/10.3390/s21186259
-5. Talebi, S.; Waczak, J.; Fernando, B.; Sridhar, A.; Lary, D.J. Data-Driven EEG Band Discovery with Decision Trees. Preprints 2022, 2022030145 (doi: 10.20944/preprints202203.0145.v1).
-6. Fernando, B.A.; Sridhar, A.; Talebi, S.; Waczak, J.; Lary, D.J. Unsupervised Blink Detection Using Eye Aspect Ratio Values. Preprints 2022, 2022030200 (doi: 10.20944/preprints202203.0200.v1).
-7. Talebi, S. et al. Decoding Physical and Cognitive Impacts of PM Concentrations at Ultra-fine Scales, 29 March 2022, PREPRINT (Version 1) available at Research Square [https://doi.org/10.21203/rs.3.rs-1499191/v1]
-8. Lary, D.J. et al. (2022). Machine Learning, Big Data, and Spatial Tools: A Combination to Reveal Complex Facts That Impact Environmental Health. In: Faruque, F.S. (eds) Geospatial Technology for Human Well-Being and Health. Springer, Cham. https://doi.org/10.1007/978-3-030-71377-5_12
-9. Wijerante, L.O.H. et al. (2022). Advancement in Airborne Particulate Estimation Using Machine Learning. In: Faruque, F.S. (eds) Geospatial Technology for Human Well-Being and Health. Springer, Cham. https://doi.org/10.1007/978-3-030-71377-5_13
-
-- [Data Science Blog](https://medium.com/@shawhin)
+1. [A Comparative Study of Text Summarization Models: Pointer Generator, Google Pegasus and OpenAI GPT-3](https://drive.google.com/file/d/1eJHqbUUCyDC-JmfF5Fe9aJuuhHmxj60C/view) @ _Journal of Information and Computational Science · May, 2023_
+2. [Image Outpainting Using Wasserstein Generative Adversarial Network with Gradient Penalty](https://ieeexplore.ieee.org/document/9753713) @ _IEEE ICCMC Conference · March, 2022_
