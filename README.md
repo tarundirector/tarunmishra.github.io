@@ -1,7 +1,7 @@
 #  Data Science Enthusiast
 
-#### Manchester, United Kingdom (Willing to Relocate)
-#### [tarunpmishra2001@gmail.com](mailto:tarunpmishra2001@gmail.com) | [LinkedIn](https://www.linkedin.com/in/tarunpmishra/) | [Kaggle (Notebooks Expert) ](https://www.kaggle.com/tarundirector/code)
+#### 📍 Manchester, United Kingdom (Willing to Relocate)
+#### 📧 [tarunpmishra2001@gmail.com](mailto:tarunpmishra2001@gmail.com) | [LinkedIn](https://www.linkedin.com/in/tarunpmishra/) | [Kaggle (Notebooks Expert) ](https://www.kaggle.com/tarundirector/code)
 
 ## 🎓 Education
 #### MSc Data Science (Computer Science And Data Informatics) | The University of Manchester (_09/2023 - 09/2024_, _Expected - Distinction_)
