@@ -19,12 +19,12 @@
 
 ## 📝 Work Experience
 ### Student Data Analyst @ Student’s Union (University of Manchester) | Manchester, UK (_02/2024 - Present_)
-- **Developed** & **optimized** dashboards using **PowerBI & DAX** to analyze & visualize extensive data from campaigns & market research surveys, each involving over **2000+ respondents**, thereby impacting student experiences.
-- **Collaborated** with various **stakeholders** to **extract, manage, transform, and clean** data from **multiple sources** using** M/Power Query**, contributing to the delivery of impactful commercial and organizational insights.
+- Developed & optimized dashboards using PowerBI & DAX to analyze & visualize extensive data from campaigns & market research surveys, each involving over 2000+ respondents, thereby impacting student experiences.
+- Collaborated with various stakeholders to extract, manage, transform, and clean** data from multiple sources using M/Power Query, contributing to the delivery of impactful commercial and organizational insights.
 
 ### Data Science Intern @ Zeno Health (Workcell Solutions Pvt Ltd) | Mumbai, India (_05/2023 - 08/2023_)
-- Leveraged **Python & SQL** to analyze vast customer data from **100+ stores**, contributing to better decision-making in sales strategies through **targeted marketing**, resulting in a sales boost of over **1.5 lakhs INR**.
-- Developed a Python script leveraging **Pandas and NumPy** to **automate** the generation of complex sales reports, thereby reducing manual effort and **enhancing productivity by 50%** within the sales team.
+- Leveraged Python & SQL to analyze vast customer data from 100+ stores, contributing to better decision-making in sales strategies through targeted marketing, resulting in a sales boost of over 1.5 lakhs INR.
+- Developed a Python script leveraging Pandas and NumPy to automate the generation of complex sales reports, thereby reducing manual effort and enhancing productivity by 50% within the sales team.
 
 * * *
 
