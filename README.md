@@ -19,6 +19,7 @@
 
 ## 📝 Work Experience
 ### Student Data Analyst @ Student’s Union (University of Manchester) | Manchester, UK (_02/2024 - Present_)
+[Dashboard Example](Sustainable_MCR_Dashboard.md)
 - Developed & optimized dashboards using PowerBI & DAX to analyze & visualize extensive data from campaigns & market research surveys, each involving over 2000+ respondents, thereby impacting student experiences.
 - Collaborated with various stakeholders to extract, manage, transform, and clean** data from multiple sources using M/Power Query, contributing to the delivery of impactful commercial and organizational insights.
 
