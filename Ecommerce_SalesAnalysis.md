@@ -70,7 +70,7 @@ This dataset provides comprehensive information about sales transactions, includ
 
 ---
 
-## 💡**PowerBI Dashboard**
+## 📊**PowerBI Dashboard**
 
 ![image](https://github.com/tarundirector/tarunmishra.github.io/assets/85684655/fb4b8b61-7016-4ef0-8a18-3f8be694ba9e)
 
@@ -101,7 +101,7 @@ _(Model View for Dashboard)_
 
 ---
 
-## **Findings and Insights**
+## **🧠Findings and Insights**
 
 For a more detailed analysis visit the [Kaggle Notebook](https://www.kaggle.com/code/tarundirector/sales-analysis-and-customer-segmentation-eda#%5B2%5D-%F0%9F%94%8D-Dataset-Overview)
 
