@@ -1,6 +1,8 @@
 
 # 🛒E-commerce Sales Analysis and Customer Segmentation Report📦
 
+For a more detailed analysis visit the [Kaggle Notebook](https://www.kaggle.com/code/tarundirector/sales-analysis-and-customer-segmentation-eda#%5B2%5D-%F0%9F%94%8D-Dataset-Overview)
+
 ![Image Alt Text](https://www.providencejournal.com/gcdn/authoring/2020/02/21/NPRJ/ghows-PJ-a02463cb-0970-4047-98b5-2cf730e90980-908abb7d.jpeg?width=660&height=348&fit=crop&format=pjpg&auto=webp)
 
 In the dynamic world of e-commerce, understanding customer behavior and sales trends is pivotal for success. This report aims to analyze sales data to identify customer segments and provide actionable insights to optimize sales and improve profitability for an e-commerce company.
@@ -102,8 +104,6 @@ _(Model View for Dashboard)_
 ---
 
 ## **🧠Findings and Insights**
-
-For a more detailed analysis visit the [Kaggle Notebook](https://www.kaggle.com/code/tarundirector/sales-analysis-and-customer-segmentation-eda#%5B2%5D-%F0%9F%94%8D-Dataset-Overview)
 
 ### **[1] 🌐Customer Segmentation:**
 
