@@ -38,7 +38,7 @@
 - Successfully implemented image outpainting using Wasserstein Generative Adversarial Network with Gradient Penalty (WGAN-GP), achieving realistic results through a three-phase training approach and demonstrating the potential for further enhancement with a larger and more diverse dataset.
 - Utilized WGAN-GP algorithm to generate outpainted images with significantly lower Root Mean Squared Error (RMSE) compared to traditional Generative Adversarial Network (GAN), indicating superior image quality and highlighting the effectiveness of the proposed model for image extrapolation tasks.
 
-### ➡️ Predictive Price Modeling for Airbnb Listings with Deployment | [Github](https://github.com/tarundirector/airbnb-predictive-analysis)
+### ➡️ Predictive Price Modeling for Airbnb Listings with Deployment | [Overview](AirBNB_PredictiveAnalysis.md) | [Github](https://github.com/tarundirector/airbnb-predictive-analysis)
 - Predicted listing prices through preprocessing, feature selection, model fitting & hyperparameter tuning.
 - Deployed a containerized web app on Heroku via a CI/CD pipeline powered by Docker & GitHub Actions.
 
