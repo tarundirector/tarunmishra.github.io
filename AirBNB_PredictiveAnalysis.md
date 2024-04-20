@@ -43,4 +43,4 @@ Here's the breakdown of the project steps :
 
 Below is a screenshot of the application in action, capturing the entire interface. Users have the option to input all pertinent details of their listings. Once entered, the trained Predictive Model leverages this information to generate a price estimate for the listing based on its features.
 
-![ezgif-4-67daf127c7](AirBNB_Web.gif)
+![ezgif-4-67daf127c7](https://github.com/tarundirector/Airbnb-Predictive-Analysis/blob/main/AirBNB_Web.gif?raw=true)
