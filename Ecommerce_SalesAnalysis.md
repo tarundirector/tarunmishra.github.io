@@ -70,6 +70,37 @@ This dataset provides comprehensive information about sales transactions, includ
 
 ---
 
+## 💡**PowerBI Dashboard**
+
+![image](https://github.com/tarundirector/tarunmishra.github.io/assets/85684655/fb4b8b61-7016-4ef0-8a18-3f8be694ba9e)
+
+The PowerBI dashboard provides a comprehensive analysis of sales data to facilitate strategic decision-making for an e-commerce company. Its primary purpose is to optimize sales and improve profitability by identifying customer segments and analyzing sales trends. 
+
+Key features of the dashboard include:
+1. **Filters**: Segmentation of products allows users to analyze sales data based on different product categories, providing insights into the performance of each segment.
+
+2. **KPIs**: Year-to-date (YTD) sales, profit, quantity, and profit margin metrics offer a quick overview of the company's financial performance, aiding in performance evaluation and goal tracking.
+
+3. **Sales by Category Table**: A detailed breakdown of sales by category enables users to understand which product categories are driving revenue and identify trends over time.
+
+4. **Sales by State Map**: Geographic visualization of sales data helps identify regions with high or low sales volumes, allowing for targeted marketing efforts and resource allocation.
+
+5. **Top and Bottom Products Bar Charts**: These charts highlight the best and worst-performing products, helping identify successful products to capitalize on and underperforming products that may require attention.
+
+6. **YTD Sales by Region Donut Chart**: Visualization of sales distribution across different regions provides insights into regional performance and helps identify areas for growth or improvement.
+
+7. **YTD Sales by Shipping Type Donut Chart**: Analysis of sales by shipping type allows users to assess the effectiveness of different shipping methods and their impact on sales.
+
+Overall, the PowerBI dashboard serves as a powerful tool for sales analysis and strategic planning, empowering stakeholders to make informed decisions to optimize sales and improve profitability.
+
+![Untitled design](https://github.com/tarundirector/tarunmishra.github.io/assets/85684655/62e6e9be-0945-4b6a-9102-f2da9b21043a)
+_(Dashboard in Action)_
+
+![image](https://github.com/tarundirector/tarunmishra.github.io/assets/85684655/ca99403f-7a8a-4e45-a656-555808e1e701)
+_(Model View for Dashboard)_
+
+---
+
 ## **Findings and Insights**
 
 For a more detailed analysis visit the [Kaggle Notebook](https://www.kaggle.com/code/tarundirector/sales-analysis-and-customer-segmentation-eda#%5B2%5D-%F0%9F%94%8D-Dataset-Overview)
