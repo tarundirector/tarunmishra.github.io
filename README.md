@@ -35,8 +35,8 @@
 <details>
 <summary>Details</summary>
 <br>
-    + Effectively communicated complex data insights to non-technical stakeholders, facilitating informed decision-making and driving business growth.
-    + Utilized data-driven approaches to solve business problems, optimizing sales strategies, and demonstrating strong problem-solving skills by analyzing sales trends and customer behavior patterns, translating technical findings into actionable recommendations.
+<br> Effectively communicated complex data insights to non-technical stakeholders, facilitating informed decision-making and driving business growth.
+<br> Utilized data-driven approaches to solve business problems, optimizing sales strategies, and demonstrating strong problem-solving skills by analyzing sales trends and customer behavior patterns, translating technical findings into actionable recommendations.
 </details>
 
 ### ➡️ Sales Analysis and Customer Segmentation | [Report & PowerBI Dashboard](Ecommerce_SalesAnalysis.md) | [Kaggle Notebook](https://www.kaggle.com/code/tarundirector/sales-analysis-and-customer-segmentation-eda#%5B2%5D-%F0%9F%94%8D-Dataset-Overview)
