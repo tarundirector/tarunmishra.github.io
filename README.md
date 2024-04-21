@@ -32,49 +32,24 @@
 ## 💻 Projects
 
 ### ➡️ Sales Analysis and Customer Segmentation | [Report & PowerBI Dashboard](Ecommerce_SalesAnalysis.md) | [Kaggle Notebook](https://www.kaggle.com/code/tarundirector/sales-analysis-and-customer-segmentation-eda#%5B2%5D-%F0%9F%94%8D-Dataset-Overview)
-<details>
-<summary>More Details</summary>
-
-  - Effectively communicated complex data insights to non-technical stakeholders, facilitating informed decision-making and driving business growth.
-  - Utilized data-driven approaches to solve business problems, optimizing sales strategies, and demonstrating strong problem-solving skills by analyzing sales trends and customer behavior patterns, translating technical findings into actionable recommendations.
-    
-</details>
+- Effectively communicated complex data insights to non-technical stakeholders, facilitating informed decision-making and driving business growth.
+- Utilized data-driven approaches to solve business problems, optimizing sales strategies, and demonstrating strong problem-solving skills by analyzing sales trends and customer behavior patterns, translating technical findings into actionable recommendations.
 
 ### ➡️ Image Outpainting Using Wasserstein Generative Adversarial Network with Gradient Penalty | [Research Paper (IEEE ICCMC Conference · 03/22)](https://ieeexplore.ieee.org/document/9753713) | [Github](https://github.com/tarundirector/Image-Outpainting-Using-Wasserstein-Generative-Adversarial-Network-with-Gradient-Penalty)
-<details>
-<summary>More Details</summary>
-
-  - Successfully implemented image outpainting using Wasserstein Generative Adversarial Network with Gradient Penalty (WGAN-GP), achieving realistic results through a three-phase training approach and demonstrating the potential for further enhancement with a larger and more diverse dataset.
-  - Utilized WGAN-GP algorithm to generate outpainted images with significantly lower Root Mean Squared Error (RMSE) compared to traditional Generative Adversarial Network (GAN), indicating superior image quality and highlighting the effectiveness of the proposed model for image extrapolation tasks.
-    
-</details>
+- Successfully implemented image outpainting using Wasserstein Generative Adversarial Network with Gradient Penalty (WGAN-GP), achieving realistic results through a three-phase training approach and demonstrating the potential for further enhancement with a larger and more diverse dataset.
+- Utilized WGAN-GP algorithm to generate outpainted images with significantly lower Root Mean Squared Error (RMSE) compared to traditional Generative Adversarial Network (GAN), indicating superior image quality and highlighting the effectiveness of the proposed model for image extrapolation tasks.
 
 ### ➡️ Predictive Price Modeling for Airbnb Listings with Deployment | [Overview](AirBNB_PredictiveAnalysis.md) | [Github](https://github.com/tarundirector/airbnb-predictive-analysis)
-<details>
-<summary>More Details</summary>
-
-  - Predicted listing prices through preprocessing, feature selection, model fitting & hyperparameter tuning.
-  - Deployed a containerized web app on Heroku via a CI/CD pipeline powered by Docker & GitHub Actions.
+- Predicted listing prices through preprocessing, feature selection, model fitting & hyperparameter tuning.
+- Deployed a containerized web app on Heroku via a CI/CD pipeline powered by Docker & GitHub Actions.
     
-</details>
-
 ### ➡️ Multi-Class Classification for Obesity Risk (Top 7%) | [Kaggle](https://www.kaggle.com/code/tarundirector/multi-class-obesity-risk-eda)
 
 ### ➡️ Sales Analytics Dashboard using Tableau | [Live Dashboard](https://public.tableau.com/app/profile/tarun.mishra7740/viz/PizzaSalesDashboard_17070774157650/Home) | [Github](https://github.com/tarundirector/Analytics-and-Revenue-Insights-Dashboard-for-Pizza-Sales-using-Tableau?tab=readme-ov-file)
-<details>
-<summary>More Details</summary>
-
-  - Ensured data accuracy by cross-verifying dashboard outputs with SQL queries using MS SQL.
-    
-</details>
+- Ensured data accuracy by cross-verifying dashboard outputs with SQL queries using MS SQL.
 
 ### ➡️ Relation Extraction using BERT with Word Attention | [Github](https://github.com/tarundirector/Relation-Extraction-using-BERT-with-Word-Attention)
-<details>
-<summary>More Details</summary>
-
-  - Semantic relation classification, combining BERT-uncased-base model with a novel word attention mechanism.
-    
-</details>
+- Semantic relation classification, combining BERT-uncased-base model with a novel word attention mechanism.
 
 * * *
 
