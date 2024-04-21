@@ -21,7 +21,7 @@
 ### Student Data Analyst @ Student’s Union (University of Manchester) | Manchester, UK (_02/2024 - Present_)
 [Dashboard Example](Sustainable_MCR_Dashboard.md)
 - Developed & optimized dashboards using PowerBI & DAX to analyze & visualize extensive data from campaigns & market research surveys, each involving over 2000+ respondents, thereby impacting student experiences.
-- Collaborated with various stakeholders to extract, manage, transform, and clean** data from multiple sources using M/Power Query, contributing to the delivery of impactful commercial and organizational insights.
+- Collaborated with various stakeholders to extract, manage, transform, and clean data from multiple sources using M/Power Query, contributing to the delivery of impactful commercial and organizational insights.
 
 ### Data Science Intern @ Zeno Health (Workcell Solutions Pvt Ltd) | Mumbai, India (_05/2023 - 08/2023_)
 - Leveraged Python & SQL to analyze vast customer data from 100+ stores, contributing to better decision-making in sales strategies through targeted marketing, resulting in a sales boost of over 1.5 lakhs INR.
@@ -30,6 +30,15 @@
 * * *
 
 ## 💻 Projects
+
+### ➡️ Sales Analysis and Customer Segmentation | [Report & PowerBI Dashboard](Ecommerce_SalesAnalysis.md) | [Kaggle Notebook](https://www.kaggle.com/code/tarundirector/sales-analysis-and-customer-segmentation-eda#%5B2%5D-%F0%9F%94%8D-Dataset-Overview)
+<details>
+<summary>Details</summary>
+<br>
+- Effectively communicated complex data insights to non-technical stakeholders, facilitating informed decision-making and driving business growth.
+- Utilized data-driven approaches to solve business problems, optimizing sales strategies, and demonstrating strong problem-solving skills by analyzing sales trends and customer behavior patterns, translating technical findings into actionable recommendations.
+</details>
+
 ### ➡️ Sales Analysis and Customer Segmentation | [Report & PowerBI Dashboard](Ecommerce_SalesAnalysis.md) | [Kaggle Notebook](https://www.kaggle.com/code/tarundirector/sales-analysis-and-customer-segmentation-eda#%5B2%5D-%F0%9F%94%8D-Dataset-Overview)
 - Effectively communicated complex data insights to non-technical stakeholders, facilitating informed decision-making and driving business growth.
 - Utilized data-driven approaches to solve business problems, optimizing sales strategies, and demonstrating strong problem-solving skills by analyzing sales trends and customer behavior patterns, translating technical findings into actionable recommendations.
