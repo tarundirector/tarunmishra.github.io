@@ -22,7 +22,12 @@
 * * *
 
 ## 📝 Work Experience
-### Student Data Analyst @ Student’s Union (University of Manchester) | Manchester, UK (_02/2024 - Present_)
+### Data Analyst Intern @ Siemens Digital Industries Software | London, UK (_09/2024 - Present_)
+- Spearheading the development of a data analytics dashboard to analyse software usage, extracting and transforming large datasets from AWS using Lambda functions, and leveraging Python (NumPy, Pandas) to optimise data pipelines, significantly improving data accessibility for senior management and sales teams.
+- Utilising Mendix along with Java actions, JavaScript and Plotly to parse JSON data and generate interactive visualisations, providing actionable insights for sales teams and accelerating decision-making.
+- Focused on optimising the dashboard for scalability, targeting a 60% reduction in processing time, ensuring it can efficiently handle large-scale data for future expansion.
+
+### Student Data Analyst @ Student’s Union (University of Manchester) | Manchester, UK (_02/2024 - 08/2024_)
 [Dashboard Example](Sustainable_MCR_Dashboard.md)
 - Developed & optimized dashboards using PowerBI & DAX to analyze & visualize extensive data from campaigns & market research surveys, each involving over 2000+ respondents, thereby impacting student experiences.
 - Collaborated with various stakeholders to extract, manage, transform, and clean data from multiple sources using M/Power Query, contributing to the delivery of impactful commercial and organizational insights.
