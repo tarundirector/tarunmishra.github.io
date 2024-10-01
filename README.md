@@ -3,6 +3,7 @@
 #### 📧 [tarunpmishra2001@gmail.com](mailto:tarunpmishra2001@gmail.com) | [LinkedIn](https://www.linkedin.com/in/tarunpmishra/) | [Kaggle (Notebooks Expert) ](https://www.kaggle.com/tarundirector/code)
 #### Highlighted Projects:
 ##### ➡️ Sales Analysis and Customer Segmentation | [Report & PowerBI Dashboard](Ecommerce_SalesAnalysis.md) | [Kaggle Notebook](https://www.kaggle.com/code/tarundirector/sales-analysis-and-customer-segmentation-eda#%5B2%5D-%F0%9F%94%8D-Dataset-Overview)
+##### ➡️ Student Model dashboard [Dashboard](StudentModel_README.md)
 ##### ➡️ Sustainable MCR dashboard [Dashboard](Sustainable_MCR_Dashboard.md)
 ##### ➡️ Predictive Price Modeling for Airbnb Listings with Deployment | [Overview](AirBNB_PredictiveAnalysis.md) | [Github](https://github.com/tarundirector/airbnb-predictive-analysis)
 
