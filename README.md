@@ -10,7 +10,7 @@
 * * *
 
 ## 🎓 Education
-### MSc Data Science (Computer Science And Data Informatics) | The University of Manchester (_09/2023 - 09/2024_, _Expected - Distinction_)
+### MSc Data Science (Computer Science And Data Informatics) | The University of Manchester (_09/2023 - 09/2024_, _Grade Achieved - Distinction_)
   - Courses: Statistics & Machine Learning (Supervised & Unsupervised Learning), Data Engineering, Text Mining, Understanding Databases (SQL & NoSQL), Data & Their Environment, Cognitive Robotics and Computer Vision.
   - Dissertation: Low-Rank Matrix Completion for facilitating tasks like network inference and image reconstruction.
   - Industrial Project: Implemented an Effective Resource Planning System for Construction Projects at Bouygues E&S.
