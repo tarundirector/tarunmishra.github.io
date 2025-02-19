@@ -6,7 +6,7 @@
 
 
 * * *
-
+<br>
 
 ## 🎓 Education
 ### MSc Data Science (Computer Science And Data Informatics) | The University of Manchester (_09/2023 - 09/2024_, _Grade Achieved - Distinction_)
@@ -18,8 +18,7 @@
   - Relevant Courses: Data Warehousing & Mining, Probabilistic Graphical Models, Machine Learning, Big Data Analytics, Natural Language Processing, Blockchain, Social Media Analytics, Applied Data Science, Data Structures, Analysis of Algorithms, Project Management, Database Management System, Cloud Computing.     
   - Dissertation: Developed a Python-based NLP (Natural Language Processing)-enabled RSS Scraper to gather news data and implemented a content-based and collaborative filtering recommendation model for [Techshots](https://www.techshotsapp.com/).
 
-   
-
+<br>
 * * *
 
 
