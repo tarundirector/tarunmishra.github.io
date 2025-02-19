@@ -4,7 +4,7 @@
 ##### ➡️ Dashboard Examples | [Student Model dashboard](StudentModel_README.md) | [Sustainable MCR dashboard](Sustainable_MCR_Dashboard.md)
 ##### ➡️ Predictive Price Modeling for Airbnb Listings with Deployment | [Overview](AirBNB_PredictiveAnalysis.md) | [Github](https://github.com/tarundirector/airbnb-predictive-analysis)
 
-
+<br>
 * * *
 <br>
 
@@ -20,7 +20,7 @@
 
 <br>
 * * *
-
+<br>
 
 ## 📝 Work Experience
 ### Data Analyst Intern @ Siemens Digital Industries Software | London, UK (_09/2024 - Present_)
@@ -37,9 +37,9 @@
 - Leveraged Python & SQL to analyze vast customer data from 100+ stores, contributing to better decision-making in sales strategies through targeted marketing, resulting in a sales boost of over 1.5 lakhs INR.
 - Developed a Python script leveraging Pandas and NumPy to automate the generation of complex sales reports, thereby reducing manual effort and enhancing productivity by 50% within the sales team.
 
-
+<br>
 * * *
-
+<br>
 
 ## 💻 Projects
 
@@ -63,9 +63,9 @@
 ### ➡️ Relation Extraction using BERT with Word Attention | [Github](https://github.com/tarundirector/Relation-Extraction-using-BERT-with-Word-Attention)
 - Semantic relation classification, combining BERT-uncased-base model with a novel word attention mechanism.
 
-
+<br>
 * * *
-
+<br>
 
 ## 🚀 Skills
 - **Technical Skills: _ML / AI / DS:_** Python, SQL, R, Numpy, Pandas, Scikit-learn, PyTorch, Data Analysis, Data Visualization (PowerBI & Tableau), Statistical Analysis, Big Data, Data Pipelines, Data Engineering, Machine Learning **_Others:_** JavaScript, Java, C++, HTML, CSS, Microsoft Office Suite (Excel, Word, Powerpoint)
@@ -80,9 +80,9 @@
 - Demonstrated strong organizational skills in a fast-paced catering environment, ensuring efficient order processing and inventory management while maintaining attention to detail.
 - Fostered effective communication and teamwork by collaborating with colleagues, customers, and management to create a positive and cohesive work environment conducive to achieving shared goals.
 
-
+<br>
 * * *
-
+<br>
 
 ## 🏆 Achievements
 ### Top 10 at NIT (National Institute of Technology) Nagpur's Startup Conclave
