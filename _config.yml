@@ -2,9 +2,10 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 author:
-  name: GitHub User
-  email: your-email@domain.com
+  name: Tarun Pramod Mishra
+  email: tarunpmishra2001@gmail.com
 title: tarun.ai
+header_pages:
 logo: Portrait_TarunPMishra_Circle..png
 description: A results-oriented Data Science professional adept at extracting actionable insights from complex datasets.
 #show_downloads: true
