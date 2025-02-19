@@ -1,6 +1,8 @@
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+header_pages:
+  - README.md
 author:
   name: Tarun Pramod Mishra
   email: tarunpmishra2001@gmail.com
