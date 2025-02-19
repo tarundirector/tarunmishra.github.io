@@ -4,7 +4,9 @@
 ##### ➡️ Dashboard Examples | [Student Model dashboard](StudentModel_README.md) | [Sustainable MCR dashboard](Sustainable_MCR_Dashboard.md)
 ##### ➡️ Predictive Price Modeling for Airbnb Listings with Deployment | [Overview](AirBNB_PredictiveAnalysis.md) | [Github](https://github.com/tarundirector/airbnb-predictive-analysis)
 
+
 * * *
+
 
 ## 🎓 Education
 ### MSc Data Science (Computer Science And Data Informatics) | The University of Manchester (_09/2023 - 09/2024_, _Grade Achieved - Distinction_)
@@ -14,9 +16,12 @@
 
 ### BEng Computer Engineering | Mumbai University (_04/2019 - 04/2023_, _CGPA - 9.45/10.0_)
   - Relevant Courses: Data Warehousing & Mining, Probabilistic Graphical Models, Machine Learning, Big Data Analytics, Natural Language Processing, Blockchain, Social Media Analytics, Applied Data Science, Data Structures, Analysis of Algorithms, Project Management, Database Management System, Cloud Computing.     
-  - Dissertation: Developed a Python-based NLP (Natural Language Processing)-enabled RSS Scraper to gather news data and implemented a content-based and collaborative filtering recommendation model for [Techshots](https://www.techshotsapp.com/).     		
+  - Dissertation: Developed a Python-based NLP (Natural Language Processing)-enabled RSS Scraper to gather news data and implemented a content-based and collaborative filtering recommendation model for [Techshots](https://www.techshotsapp.com/).
+
+   
 
 * * *
+
 
 ## 📝 Work Experience
 ### Data Analyst Intern @ Siemens Digital Industries Software | London, UK (_09/2024 - Present_)
@@ -33,7 +38,9 @@
 - Leveraged Python & SQL to analyze vast customer data from 100+ stores, contributing to better decision-making in sales strategies through targeted marketing, resulting in a sales boost of over 1.5 lakhs INR.
 - Developed a Python script leveraging Pandas and NumPy to automate the generation of complex sales reports, thereby reducing manual effort and enhancing productivity by 50% within the sales team.
 
+
 * * *
+
 
 ## 💻 Projects
 
@@ -57,20 +64,26 @@
 ### ➡️ Relation Extraction using BERT with Word Attention | [Github](https://github.com/tarundirector/Relation-Extraction-using-BERT-with-Word-Attention)
 - Semantic relation classification, combining BERT-uncased-base model with a novel word attention mechanism.
 
+
 * * *
+
 
 ## 🚀 Skills
 - **Technical Skills: _ML / AI / DS:_** Python, SQL, R, Numpy, Pandas, Scikit-learn, PyTorch, Data Analysis, Data Visualization (PowerBI & Tableau), Statistical Analysis, Big Data, Data Pipelines, Data Engineering, Machine Learning **_Others:_** JavaScript, Java, C++, HTML, CSS, Microsoft Office Suite (Excel, Word, Powerpoint)
 - **Soft Skills:** Planning, Organisational, Communication, Energy, Curiosity, Adaptability, Team Player, Time Management, Flexibility, Problem-solving, Leadership, Collaboration, Calm under Pressure, Methodical Approach, Attention to Detail 
 
+
 * * *
+
 
 ## 📝 Other Work Experience
 **Customer Assistant @ Corridor Cafe | Student’s Union (University of Manchester) (_10/2023 - Present_)**
 - Demonstrated strong organizational skills in a fast-paced catering environment, ensuring efficient order processing and inventory management while maintaining attention to detail.
 - Fostered effective communication and teamwork by collaborating with colleagues, customers, and management to create a positive and cohesive work environment conducive to achieving shared goals.
 
+
 * * *
+
 
 ## 🏆 Achievements
 ### Top 10 at NIT (National Institute of Technology) Nagpur's Startup Conclave
