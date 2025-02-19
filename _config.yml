@@ -1,7 +1,10 @@
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-title: Tarun P Mishra
+author:
+  name: GitHub User
+  email: your-email@domain.com
+title: tarun.ai
 logo: Portrait_TarunPMishra_Circle..png
 description: A results-oriented Data Science professional adept at extracting actionable insights from complex datasets.
 #show_downloads: true
