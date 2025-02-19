@@ -71,9 +71,9 @@
 - **Technical Skills: _ML / AI / DS:_** Python, SQL, R, Numpy, Pandas, Scikit-learn, PyTorch, Data Analysis, Data Visualization (PowerBI & Tableau), Statistical Analysis, Big Data, Data Pipelines, Data Engineering, Machine Learning **_Others:_** JavaScript, Java, C++, HTML, CSS, Microsoft Office Suite (Excel, Word, Powerpoint)
 - **Soft Skills:** Planning, Organisational, Communication, Energy, Curiosity, Adaptability, Team Player, Time Management, Flexibility, Problem-solving, Leadership, Collaboration, Calm under Pressure, Methodical Approach, Attention to Detail 
 
-
+<br>
 * * *
-
+<br>
 
 ## 📝 Other Work Experience
 **Customer Assistant @ Corridor Cafe | Student’s Union (University of Manchester) (_10/2023 - Present_)**
@@ -90,7 +90,10 @@
 
 ### Recipient Global Futures Scholarship at The University of Manchester
   Awarded prestigious £8,000 Merit-Based Global Futures Scholarship for academic excellence in pursuing a Master's in Data Science at the University of Manchester.     
+
+<br>
 * * *
+<br>
 
 ## 📚 Publications
 1. [A Comparative Study of Text Summarization Models: Pointer Generator, Google Pegasus and OpenAI GPT-3](https://drive.google.com/file/d/1eJHqbUUCyDC-JmfF5Fe9aJuuhHmxj60C/view) @ _Journal of Information and Computational Science · May, 2023_
