@@ -1,4 +1,15 @@
----
----
-
 @import 'jekyll-theme-cayman';
+
+/* Reduce the height of the title background */
+.page-header {
+  padding: 1rem 0; /* Reduce vertical padding */
+}
+
+/* Optionally, adjust font size to match the smaller header */
+.project-name {
+  font-size: 2rem; /* Adjust as needed */
+}
+
+.project-tagline {
+  font-size: 1rem; /* Adjust tagline size */
+}
