@@ -1,0 +1,15 @@
+@import "{{ site.theme }}";
+
+.page-header {
+    padding: 10px 20px;  /* Decrease padding to reduce height */
+}
+
+.project-name {
+    font-size: 1.8rem;  /* Adjust title size if needed */
+    margin-bottom: 5px;
+}
+
+.project-tagline {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
