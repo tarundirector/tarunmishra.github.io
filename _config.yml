@@ -13,4 +13,5 @@ logo: Portrait_TarunPMishra_Circle..png
 description: A results-oriented Data Science professional adept at extracting actionable insights from complex datasets.
 #show_downloads: true
 show_downloads: false
-is_project_page: false
+github:
+  is_project_page: false
