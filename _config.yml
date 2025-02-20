@@ -1,6 +1,9 @@
+remote_theme: pages-themes/cayman@v0.2.0
+plugins:
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-remote-theme
 header_pages:
   - README.md
 author:
@@ -10,7 +13,6 @@ title: tarun.ai
 logo: Portrait_TarunPMishra_Circle..png
 description: A results-oriented Data Science professional adept at extracting actionable insights from complex datasets.
 #show_downloads: true
-theme: minima
 minima:
   # Minima skin selection.
   # Available skins are:
@@ -21,4 +23,4 @@ minima:
   # solarized-dark	   Dark variant of solarized color scheme.
   # solarized	         Adaptive skin for solarized color scheme skins.
   skin: auto
-
+show_downloads: false
