@@ -1,7 +1,10 @@
-### **Highlighted Projects:**
+### **💻 Highlighted Projects:**
 [![](assets/banners/P1_Banner.png)](Ecommerce_SalesAnalysis)
+<br>
 [![](assets/banners/P2_Banner.png)](StudentModel_README)
+<br>
 [![](assets/banners/P3_Banner.png)](Sustainable_MCR_Dashboard)
+<br>
 [![](assets/banners/P4_Banner.png)](AirBNB_PredictiveAnalysis)
 
 <br>
@@ -16,11 +19,11 @@
 
 ## **📝 Work Experience**
 ### Data Analyst Intern @ Siemens Digital Industries Software | London, UK (_09/2024 - Present_)
-Designed and implemented ETL workflows for software usage data of 5+ products, employing AWS Lambda, Glue, S3 and Python to streamline data preprocessing, enabling real-time monitoring and analysis capabilities.
-Developed interactive dashboards for 8+ use cases using Python & JavaScript, incorporating data visualisations with Plotly, enabling product teams to monitor KPIs, generate detailed reports, and derive actionable insights.
-Fetched and integrated high-volume data from multiple sources, including Snowflake (using SQL) and APIs, ensuring scalability for increased data loads and reducing data processing time by 80%.
-Collaborated with various product teams to translate complex analytics needs into scalable dashboards, aligning solutions with business goals and effectively communicating findings effectively to non-technical audiences.
-Engineered AI agents to automate analytics, generate plots, and drive data-driven actions in response to user queries.
+- Designed and implemented ETL workflows for software usage data of 5+ products, employing AWS Lambda, Glue, S3 and Python to streamline data preprocessing, enabling real-time monitoring and analysis capabilities.
+- Engineered AI agents to automate analytics, generate plots, and drive data-driven actions in response to user queries.
+- Developed interactive dashboards for 8+ use cases using Python & JavaScript, incorporating data visualisations with Plotly, enabling product teams to monitor KPIs, generate detailed reports, and derive actionable insights.
+- Fetched and integrated high-volume data from multiple sources, including Snowflake (using SQL) and APIs, ensuring scalability for increased data loads and reducing data processing time by 80%.
+- Collaborated with various product teams to translate complex analytics needs into scalable dashboards, aligning solutions with business goals and effectively communicating findings effectively to non-technical audiences.
 
 ### Student Data Analyst @ Student’s Union (University of Manchester) | Manchester, UK (_02/2024 - 08/2024_)
 [Dashboard Example](Sustainable_MCR_Dashboard.md)
