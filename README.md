@@ -1,31 +1,26 @@
 ### **Highlighted Projects:**
 [![](assets/banners/P1_Banner.png)](Ecommerce_SalesAnalysis)
-##### ➡️ Dashboard Examples | [Student Model dashboard](StudentModel_README.md) | [Sustainable MCR dashboard](Sustainable_MCR_Dashboard.md)
-##### ➡️ Predictive Price Modeling for Airbnb Listings with Deployment | [Overview](AirBNB_PredictiveAnalysis.md) | [Github](https://github.com/tarundirector/airbnb-predictive-analysis)
+[![](assets/banners/P2_Banner.png)](StudentModel_README)
+[![](assets/banners/P3_Banner.png)](Sustainable_MCR_Dashboard)
+[![](assets/banners/P4_Banner.png)](AirBNB_PredictiveAnalysis)
 
 <br>
 * * *
 <br>
 
-## 🎓 Education
-### MSc Data Science (Computer Science And Data Informatics) | The University of Manchester (_09/2023 - 09/2024_, _Grade Achieved - Distinction_)
-  - Courses: Statistics & Machine Learning (Supervised & Unsupervised Learning), Data Engineering, Text Mining, Understanding Databases (SQL & NoSQL), Data & Their Environment, Cognitive Robotics and Computer Vision.
-  - Dissertation: Low-Rank Matrix Completion for facilitating tasks like network inference and image reconstruction.
-  - Industrial Project: Implemented an Effective Resource Planning System for Construction Projects at Bouygues E&S.
-
-### BEng Computer Engineering | Mumbai University (_04/2019 - 04/2023_, _CGPA - 9.45/10.0_)
-  - Relevant Courses: Data Warehousing & Mining, Probabilistic Graphical Models, Machine Learning, Big Data Analytics, Natural Language Processing, Blockchain, Social Media Analytics, Applied Data Science, Data Structures, Analysis of Algorithms, Project Management, Database Management System, Cloud Computing.     
-  - Dissertation: Developed a Python-based NLP (Natural Language Processing)-enabled RSS Scraper to gather news data and implemented a content-based and collaborative filtering recommendation model for [Techshots](https://www.techshotsapp.com/).
+# **🙋‍♂️ About Me**
 
 <br>
 * * *
 <br>
 
-## 📝 Work Experience
+## **📝 Work Experience**
 ### Data Analyst Intern @ Siemens Digital Industries Software | London, UK (_09/2024 - Present_)
-- Spearheading the development of a data analytics dashboard to analyse software usage, extracting and transforming large datasets from AWS using Lambda functions, and leveraging Python (NumPy, Pandas) to optimise data pipelines, significantly improving data accessibility for senior management and sales teams.
-- Utilising Mendix along with Java actions, JavaScript and Plotly to parse JSON data and generate interactive visualisations, providing actionable insights for sales teams and accelerating decision-making.
-- Focused on optimising the dashboard for scalability, targeting a 60% reduction in processing time, ensuring it can efficiently handle large-scale data for future expansion.
+Designed and implemented ETL workflows for software usage data of 5+ products, employing AWS Lambda, Glue, S3 and Python to streamline data preprocessing, enabling real-time monitoring and analysis capabilities.
+Developed interactive dashboards for 8+ use cases using Python & JavaScript, incorporating data visualisations with Plotly, enabling product teams to monitor KPIs, generate detailed reports, and derive actionable insights.
+Fetched and integrated high-volume data from multiple sources, including Snowflake (using SQL) and APIs, ensuring scalability for increased data loads and reducing data processing time by 80%.
+Collaborated with various product teams to translate complex analytics needs into scalable dashboards, aligning solutions with business goals and effectively communicating findings effectively to non-technical audiences.
+Engineered AI agents to automate analytics, generate plots, and drive data-driven actions in response to user queries.
 
 ### Student Data Analyst @ Student’s Union (University of Manchester) | Manchester, UK (_02/2024 - 08/2024_)
 [Dashboard Example](Sustainable_MCR_Dashboard.md)
@@ -40,7 +35,21 @@
 * * *
 <br>
 
-## 💻 Projects
+## **🎓 Education**
+### MSc Data Science (Computer Science And Data Informatics) | The University of Manchester (_09/2023 - 09/2024_, _Grade Achieved - Distinction_)
+  - Courses: Statistics & Machine Learning (Supervised & Unsupervised Learning), Data Engineering, Text Mining, Understanding Databases (SQL & NoSQL), Data & Their Environment, Cognitive Robotics and Computer Vision.
+  - Dissertation: Low-Rank Matrix Completion for facilitating tasks like network inference and image reconstruction.
+  - Industrial Project: Implemented an Effective Resource Planning System for Construction Projects at Bouygues E&S.
+
+### BEng Computer Engineering | Mumbai University (_04/2019 - 04/2023_, _CGPA - 9.45/10.0_)
+  - Relevant Courses: Data Warehousing & Mining, Probabilistic Graphical Models, Machine Learning, Big Data Analytics, Natural Language Processing, Blockchain, Social Media Analytics, Applied Data Science, Data Structures, Analysis of Algorithms, Project Management, Database Management System, Cloud Computing.     
+  - Dissertation: Developed a Python-based NLP (Natural Language Processing)-enabled RSS Scraper to gather news data and implemented a content-based and collaborative filtering recommendation model for [Techshots](https://www.techshotsapp.com/).
+
+<br>
+* * *
+<br>
+
+## **💻 Projects**
 
 ### ➡️ Sales Analysis and Customer Segmentation | [Report & PowerBI Dashboard](Ecommerce_SalesAnalysis.md) | [Kaggle Notebook](https://www.kaggle.com/code/tarundirector/sales-analysis-and-customer-segmentation-eda#%5B2%5D-%F0%9F%94%8D-Dataset-Overview)
 - Effectively communicated complex data insights to non-technical stakeholders, facilitating informed decision-making and driving business growth.
@@ -66,7 +75,7 @@
 * * *
 <br>
 
-## 🚀 Skills
+## **🚀 Skills**
 - **Technical Skills: _ML / AI / DS:_** Python, SQL, R, Numpy, Pandas, Scikit-learn, PyTorch, Data Analysis, Data Visualization (PowerBI & Tableau), Statistical Analysis, Big Data, Data Pipelines, Data Engineering, Machine Learning **_Others:_** JavaScript, Java, C++, HTML, CSS, Microsoft Office Suite (Excel, Word, Powerpoint)
 - **Soft Skills:** Planning, Organisational, Communication, Energy, Curiosity, Adaptability, Team Player, Time Management, Flexibility, Problem-solving, Leadership, Collaboration, Calm under Pressure, Methodical Approach, Attention to Detail 
 
@@ -74,7 +83,7 @@
 * * *
 <br>
 
-## 📝 Other Work Experience
+## **📝 Other Work Experience**
 **Customer Assistant @ Corridor Cafe | Student’s Union (University of Manchester) (_10/2023 - Present_)**
 - Demonstrated strong organizational skills in a fast-paced catering environment, ensuring efficient order processing and inventory management while maintaining attention to detail.
 - Fostered effective communication and teamwork by collaborating with colleagues, customers, and management to create a positive and cohesive work environment conducive to achieving shared goals.
@@ -83,7 +92,7 @@
 * * *
 <br>
 
-## 🏆 Achievements
+## **🏆 Achievements**
 ### Top 10 at NIT (National Institute of Technology) Nagpur's Startup Conclave
   Honored for entrepreneurial excellence, securing a top 10 position among 500 teams in Central India's Largest B-Plan Competition, demonstrating strategic planning & strong presentation skills.
 
@@ -94,6 +103,6 @@
 * * *
 <br>
 
-## 📚 Publications
+## **📚 Publications**
 1. [A Comparative Study of Text Summarization Models: Pointer Generator, Google Pegasus and OpenAI GPT-3](https://drive.google.com/file/d/1eJHqbUUCyDC-JmfF5Fe9aJuuhHmxj60C/view) @ _Journal of Information and Computational Science · May, 2023_
 2. [Image Outpainting Using Wasserstein Generative Adversarial Network with Gradient Penalty](https://ieeexplore.ieee.org/document/9753713) @ _IEEE ICCMC Conference · March, 2022_
