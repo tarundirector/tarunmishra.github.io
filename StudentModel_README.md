@@ -1,4 +1,4 @@
-# The Student Model Dashboard 🎓
+# **The Student Model Dashboard 🎓**
 
 During my role as a Student Data Analyst at the University of Manchester Students' Union, I developed a comprehensive Power BI dashboard named *The Student Model*. This dashboard was created with the goal of improving the student experience by analysing data gathered through two extensive surveys, **Build MCR** and **Educate MCR**. These surveys collected over 12,000 responses from the student body, providing valuable insights into various aspects of student life and university engagement.
 

@@ -1,8 +1,4 @@
----
-layout: default
-title: 🏠Airbnb Rental Rate Prediction📈
-description: Forecasting Airbnb listing prices using machine learning, with CI/CD deployment via Docker and GitHub Actions on Heroku.
----
+# **🏠Airbnb Rental Rate Prediction📈**
 
 For more details visit this [Github Project](https://github.com/tarundirector/airbnb-predictive-analysis)
 
