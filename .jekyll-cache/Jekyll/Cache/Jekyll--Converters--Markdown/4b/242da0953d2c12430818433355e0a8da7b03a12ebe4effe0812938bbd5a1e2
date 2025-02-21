@@ -1,0 +1,58 @@
+I"<p>For more details visit this <a href="https://github.com/tarundirector/airbnb-predictive-analysis">Github Project</a></p>
+
+<p>This project aims to forecast the pricing of Airbnb listings based on various features. It encompasses phases such as delving into the data for exploratory analysis, preprocessing the data, selecting pertinent features, fitting models, comparing them, and ultimately deploying a containerized web application on Heroku. This deployment is facilitated through a continuous integration and continuous deployment (CI/CD) pipeline, employing Docker and GitHub Actions.</p>
+
+<hr />
+
+<h2 id="project-objectives"><strong>🎯Project Objectives</strong></h2>
+
+<p>The primary goal of this project is to aid Airbnb hosts in determining suitable prices for their listings.</p>
+
+<p>💡 <strong>Problem:</strong> New Airbnb hosts face challenges in determining the optimal price for their listings. Without a convenient tool, hosts often resort to estimating prices based on neighboring listings, leading to potential underpricing or overpricing.</p>
+
+<p>🔍 <strong>Solution:</strong> Introducing a Predictive Price Modeling tool designed to empower new hosts in setting competitive prices for their listings. By leveraging Machine Learning, hosts can input various listing details such as location, property attributes, and available amenities. The model, trained on extensive Airbnb data, then generates a suggested price based on similar listings.</p>
+
+<p>This approach streamlines the pricing process, providing hosts with data-driven insights to maximize their listing’s earning potential while ensuring competitiveness in the market.</p>
+
+<hr />
+
+<h2 id="️project-implementation-overview">🛠️Project Implementation Overview</h2>
+
+<p>Here’s the breakdown of the project steps :</p>
+
+<ol>
+  <li>
+    <p><strong>Exploratory Data Analysis (EDA):</strong> Delve into the dataset, examining various features’ distributions using Histograms and Box-plots.</p>
+  </li>
+  <li>
+    <p><strong>Pre-processing and Data Cleaning:</strong> Prepare the data for analysis by normalizing, filling missing values, and encoding categorical values.</p>
+  </li>
+  <li>
+    <p><strong>Feature Selection:</strong> Identify the most influential features for predicting listing prices by analyzing their correlation with the response variable (Listing Price).</p>
+  </li>
+  <li>
+    <p><strong>Model Fitting and Selection:</strong> Train multiple models, fine-tune hyperparameters, and evaluate model performance using Learning Curves.</p>
+  </li>
+  <li>
+    <p><strong>Model Serving:</strong> Utilize Flask to deploy and serve model predictions via a REST API.</p>
+  </li>
+  <li>
+    <p><strong>Containerization:</strong> Employ Docker to containerize the web application, ensuring consistent deployment across environments.</p>
+  </li>
+  <li>
+    <p><strong>Production Deployment:</strong> Implement a CI/CD pipeline on GitHub for continuous integration and deployment, ensuring smooth updates and maintenance. Heroku is utilized as the deployment platform to host the application and make it accessible to users online.</p>
+  </li>
+</ol>
+
+<p><img src="https://github.com/tarundirector/airbnb-predictive-analysis/assets/85684655/eface5b5-e921-4b95-b486-8a3e860ea3e9" alt="Colorful Modern Business Timeline Infographic Graph (1)" /></p>
+
+<hr />
+
+<h2 id="results">🚀Results</h2>
+
+<p>Below is a screen recording of the application in action, capturing the entire interface. Users have the option to input all pertinent details of their listings. Once entered, the trained Predictive Model leverages this information to generate a price estimate for the listing based on its features.</p>
+
+<p><img src="https://github.com/tarundirector/Airbnb-Predictive-Analysis/blob/main/AirBNB_Web.gif?raw=true" alt="ezgif-4-67daf127c7" /></p>
+
+<p><a href="./">back</a></p>
+:ET
