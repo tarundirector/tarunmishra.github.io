@@ -1,5 +1,8 @@
-
-# 🏠Airbnb Rental Rate Prediction📈
+---
+layout: default
+title: 🏠Airbnb Rental Rate Prediction📈
+description: Forecasting Airbnb listing prices using machine learning, with CI/CD deployment via Docker and GitHub Actions on Heroku.
+---
 
 For more details visit this [Github Project](https://github.com/tarundirector/airbnb-predictive-analysis)
 
@@ -46,3 +49,5 @@ Here's the breakdown of the project steps :
 Below is a screen recording of the application in action, capturing the entire interface. Users have the option to input all pertinent details of their listings. Once entered, the trained Predictive Model leverages this information to generate a price estimate for the listing based on its features.
 
 ![ezgif-4-67daf127c7](https://github.com/tarundirector/Airbnb-Predictive-Analysis/blob/main/AirBNB_Web.gif?raw=true)
+
+[back](./)
