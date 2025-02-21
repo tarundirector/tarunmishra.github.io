@@ -1,5 +1,7 @@
-
-# 🛒E-commerce Sales Analysis and Customer Segmentation Report📦
+---
+title: "🛒E-commerce Sales Analysis and Customer Segmentation Report📦"
+layout: default
+---
 
 For a more detailed analysis visit the [Kaggle Notebook](https://www.kaggle.com/code/tarundirector/sales-analysis-and-customer-segmentation-eda#%5B2%5D-%F0%9F%94%8D-Dataset-Overview)
 
