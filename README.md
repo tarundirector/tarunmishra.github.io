@@ -1,18 +1,19 @@
 ### **💻 Highlighted Projects:**
 [![](assets/banners/P1_Banner.png)](Ecommerce_SalesAnalysis)
 <br>
+
 [![](assets/banners/P2_Banner.png)](StudentModel_README)
 <br>
+
 [![](assets/banners/P3_Banner.png)](Sustainable_MCR_Dashboard)
 <br>
+
 [![](assets/banners/P4_Banner.png)](AirBNB_PredictiveAnalysis)
 
 <br>
-* * *
-<br>
 
 # **🙋‍♂️ About Me**
-
+* * *
 <br>
 
 ## **📝 Work Experience**
