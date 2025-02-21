@@ -14,7 +14,6 @@
 
 # **🙋‍♂️ About Me**
 * * *
-<br>
 
 ## **📝 Work Experience**
 ### Data Analyst Intern @ Siemens Digital Industries Software | London, UK (_09/2024 - Present_)
