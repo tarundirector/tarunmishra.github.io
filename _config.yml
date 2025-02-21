@@ -4,15 +4,20 @@ plugins:
   - jekyll-seo-tag
   - jekyll-remote-theme
   - jekyll-relative-links
+
 header_pages:
   - README.md
+
 author:
   name: Tarun Pramod Mishra
   email: tarunpmishra2001@gmail.com
+
 title: tarun.ai
 logo: Portrait_TarunPMishra_Circle..png
-description: A results-driven Data Scientist who extracts insights faster than AI evolves—constantly learning, adapting, and staying ahead in the ever-accelerating world of tech.
-#show_downloads: true
+description: >
+  A results-driven Data Scientist who extracts insights faster than AI evolves—
+  constantly learning, adapting, and staying ahead in the ever-accelerating world of tech.
+
 show_downloads: false
 github:
   is_project_page: false
