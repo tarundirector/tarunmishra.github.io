@@ -3,6 +3,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-remote-theme
+  - jekyll-relative-links
 header_pages:
   - README.md
 author:
