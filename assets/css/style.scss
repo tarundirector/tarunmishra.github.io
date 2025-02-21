@@ -1,7 +1,7 @@
-@import "{{ site.theme }}";
+@import 'jekyll-theme-cayman';
 
 .page-header {
-    padding: 10px 20px;  /* Decrease padding to reduce height */
+    padding: 5px 20px;  /* Decrease padding to reduce height */
 }
 
 .project-name {
