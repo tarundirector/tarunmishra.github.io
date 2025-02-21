@@ -1,6 +1,5 @@
-#### 📧 [tarunpmishra2001@gmail.com](mailto:tarunpmishra2001@gmail.com) | [LinkedIn](https://www.linkedin.com/in/tarunpmishra/) | [Kaggle (Notebooks Expert) ](https://www.kaggle.com/tarundirector/code)
-### Highlighted Projects:
-##### [![](assets/banners/P1_Banner.png)](Ecommerce_SalesAnalysis)
+### **Highlighted Projects:**
+[![](assets/banners/P1_Banner.png)](Ecommerce_SalesAnalysis)
 ##### ➡️ Dashboard Examples | [Student Model dashboard](StudentModel_README.md) | [Sustainable MCR dashboard](Sustainable_MCR_Dashboard.md)
 ##### ➡️ Predictive Price Modeling for Airbnb Listings with Deployment | [Overview](AirBNB_PredictiveAnalysis.md) | [Github](https://github.com/tarundirector/airbnb-predictive-analysis)
 
