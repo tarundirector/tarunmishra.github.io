@@ -1,3 +1,8 @@
+### **📡 AI News**
+This section is where I share my take on the latest AI developments. Since AI evolves at lightning speed ⚡, I’ll be updating this regularly to keep things fresh! Stay tuned for insights, trends, and discussions on where AI is headed next. 🚀
+
+[![](https://github.com/user-attachments/assets/b15487ca-6acc-4f44-9a36-49ef969b10dd)](./pages/news/280225_newspage)
+
 ### **💻 Highlighted Projects:**
 [![](assets/banners/P1_Banner.png)](Ecommerce_SalesAnalysis)
 <br>
