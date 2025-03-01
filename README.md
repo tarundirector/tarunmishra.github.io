@@ -1,19 +1,20 @@
 ### **📡 AI News**
 This section is where I share my take on the latest AI developments. Since AI evolves at lightning speed ⚡, I’ll be updating this regularly to keep things fresh! Stay tuned for insights, trends, and discussions on where AI is headed next. 🚀
 
-[![](https://github.com/user-attachments/assets/b15487ca-6acc-4f44-9a36-49ef969b10dd)](./pages/news/280225_newspage)
+[![](https://github.com/user-attachments/assets/557842aa-aad4-4955-9865-07b5a26ef7d9)](./pages/news/280225_newspage)
 
 ### **💻 Highlighted Projects:**
-[![](assets/banners/P1_Banner.png)](Ecommerce_SalesAnalysis)
+
+[![](https://github.com/user-attachments/assets/19e35dd8-c462-40ef-a952-b50e6eb98cea)](Ecommerce_SalesAnalysis)
 <br>
 
-[![](assets/banners/P2_Banner.png)](StudentModel_README)
+[![](https://github.com/user-attachments/assets/d76725d1-97a6-42f4-8352-5b28e145f80d)](StudentModel_README)
 <br>
 
-[![](assets/banners/P3_Banner.png)](Sustainable_MCR_Dashboard)
+[![](https://github.com/user-attachments/assets/73f9b0d8-c824-47bc-b31b-83626e4df6dd)](Sustainable_MCR_Dashboard)
 <br>
 
-[![](assets/banners/P4_Banner.png)](AirBNB_PredictiveAnalysis)
+[![](https://github.com/user-attachments/assets/a7fb9bc0-da71-4d0e-82d7-0febff147e6d)](AirBNB_PredictiveAnalysis)
 
 <br>
 
