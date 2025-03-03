@@ -11,6 +11,9 @@ This section is where I share my take on the latest AI developments. Since AI ev
 [![](https://github.com/user-attachments/assets/d76725d1-97a6-42f4-8352-5b28e145f80d)](StudentModel_README)
 <br>
 
+[![](https://github.com/user-attachments/assets/ef2f91cd-443f-44a6-bc74-61ba8ee1e374)](SalesAnalysis_Pizza)
+<br>
+
 [![](https://github.com/user-attachments/assets/73f9b0d8-c824-47bc-b31b-83626e4df6dd)](Sustainable_MCR_Dashboard)
 <br>
 
