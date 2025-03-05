@@ -1,20 +1,22 @@
-title: {"Hey I'm": Tarun Mishra}
+remote_theme: pages-themes/cayman@v0.2.0
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-remote-theme
+  - jekyll-relative-links
+
+header_pages:
+  - README.md
+
+author:
+  name: Tarun Pramod Mishra
+  email: tarunpmishra2001@gmail.com
+
+title: tarun.ai
 description: >
   A results-driven Data Scientist who extracts insights faster than AI evolves—
   constantly learning, adapting, and staying ahead in the ever-accelerating world of tech.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-github_repo: jekyll # the GitHub repo name for your project
-github_username: jekyll
 
-# Optional social link, you can choose from the following options:
-# twitter (default), instagram, medium, or dribbble
-social_link: twitter
-social_username: jekyllrb
-
-# Set theme color here
-# Choose from: black (default), blue, gray, magenta, orange, red, white, and yellow.
-theme_color: yellow
-
-# Build settings
-markdown: kramdown
+show_downloads: false
+github:
+  is_project_page: false

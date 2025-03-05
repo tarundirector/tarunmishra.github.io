@@ -1,7 +1,7 @@
 
 # **📊 Analytics & Revenue Insights Dashboard for Pizza Sales using Tableau 🍕💡**
 
-## [Live Interactive Dashboard](https://public.tableau.com/app/profile/tarun.mishra7740/viz/PizzaSalesDashboard_17070774157650/Home)
+Live Interactive Dashboard Link : https://public.tableau.com/app/profile/tarun.mishra7740/viz/PizzaSalesDashboard_17070774157650/Home
 
 ![App Screenshot](https://github.com/tarundirector/HR-Analytics-using-PowerBI/assets/85684655/448b794e-dea6-41ae-bcfa-72ec64c56b17)
 
