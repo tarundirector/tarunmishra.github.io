@@ -4,54 +4,141 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+    <!-- Import Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+      /* CSS Variables */
+      :root {
+        --primary-bg: #544bb6;      /* Purple (Main) */
+        --secondary-bg: #e6e6e6;    /* Light Grey BG */
+        --accent-color: #ffdd00;    /* Yellow */
+        --dark-color: #1f2626;      /* Dark */
+        --light-color: #d9d7cd;     /* Light Greyish */
+        --highlight-bg: #ffdd00;    /* Highlight effect */
+      }
+      /* Global Styles */
+      body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #fff;
+        color: var(--dark-color);
+      }
+      .wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      a {
+        text-decoration: none;
+        transition: background 0.3s, color 0.3s;
+      }
+      /* Header Styles */
+      .site-header {
+        margin-bottom: 20px; /* Space below header */
+      }
+      .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .header-left,
+      .header-right {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+      }
+      .header-left {
+        font-family: 'Archivo Black', sans-serif;
+        background-color: var(--primary-bg);
+        color: var(--light-color);
+        font-size: 1.5rem;
+      }
+      .header-left .name {
+        font-family: 'Archivo Black', sans-serif;
+        color: var(--accent-color);
+        margin: 0 5px;
+      }
+      .header-right {
+        background-color: var(--secondary-bg);
+      }
+      .nav-buttons {
+        display: flex;
+        gap: 20px;
+      }
+      .nav-link {
+        font-family: 'Archivo Black', sans-serif;
+        color: var(--primary-bg);
+        padding: 5px 10px;
+        transition: background 0.3s;
+      }
+      .nav-link:hover {
+        background: linear-gradient(transparent 60%, var(--highlight-bg) 60%);
+      }
+      /* Footer Styles */
+      footer {
+        background-color: var(--secondary-bg);
+        color: var(--dark-color);
+        padding: 20px;
+        text-align: center;
+        margin-top: 20px; /* Space above footer */
+      }
+      footer .footer-text {
+        margin-bottom: 10px;
+        font-style: italic;
+      }
+      footer .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+      }
+      footer .social-links a {
+        color: var(--dark-color);
+        transition: color 0.3s;
+      }
+      footer .social-links a:hover {
+        color: var(--accent-color);
+      }
+    </style>
   </head>
   <body>
-    <!-- Custom Header -->
-    <header class="site-header" style="display: flex;">
-      <!-- Left half: Text with primary-bg -->
-      <div class="header-left" style="flex: 1; background-color: var(--primary-bg); display: flex; align-items: center; justify-content: center;">
-        <h1 style="font-family: 'Archivo Black', sans-serif; margin: 0; font-size: 1.5rem;">
-          <span style="color: var(--light-color);">{ "Hey I'm":</span>
-          <span style="color: var(--accent-color);"> Tarun Mishra</span>
-          <span style="color: var(--light-color);"> }</span>
-        </h1>
-      </div>
-      <!-- Right half: Navigation buttons with secondary-bg -->
-      <div class="header-right" style="flex: 1; background-color: var(--secondary-bg); display: flex; align-items: center; justify-content: center;">
-        <nav class="site-nav">
-          <a href="{{ '/' | relative_url }}" class="nav-button" style="font-family: 'Archivo Black', sans-serif; color: var(--primary-bg); margin: 0 1rem; text-decoration: none;">
-            Home
-          </a>
-          <a href="{{ '/pages/news/march_newspage' | relative_url }}" class="nav-button" style="font-family: 'Archivo Black', sans-serif; color: var(--primary-bg); margin: 0 1rem; text-decoration: none;">
-            AI News
-          </a>
-          <a href="{{ '/#projects' | relative_url }}" class="nav-button" style="font-family: 'Archivo Black', sans-serif; color: var(--primary-bg); margin: 0 1rem; text-decoration: none;">
-            About Me
-          </a>
-        </nav>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="wrapper header-container">
+        <div class="header-left">
+          <span class="greeting">{ "Hey I'm":</span>
+          <span class="name">Tarun Mishra</span>
+          <span class="greeting">}</span>
+        </div>
+        <div class="header-right">
+          <nav class="nav-buttons">
+            <a href="/" class="nav-link">Home</a>
+            <a href="/pages/news/march_newspage" class="nav-link">AI News</a>
+            <a href="/#about" class="nav-link">About Me</a>
+          </nav>
+        </div>
       </div>
     </header>
 
-    <!-- Main Content wrapped in .wrapper -->
-    <main class="page-content" aria-label="Content">
+    <!-- Main Content -->
+    <main class="page-content">
       <div class="wrapper">
         {{ content }}
       </div>
     </main>
 
-    <!-- Custom Footer -->
-    <footer class="site-footer" style="background-color: var(--secondary-bg);">
+    <!-- Footer -->
+    <footer>
       <div class="wrapper">
-        <div class="footer-text" style="font-family: 'Roboto', sans-serif; font-weight: 700; font-style: italic; font-size: 1.1rem; margin-bottom: 1rem; color: var(--dark-color);">
+        <div class="footer-text">
           - That was the end of my portfolio, but there’s much more to know about me—feel free to reach out! -
         </div>
         <div class="social-links">
-          <a href="mailto:tarunpmishra2001@gmail.com" style="color: var(--dark-color); text-decoration: none; margin: 0 0.5rem;">Email</a>
-          <a href="https://www.linkedin.com/in/tarunpmishra/" style="color: var(--dark-color); text-decoration: none; margin: 0 0.5rem;">LinkedIn</a>
-          <a href="https://www.kaggle.com/tarundirector/code" style="color: var(--dark-color); text-decoration: none; margin: 0 0.5rem;">Kaggle</a>
-          <a href="https://github.com/tarundirector" style="color: var(--dark-color); text-decoration: none; margin: 0 0.5rem;">GitHub</a>
+          <a href="mailto:tarunpmishra2001@gmail.com" target="_blank">Email</a>
+          <a href="https://www.linkedin.com/in/tarunpmishra/" target="_blank">LinkedIn</a>
+          <a href="https://www.kaggle.com/tarundirector/code" target="_blank">Kaggle</a>
+          <a href="https://github.com/tarundirector" target="_blank">GitHub</a>
         </div>
       </div>
     </footer>
