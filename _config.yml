@@ -3,3 +3,5 @@ include:
   - "*.md"
 
 markdown: kramdown
+
+remote_theme: jekyll/minima@v0.5.4
