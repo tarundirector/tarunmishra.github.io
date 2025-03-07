@@ -26,7 +26,7 @@
       --section-bg-alt: #dbf1f1; /* Light Teal */
       --line-color:  #d9d7cd; /* For horizontal dividing lines */
       --line-thickness: 2px; /* Thickness for dividing lines */
-      --timeline-line-color: #d9d7cd; /* For timeline vertical line */
+      --timeline-line-color: #dbf1f1; /* For timeline vertical line */
       --timeline-circle-color: #ffdd00; /* For timeline circles */
       --skills-divider-color: #dbf1f1; /* For small lines between skills blocks */
       --other-skill-bg: #fff18d; /* For "else" skill tags */
@@ -214,9 +214,11 @@
       z-index: 1;
     }
     .intro-right .about-btn {
+      padding: 0 1.5rem; /* Adjust padding */
+      height: var(--icon-size); /* Match Kaggle button height */
+      line-height: var(--icon-size); /* Vertically center text */
       display: inline-block;
       margin-top: 2rem;
-      padding: 0.75rem 1.5rem;
       background-color: var(--accent-color);
       color: var(--dark-color);
       font-family: 'Archivo', sans-serif;
@@ -294,21 +296,20 @@
     ============================================== */
     .ai-news-banner {
   width: 100%;
-  border: 4px solid transparent; /* Ensures the space for border */
   border-radius: 1rem;
   background-color: #fff18d;
   display: flex;
   overflow: hidden;
   cursor: pointer;
   transition: background-color var(--transition-speed) ease,
-              border-color var(--transition-speed) ease,
+              box-shadow var(--transition-speed) ease,
               filter 0.3s ease;
   margin-top: 1rem;
 }
 
 .ai-news-banner:hover {
   background-color: #fbe96e;
-  border-color: #f7bd03; /* Yellow border */
+  box-shadow: 0 0 0 4px #f7bd03; /* Simulates border without shrinking content */
   filter: brightness(1.05);
 }
 
@@ -1083,7 +1084,7 @@
       <p class="section-tagline">
         Always staying on top of the latest <strong>AI breakthroughs</strong> and <strong>innovations</strong>—here’s a quick glimpse of what’s buzzing!
       </p>
-      <a href="#" class="ai-news-banner">
+      <a href="pages/news/march_newspage.md" class="ai-news-banner">
         <div class="banner-left" style="background-image: url('https://github.com/user-attachments/assets/733e8546-2ef6-4b0c-9f2f-2c62117ba402');"></div>
         <div class="banner-right">
           <h3><span class="highlight">🤖 This Month in AI</span></h3>
@@ -1113,7 +1114,7 @@
       </p>
       <div class="projects-grid">
         <!-- Example Project Tile 1 -->
-        <a href="#" class="project-tile">
+        <a href="pages/projects/Ecommerce_SalesAnalysis.md" class="project-tile">
           <div class="tile-image" style="background-image: url('https://github.com/user-attachments/assets/d38f9017-ad1a-47b3-bfca-b0b6471c4ec5');"></div>
           <div class="tile-content">
             <h6>case:</h6>
@@ -1128,7 +1129,7 @@
           </div>
         </a>
         <!-- Project Tile 2 -->
-        <a href="#" class="project-tile">
+        <a href="pages/projects/StudentModel_README.md" class="project-tile">
           <div class="tile-image" style="background-image: url('https://github.com/user-attachments/assets/5e39a693-0968-4a9e-967e-54ebbb5fd4c2');"></div>
           <div class="tile-content">
             <h6>case:</h6>
@@ -1143,7 +1144,7 @@
           </div>
         </a>
         <!-- Project Tile 3 -->
-        <a href="#" class="project-tile">
+        <a href="pages/projects/SalesAnalysis_Pizza.md" class="project-tile">
           <div class="tile-image" style="background-image: url('https://github.com/user-attachments/assets/58557455-d8e9-419d-b1ea-dc85ec54b032');"></div>
           <div class="tile-content">
             <h6>case:</h6>
@@ -1158,7 +1159,7 @@
           </div>
         </a>
         <!-- Project Tile 4 -->
-        <a href="#" class="project-tile">
+        <a href="pages/projects/Sustainable_MCR_Dashboard.md" class="project-tile">
           <div class="tile-image" style="background-image: url('https://github.com/user-attachments/assets/42e150c0-c2d3-4c42-b236-d33acdf07b6b');"></div>
           <div class="tile-content">
             <h6>case:</h6>
@@ -1173,7 +1174,7 @@
           </div>
         </a>
         <!-- More tiles will automatically wrap into new rows -->
-        <a href="#" class="project-tile">
+        <a href="pages/projects/AirBNB_PredictiveAnalysis.md" class="project-tile">
           <div class="tile-image" style="background-image: url('https://github.com/user-attachments/assets/57869c91-171d-4d1a-b9fb-c3112112e5a4');"></div>
           <div class="tile-content">
             <h6>case:</h6>
@@ -1478,7 +1479,7 @@
   ============================================= -->
   <footer>
     <div class="footer-text">
-      That was the end of my portfolio, but there’s much more to know about me—feel free to reach out!
+      - That was the end of my portfolio, but there’s much more to know about me—feel free to reach out! -
     </div>
     <div class="social-links">
       <a href="mailto:tarunpmishra2001@gmail.com" target="_blank">Email</a>
