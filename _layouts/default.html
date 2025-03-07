@@ -2,118 +2,121 @@
 <html lang="{{ site.lang | default: 'en-US' }}">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css">
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+  <title>🤖tarun.ai🧠</title>
+  {% seo %}
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Inline CSS for Header and Footer only -->
+  <meta name="theme-color" content="#157878">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <!-- Inline CSS for header & footer only -->
   <style>
+    /* Define our theme variables */
     :root {
-      --primary-bg: #544bb6;       /* Purple */
-      --secondary-bg: #e6e6e6;     /* Light Grey */
-      --accent-color: #ffdd00;     /* Yellow */
-      --dark-color: #1f2626;       /* Dark */
-      --light-color: #d9d7cd;      /* Light Greyish */
-      --highlight-bg: #ffdd00;     /* For highlight effect */
-      --transition-speed: 0.3s;
+      --primary-bg: #544bb6; /* Purple */
+      --secondary-bg: #e6e6e6; /* Light Grey BG */
+      --accent-color: #ffdd00; /* Yellow */
+      --dark-color: #1f2626;   /* Dark */
+      --light-color: #d9d7cd;  /* Light Greyish */
+      --highlight-bg: #ffdd00; /* Highlight effect */
     }
-    /* ----------------------- Global Reset ----------------------- */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Open Sans', sans-serif; background: #fff; color: var(--dark-color); }
-    a { text-decoration: none; color: inherit; transition: color var(--transition-speed) ease; }
-    /* ----------------------- Header ----------------------- */
-    header.site-header {
+    /* HEADER */
+    header.custom-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: var(--primary-bg);
       padding: 1rem;
     }
-    /* Left header: Intro text */
-    .header-left {
-      background: var(--primary-bg);
-      padding: 0.5rem 1rem;
+    header.custom-header .left,
+    header.custom-header .right {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    /* Left half: primary background and styled text */
+    header.custom-header .left {
+      background-color: var(--primary-bg);
       font-family: 'Archivo Black', sans-serif;
-      font-size: 1.8rem;
-      text-align: right;
+      font-size: 1.5rem;
       color: var(--light-color);
     }
-    .header-left span.accent {
+    header.custom-header .left .name {
       color: var(--accent-color);
+      margin: 0 0.3rem;
     }
-    /* Right header: Navigation */
-    .header-right {
-      background: var(--secondary-bg);
-      padding: 0.5rem 1rem;
-      display: flex;
-      gap: 1.5rem;
+    /* Right half: secondary background with nav buttons */
+    header.custom-header .right {
+      background-color: var(--secondary-bg);
     }
-    .header-right a.nav-btn {
+    header.custom-header .right a {
       font-family: 'Archivo Black', sans-serif;
       color: var(--primary-bg);
-      position: relative;
+      text-decoration: none;
+      margin: 0 0.5rem;
+      padding: 0.5rem 1rem;
+      transition: background 0.3s ease;
     }
-    .header-right a.nav-btn:hover {
-      /* Hover effect using highlight */
-      color: var(--primary-bg);
-    }
-    .header-right a.nav-btn:hover::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -2px;
-      width: 100%;
-      height: 4px;
+    header.custom-header .right a:hover {
+      /* Using the .highlight effect */
       background: linear-gradient(transparent 60%, var(--highlight-bg) 60%);
     }
-    /* ----------------------- Footer ----------------------- */
-    footer.site-footer {
-      background: var(--secondary-bg);
+    /* FOOTER */
+    footer.custom-footer {
+      background-color: var(--secondary-bg);
+      color: var(--dark-color);
       padding: 1rem;
       text-align: center;
     }
-    footer.site-footer a {
-      font-family: 'Archivo Black', sans-serif;
+    footer.custom-footer a {
       color: var(--dark-color);
-      transition: color var(--transition-speed) ease;
+      text-decoration: none;
+      margin: 0 0.5rem;
+      transition: color 0.3s ease;
     }
-    footer.site-footer a:hover {
+    footer.custom-footer a:hover {
       color: var(--accent-color);
     }
   </style>
+
+  <!-- External styles applied only to .wrapper (assumed to be scoped within your CSS) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
-  
-  <!-- Header -->
-  <header class="site-header">
-    <!-- Left part: Custom intro text -->
-    <div class="header-left">
-      { "Hey, I'm": <span class="accent">Tarun Mishra</span> }
+  <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+  <!-- Custom Header -->
+  <header class="custom-header">
+    <!-- Left part -->
+    <div class="left">
+      <span class="light">{ "Hey I'm":</span>
+      <span class="name">Tarun Mishra</span>
+      <span class="light">}</span>
     </div>
-    <!-- Right part: Navigation buttons -->
-    <div class="header-right">
-      <a href="{{ site.baseurl }}/" class="nav-btn">Home</a>
-      <a href="{{ site.baseurl }}/pages/news/march_newspage" class="nav-btn">AI News</a>
-      <a href="{{ site.baseurl }}/#about" class="nav-btn">About Me</a>
+    <!-- Right part: Navigation -->
+    <div class="right">
+      <a href="{{ '/' | relative_url }}">Home</a>
+      <a href="{{ '/#about' | relative_url }}">About Me</a>
+      <a href="{{ '/pages/news/march_newspage' | relative_url }}">AI News</a>
     </div>
   </header>
-  
+
   <!-- Main Content -->
-  <div class="wrapper">
-        {{ content }}
-  </div>
-  
-  <!-- Footer -->
-  <footer class="site-footer">
-    <p>
-      &copy; {{ site.time | date: "%Y" }} Tarun Mishra. All rights reserved.
-    </p>
-    <div class="social-links">
-      <a href="mailto:tarunpmishra2001@gmail.com" target="_blank">Email</a>
-      <a href="https://www.linkedin.com/in/tarunpmishra/" target="_blank">LinkedIn</a>
-      <a href="https://www.kaggle.com/tarundirector/code" target="_blank">Kaggle</a>
-      <a href="https://github.com/tarundirector" target="_blank">GitHub</a>
+  <main id="content">
+    <!-- The external CSS files (FontAwesome and style.css) are assumed to target only this wrapper -->
+    <div class="wrapper">
+      {{ content }}
+    </div>
+  </main>
+
+  <!-- Custom Footer -->
+  <footer class="custom-footer">
+    <p>- That was the end of my portfolio, but there’s much more to know about me—feel free to reach out! -</p>
+    <div>
+      <a href="mailto:tarunpmishra2001@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/tarunpmishra/">LinkedIn</a>
+      <a href="https://www.kaggle.com/tarundirector/code">Kaggle</a>
+      <a href="https://github.com/tarundirector">GitHub</a>
     </div>
   </footer>
 </body>
