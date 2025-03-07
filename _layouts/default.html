@@ -1,103 +1,123 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: 'en-US' }}">
 <head>
-  <meta charset="UTF-8">
-  <title>🤖tarun.ai🧠</title>
-  {% seo %}
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#157878">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-  {% include head-custom.html %}
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  
-  <style>
-    /* Extra CSS to override the header */
-    header.page-header {
-      display: flex;
-      flex-wrap: wrap;
-      margin: 0;
-    }
-    /* Left half: primary background with intro text */
-    .header-left {
-      flex: 1;
-      background-color: var(--primary-bg);
-      padding: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .header-left h1 {
-      font-family: 'Archivo Black', sans-serif;
-      font-size: 2rem;
-      color: var(--light-color);
-      margin: 0;
-    }
-    /* Inside the left h1, style the parts differently */
-    .header-left h1 .accent {
-      color: var(--accent-color);
-    }
-    
-    /* Right half: secondary background with nav buttons */
-    .header-right {
-      flex: 1;
-      background-color: var(--secondary-bg);
-      padding: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .header-right nav a {
-      font-family: 'Archivo Black', sans-serif;
-      font-size: 1.2rem;
-      color: var(--primary-bg);
-      margin: 0 1rem;
-      padding: 0.5rem 1rem;
-      transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
-      border-radius: 4px;
-    }
-    /* On hover, add the highlight effect (using the same .highlight effect) */
-    .header-right nav a:hover {
-      background: linear-gradient(transparent 60%, var(--highlight-bg) 60%);
-    }
-  </style>
-  
+    <meta charset="UTF-8">
+    <title>🤖tarun.ai🧠</title>
+    {% seo %}
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    {% include head-custom.html %}
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- FontAwesome for icons -->
+    <style>
+      /* --- New Header & Footer Styles --- */
+      header.page-header {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: space-between;
+          padding: 1rem var(--global-section-padding);
+      }
+      /* Left header: branding text on primary-bg */
+      .header-left {
+          background-color: var(--primary-bg);
+          flex: 1 1 50%;
+          padding: 1rem;
+          text-align: right;
+          font-family: 'Archivo Black', sans-serif;
+          color: var(--light-color);
+      }
+      .header-left .branding {
+          font-size: 2rem;
+      }
+      /* Right header: navigation buttons on secondary-bg */
+      .header-right {
+          background-color: var(--secondary-bg);
+          flex: 1 1 50%;
+          padding: 1rem;
+          text-align: center;
+      }
+      .nav-btn {
+          font-family: 'Archivo Black', sans-serif;
+          font-size: 1.1rem;
+          color: var(--primary-bg);
+          padding: 0.5rem 1rem;
+          margin: 0 0.5rem;
+          transition: color var(--transition-speed) ease;
+      }
+      .nav-btn:hover {
+          /* Using .highlight effect */
+          color: var(--accent-color);
+      }
+      /* Footer styling per new reference */
+      footer.site-footer {
+          background-color: var(--primary-bg);
+          color: var(--light-color);
+          padding: 2rem var(--global-section-padding);
+          text-align: center;
+          font-family: 'Roboto', sans-serif;
+      }
+      footer .footer-text {
+          font-weight: bold;
+          font-style: italic;
+          font-size: 1.1rem;
+          margin-bottom: 1rem;
+      }
+      footer .social-links {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 1rem;
+      }
+      footer .social-links a {
+          font-family: 'Archivo', sans-serif;
+          font-weight: 700;
+          color: var(--light-color);
+          transition: color var(--transition-speed) ease;
+      }
+      footer .social-links a:hover {
+          color: var(--accent-color);
+      }
+    </style>
 </head>
 <body>
-  <a id="skip-to-content" href="#content">Skip to the content.</a>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
 
-  <!-- ========= New Header ========= -->
-  <header class="page-header" role="banner">
-    <!-- Left half -->
-    <div class="header-left">
-      <h1>
-        { "Hey I'm": <span class="accent">Tarun Mishra</span> }
-      </h1>
-    </div>
-    <!-- Right half with navigation buttons -->
-    <div class="header-right">
-      <nav>
-        <a href="{{ '/' | relative_url }}">Home</a>
-        <a href="{{ '/pages/news/march_newspage.md' | relative_url }}">AI News</a>
-        <a href="{{ '/#about' | relative_url }}">About Me</a>
-      </nav>
-    </div>
-  </header>
+    <!-- NEW HEADER -->
+    <header class="page-header" role="banner">
+      <!-- Left part: Branding with intro text -->
+      <div class="header-left">
+        <div class="branding">
+          { "Hey, I'm": Tarun Mishra }
+        </div>
+      </div>
+      <!-- Right part: Navigation buttons -->
+      <div class="header-right">
+        <a href="{{ site.baseurl }}/" class="nav-btn">Home</a>
+        <a href="{{ site.baseurl }}/pages/news/march_newspage.md" class="nav-btn">AI News</a>
+        <a href="#about" class="nav-btn">About Me</a>
+      </div>
+    </header>
 
-  <main id="content" class="main-content" role="main">
-    {{ content }}
+    <!-- Main Content -->
+    <main id="content" class="main-content" role="main">
+        {{ content }}
 
-    <!-- ========= Footer (kept as in your reference) ========= -->
-    <footer class="site-footer">
-      {% if site.github.is_project_page %}
-        <span class="site-footer-owner">
-          <a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> is maintained by 
-          <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.
-        </span>
-      {% endif %}
-    </footer>
-  </main>
+        <!-- NEW FOOTER -->
+        <footer class="site-footer">
+          <div class="footer-text">
+            - That was the end of my portfolio, but there’s much more to know about me—feel free to reach out! -
+          </div>
+          <div class="social-links">
+            <a href="mailto:tarunpmishra2001@gmail.com" target="_blank">Email</a>
+            <a href="https://www.linkedin.com/in/tarunpmishra/" target="_blank">LinkedIn</a>
+            <a href="https://www.kaggle.com/tarundirector/code" target="_blank">Kaggle</a>
+            <a href="https://github.com/tarundirector" target="_blank">GitHub</a>
+          </div>
+        </footer>
+    </main>
 </body>
 </html>
