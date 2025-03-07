@@ -1,146 +1,145 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: 'en' }}">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | escape }} - {{ site.title | escape }}</title>
+  <!-- Import Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-bg: #544bb6;    /* Purple (Main) */
+      --secondary-bg: #e6e6e6;  /* Light Grey BG */
+      --accent-color: #ffdd00;  /* Yellow */
+      --dark-color: #1f2626;    /* Dark */
+      --light-color: #d9d7cd;   /* Light Greyish */
+      --highlight-bg: #ffdd00;  /* Highlight background */
+    }
+    /* Reset & Basic Styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #fff;
+      color: var(--dark-color);
+      /* Provide space so content isn’t hidden by fixed header/footer */
+      padding-top: 70px; 
+      padding-bottom: 70px;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    /* Header Styles */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      height: 60px;
+      z-index: 1000;
+    }
+    .header-left,
+    .header-right {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+    }
+    .header-left {
+      background-color: var(--primary-bg);
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 1.5rem;
+    }
+    .header-left .light {
+      color: var(--light-color);
+    }
+    .header-left .accent {
+      color: var(--accent-color);
+    }
+    .header-right {
+      background-color: var(--secondary-bg);
+    }
+    .header-right a {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 1.2rem;
+      color: var(--primary-bg);
+      margin: 0 10px;
+      transition: background 0.3s, padding 0.3s;
+    }
+    .header-right a:hover {
+      background: linear-gradient(transparent 60%, var(--highlight-bg) 60%);
+      padding: 2px 4px;
+      display: inline-block;
+    }
+    /* Main Content Wrapper */
+    .wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    /* Footer Styles */
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: var(--secondary-bg);
+      color: var(--dark-color);
+      text-align: center;
+      padding: 10px;
+      font-family: 'Roboto', sans-serif;
+    }
+    footer .social-links a {
+      margin: 0 5px;
+      transition: color 0.3s;
+    }
+    footer .social-links a:hover {
+      color: var(--accent-color);
+    }
+  </style>
 
-    <!-- Import Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 
-    <style>
-      /* CSS Variables */
-      :root {
-        --primary-bg: #544bb6;      /* Purple (Main) */
-        --secondary-bg: #e6e6e6;    /* Light Grey BG */
-        --accent-color: #ffdd00;    /* Yellow */
-        --dark-color: #1f2626;      /* Dark */
-        --light-color: #d9d7cd;     /* Light Greyish */
-        --highlight-bg: #ffdd00;    /* Highlight effect */
-      }
-      /* Global Styles */
-      body {
-        font-family: 'Roboto', sans-serif;
-        background-color: #fff;
-        color: var(--dark-color);
-      }
-      .wrapper {
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-      a {
-        text-decoration: none;
-        transition: background 0.3s, color 0.3s;
-      }
-      /* Header Styles */
-      .site-header {
-        margin-bottom: 20px; /* Space below header */
-      }
-      .header-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .header-left,
-      .header-right {
-        flex: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 10px;
-      }
-      .header-left {
-        font-family: 'Archivo Black', sans-serif;
-        background-color: var(--primary-bg);
-        color: var(--light-color);
-        font-size: 1.5rem;
-      }
-      .header-left .name {
-        font-family: 'Archivo Black', sans-serif;
-        color: var(--accent-color);
-        margin: 0 5px;
-      }
-      .header-right {
-        background-color: var(--secondary-bg);
-      }
-      .nav-buttons {
-        display: flex;
-        gap: 20px;
-      }
-      .nav-link {
-        font-family: 'Archivo Black', sans-serif;
-        color: var(--primary-bg);
-        padding: 5px 10px;
-        transition: background 0.3s;
-      }
-      .nav-link:hover {
-        background: linear-gradient(transparent 60%, var(--highlight-bg) 60%);
-      }
-      /* Footer Styles */
-      footer {
-        background-color: var(--secondary-bg);
-        color: var(--dark-color);
-        padding: 20px;
-        text-align: center;
-        margin-top: 20px; /* Space above footer */
-      }
-      footer .footer-text {
-        margin-bottom: 10px;
-        font-style: italic;
-      }
-      footer .social-links {
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-      }
-      footer .social-links a {
-        color: var(--dark-color);
-        transition: color 0.3s;
-      }
-      footer .social-links a:hover {
-        color: var(--accent-color);
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Header -->
-    <header class="site-header">
-      <div class="wrapper header-container">
-        <div class="header-left">
-          <span class="greeting">{ "Hey I'm":</span>
-          <span class="name">Tarun Mishra</span>
-          <span class="greeting">}</span>
-        </div>
-        <div class="header-right">
-          <nav class="nav-buttons">
-            <a href="/" class="nav-link">Home</a>
-            <a href="/pages/news/march_newspage" class="nav-link">AI News</a>
-            <a href="/#about" class="nav-link">About Me</a>
-          </nav>
-        </div>
-      </div>
-    </header>
+</head>
+<body>
+  <header>
+    <!-- Left part of the header -->
+    <div class="header-left">
+      <span class="light">{ "Hey I'm": </span>
+      <span class="accent">Tarun Mishra</span>
+      <span class="light"> }</span>
+    </div>
+    <!-- Right part of the header -->
+    <div class="header-right">
+      <a href="{{ '/' | relative_url }}">Home</a>
+      <a href="{{ '/pages/news/march_newspage' | relative_url }}">AI News</a>
+      <a href="#about">About Me</a>
+    </div>
+  </header>
 
-    <!-- Main Content -->
-    <main class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </main>
+  <main>
+    <div class="wrapper">
+      {{ content }}
+    </div>
+  </main>
 
-    <!-- Footer -->
-    <footer>
-      <div class="wrapper">
-        <div class="footer-text">
-          - That was the end of my portfolio, but there’s much more to know about me—feel free to reach out! -
-        </div>
-        <div class="social-links">
-          <a href="mailto:tarunpmishra2001@gmail.com" target="_blank">Email</a>
-          <a href="https://www.linkedin.com/in/tarunpmishra/" target="_blank">LinkedIn</a>
-          <a href="https://www.kaggle.com/tarundirector/code" target="_blank">Kaggle</a>
-          <a href="https://github.com/tarundirector" target="_blank">GitHub</a>
-        </div>
-      </div>
-    </footer>
-  </body>
+  <footer>
+    <div class="footer-text">
+      - That was the end of my portfolio, but there’s much more to know about me—feel free to reach out! -
+    </div>
+    <div class="social-links">
+      <a href="mailto:tarunpmishra2001@gmail.com" target="_blank">Email</a>
+      <a href="https://www.linkedin.com/in/tarunpmishra/" target="_blank">LinkedIn</a>
+      <a href="https://www.kaggle.com/tarundirector/code" target="_blank">Kaggle</a>
+      <a href="https://github.com/tarundirector" target="_blank">GitHub</a>
+    </div>
+  </footer>
+</body>
 </html>
