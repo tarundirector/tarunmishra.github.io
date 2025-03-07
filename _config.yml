@@ -14,6 +14,5 @@ description: >
   A results-driven Data Scientist who extracts insights faster than AI evolves—
   constantly learning, adapting, and staying ahead in the ever-accelerating world of tech.
 
-show_downloads: false
-github:
-  is_project_page: false
+include:
+  - pages
