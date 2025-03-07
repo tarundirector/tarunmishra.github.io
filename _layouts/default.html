@@ -1,123 +1,150 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: 'en-US' }}">
-<head>
-  <meta charset="UTF-8">
-  <title>🤖tarun.ai🧠</title>
-  {% seo %}
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#157878">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <head>
+    <meta charset="UTF-8" />
+    <title>🤖tarun.ai🧠</title>
+    {% seo %}
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#157878" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-  <!-- Inline CSS for header and footer ONLY -->
-  <style>
-    :root {
-      --primary-bg: #544bb6;       /* Purple (Main) */
-      --secondary-bg: #e6e6e6;     /* Light Grey BG */
-      --accent-color: #ffdd00;     /* Yellow */
-      --dark-color: #1f2626;       /* Dark */
-      --light-color: #d9d7cd;      /* Light Greyish */
-      --highlight-bg: #ffdd00;     /* For highlight effect */
-    }
-    /* ============================
-         HEADER
-    ============================ */
-    header.custom-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    header.custom-header .header-left {
-      background-color: var(--primary-bg);
-      flex: 1;
-      padding: 1rem;
-      text-align: center;
-      font-family: sans-serif;
-      font-size: 1.5rem;
-    }
-    header.custom-header .header-left span.light {
-      color: var(--light-color);
-    }
-    header.custom-header .header-left span.accent {
-      color: var(--accent-color);
-    }
-    header.custom-header .header-right {
-      background-color: var(--secondary-bg);
-      flex: 1;
-      padding: 1rem;
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-    }
-    header.custom-header .header-right a {
-      font-family: 'Archivo Black', sans-serif;
-      color: var(--primary-bg);
-      text-decoration: none;
-      padding: 0.5rem;
-      transition: background-color 0.3s ease;
-    }
-    header.custom-header .header-right a:hover {
-      background: linear-gradient(transparent 60%, var(--highlight-bg) 60%);
-    }
+    <!-- Inline CSS for header and footer (and CSS variables) -->
+    <style>
+      /* ==============================================
+         CSS Variables – Header/Footer
+      ============================================== */
+      :root {
+        --primary-bg: #544bb6; /* Purple */
+        --secondary-bg: #e6e6e6; /* Light Grey BG */
+        --accent-color: #ffdd00; /* Yellow */
+        --dark-color: #1f2626; /* Dark */
+        --light-color: #d9d7cd; /* Light Greyish */
+        --highlight-bg: #ffdd00; /* For highlight effect */
+      }
 
-    /* ============================
-         FOOTER
-    ============================ */
-    footer.custom-footer {
-      background-color: var(--secondary-bg);
-      padding: 1rem;
-      text-align: center;
-      font-family: sans-serif;
-    }
-    footer.custom-footer a {
-      color: var(--dark-color);
-      text-decoration: none;
-      margin: 0 0.5rem;
-      transition: color 0.3s ease;
-    }
-    footer.custom-footer a:hover {
-      color: var(--accent-color);
-    }
-  </style>
-</head>
-<body>
-  <!-- Notice: "Skip to content" link has been removed -->
+      /* ==============================================
+         Header Styles
+      ============================================== */
+      .custom-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .header-left,
+      .header-right {
+        flex: 1;
+        padding: 1rem;
+        text-align: center;
+      }
+      .header-left {
+        background-color: var(--primary-bg);
+        font-family: sans-serif;
+        font-size: 1.5rem;
+      }
+      .header-left span.light {
+        color: var(--light-color);
+      }
+      .header-left span.accent {
+        color: var(--accent-color);
+      }
+      .header-right {
+        background-color: var(--secondary-bg);
+        font-family: 'Archivo Black', sans-serif;
+        font-size: 1.2rem;
+      }
+      .header-right a {
+        color: var(--primary-bg);
+        text-decoration: none;
+        margin: 0 0.5rem;
+        transition: background-color 0.3s ease, padding 0.3s ease;
+      }
+      .header-right a:hover {
+        background: linear-gradient(transparent 60%, var(--highlight-bg) 60%);
+        padding: 2px 4px;
+        display: inline-block;
+      }
 
-  <!-- HEADER with two parts -->
-  <header class="custom-header">
-    <!-- Left side: the introductory text -->
-    <div class="header-left">
-      <span class="light">{ "Hey I'm":</span>
-      <span class="accent"> Tarun Mishra</span>
-      <span class="light"> }</span>
-    </div>
-    <!-- Right side: Navigation buttons -->
-    <div class="header-right">
-      <a href="{{ '/' | relative_url }}">Home</a>
-      <a href="{{ '/pages/news/march_newspage' | relative_url }}">AI News</a>
-      <a href="{{ '/' | relative_url }}#about">About Me</a>
-    </div>
-  </header>
+      /* ==============================================
+         Footer Styles
+      ============================================== */
+      footer.custom-footer {
+        background-color: var(--secondary-bg);
+        color: var(--dark-color);
+        padding: 1rem;
+        text-align: center;
+        font-family: sans-serif;
+      }
+      footer.custom-footer a {
+        color: var(--dark-color);
+        text-decoration: none;
+        margin: 0 0.5rem;
+        transition: color 0.3s ease;
+      }
+      footer.custom-footer a:hover {
+        color: var(--accent-color);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="custom-header">
+      <div class="header-left">
+        <span class="light">{ "Hey I'm":</span>
+        <span class="accent"> Tarun Mishra</span>
+        <span class="light"> }</span>
+      </div>
+      <div class="header-right">
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="pages/news/march_newspage">AI News</a>
+        <a href="{{ '/' | relative_url }}#about">About Me</a>
+      </div>
+    </header>
 
-  <!-- MAIN CONTENT wrapped in a .wrapper -->
-  <div class="wrapper">
-    <!-- These external stylesheets only affect the .wrapper and its children -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-    
-    {{ content }}
-  </div>
+    <!-- CONTENT: Using Shadow DOM to isolate external styles for .wrapper -->
+    <div id="content-host"></div>
+    <script>
+      (function () {
+        const host = document.getElementById("content-host");
+        // Attach a shadow root to isolate the external CSS
+        const shadow = host.attachShadow({ mode: "open" });
+        // Create a wrapper div for the content
+        const wrapper = document.createElement("div");
+        wrapper.className = "wrapper";
 
-  <!-- FOOTER styled as per the reference -->
-  <footer class="custom-footer">
-    <div class="footer-text">
-      - That was the end of my portfolio, but there’s much more to know about me—feel free to reach out! -
-    </div>
-    <div class="social-links">
-      <a href="mailto:tarunpmishra2001@gmail.com">Email</a>
-      <a href="https://www.linkedin.com/in/tarunpmishra/">LinkedIn</a>
-      <a href="https://www.kaggle.com/tarundirector/code">Kaggle</a>
-      <a href="https://github.com/tarundirector">GitHub</a>
-    </div>
-  </footer>
-</body>
+        // Create link elements for external stylesheets (only for the wrapper)
+        const linkFA = document.createElement("link");
+        linkFA.rel = "stylesheet";
+        linkFA.href =
+          "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css";
+
+        const linkStyle = document.createElement("link");
+        linkStyle.rel = "stylesheet";
+        linkStyle.href = "{{ '/assets/css/style.css' | relative_url }}";
+
+        // Append the external CSS links to the shadow root
+        shadow.appendChild(linkFA);
+        shadow.appendChild(linkStyle);
+
+        // Create a container for the Jekyll content and inject it
+        const contentContainer = document.createElement("div");
+        contentContainer.innerHTML = `{{ content }}`;
+        wrapper.appendChild(contentContainer);
+        shadow.appendChild(wrapper);
+      })();
+    </script>
+
+    <!-- FOOTER -->
+    <footer class="custom-footer">
+      <div class="footer-text">
+        - That was the end of my portfolio, but there’s much more to know about me—feel free
+        to reach out! -
+      </div>
+      <div class="social-links">
+        <a href="mailto:tarunpmishra2001@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/tarunpmishra/">LinkedIn</a>
+        <a href="https://www.kaggle.com/tarundirector/code">Kaggle</a>
+        <a href="https://github.com/tarundirector">GitHub</a>
+      </div>
+    </footer>
+  </body>
 </html>
