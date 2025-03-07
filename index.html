@@ -1,0 +1,1506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tarun Mishra - Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Font Links -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Font Awesome is no longer used for icons -->
+
+  <style>
+    /* ==============================================
+       CSS Variables – adjust these for quick theme changes!
+    ============================================== */
+    :root {
+      --primary-bg: #544bb6; /* Purple (Main) */
+      --secondary-bg: #e6e6e6; /* Light Grey BG */
+      --accent-color: #ffdd00; /* Yellow */
+      --dark-color: #1f2626; /* Dark */
+      --light-color: #d9d7cd; /* Light Greyish */
+      --highlight-bg: #ffdd00; /* For highlight effect rectangles */
+      --section-bg-alt: #dbf1f1; /* Light Teal */
+      --line-color:  #d9d7cd; /* For horizontal dividing lines */
+      --line-thickness: 2px; /* Thickness for dividing lines */
+      --timeline-line-color: #d9d7cd; /* For timeline vertical line */
+      --timeline-circle-color: #ffdd00; /* For timeline circles */
+      --skills-divider-color: #dbf1f1; /* For small lines between skills blocks */
+      --other-skill-bg: #fff18d; /* For "else" skill tags */
+      --other-skill-text: #595956; /* Text color for "else" skill tags */
+      --section-padding-lr: 3vw; /* Consistent left-right padding for sections (except section 1) */
+      --circle-size: 35vh; /* Circle behind text in section 1 */
+      --transition-speed: 0.3s; /* Speed for hover transitions */
+      --global-section-padding: 4vw; /* Global left/right padding for sections (except section 1) */
+      --icon-size: 50px; /* Diameter for circular logo buttons */
+    }
+
+    /* ==============================================
+       Global Resets & Base Styles
+    ============================================== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #fff;
+      color: var(--dark-color);
+      overflow-x: hidden;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: background-color var(--transition-speed) ease,
+        color var(--transition-speed) ease;
+    }
+    ul {
+      list-style-type: disc;
+      margin-left: 1.5em;
+    }
+    li {
+      margin-bottom: 0.5em;
+    }
+    .highlight {
+      background: linear-gradient(transparent 60%, var(--highlight-bg) 60%);
+      padding: 2px 4px;
+      display: inline-block;
+    }
+
+    /* ==============================================
+       Minimal fade/slide-in on scroll
+    ============================================== */
+    .fade-element {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-element.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ==============================================
+       SECTION 1: Intro Split Screen
+    ============================================== */
+    .section-intro {
+      display: flex;
+      width: 100%;
+      height: 75vh;
+    }
+    .intro-left,
+    .intro-right {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .intro-left {
+      background-color: var(--primary-bg);
+      flex-direction: column;
+      text-align: right;
+      padding: 2rem;
+    }
+    /* Updated icons row to use SVG logos */
+    .icon-row {
+      margin-top: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .icon-row a.logo-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: var(--icon-size);
+      height: var(--icon-size);
+      border-radius: 50%;
+      background-color: var(--dark-color);
+      transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+    }
+    .icon-row a.logo-button:hover {
+      background-color: #444;
+      transform: scale(1.1);
+    }
+    .icon-row a.logo-button svg {
+      width: 32px;
+      height: 32px;
+      fill: #ffffff;
+    }
+    /* Kaggle button: height equal to circle button (i.e. 50px) */
+    .icon-row a.kaggle-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      outline: none;
+      background-color: var(--dark-color);
+      color: #fff;
+      font-family: 'Archivo', sans-serif;
+      font-weight: 700;
+      border-radius: 999px;
+      padding: 0 1rem;
+      height: var(--icon-size);
+      cursor: pointer;
+      transition: background-color var(--transition-speed) ease;
+    }
+    .icon-row a.kaggle-btn i {
+      margin-right: 0.4rem;
+    }
+    .icon-row a.kaggle-btn:hover {
+      background-color: #444;
+    }
+    /* Typing container on left */
+    .typing-container {
+      color: var(--light-color);
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 2rem;
+      line-height: 1.4;
+    }
+    .typing-container .static-text {
+      color: var(--light-color);
+      font-size: 2rem;
+    }
+    .typing-container .typing-text {
+      font-size: 3rem;
+      white-space: nowrap;
+    }
+    .typing-container .yellow-text {
+      color: var(--accent-color);
+    }
+    .typing-container .cursor {
+      display: inline-block;
+      font-size: 3rem;
+      color: var(--accent-color);
+      animation: blink 0.6s infinite alternate;
+      font-family: 'Archivo Black', sans-serif;
+      margin-left: 0.2rem;
+    }
+    @keyframes blink {
+      0% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    /* Intro right: tagline & background circle */
+    .intro-right {
+      background-color: var(--secondary-bg);
+      flex-direction: column;
+      text-align: center;
+      position: relative;
+      /* Remove any padding so bg stretches fully */
+      padding: 0;
+    }
+    .intro-right .tagline-box {
+      position: relative;
+      max-width: 80%;
+      margin: 0 auto;
+      text-align: left;
+      padding: 2rem;
+    }
+    .intro-right .tagline {
+      font-family: 'Archivo', sans-serif;
+      font-weight: 600;
+      color: var(--primary-bg);
+      font-size: 1.2rem; /* reduced font size */
+      line-height: 1.5;
+      position: relative;
+      z-index: 1;
+    }
+    .intro-right .about-btn {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      background-color: var(--accent-color);
+      color: var(--dark-color);
+      font-family: 'Archivo', sans-serif;
+      font-weight: bold;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: background-color var(--transition-speed) ease;
+    }
+    .intro-right .about-btn:hover {
+      background-color: #e5c900;
+    }
+    /* The big circle behind text – its size and position can be controlled */
+    .intro-right .circle-bg {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: var(--circle-size);
+      height: var(--circle-size);
+      background-color: var(--accent-color);
+      border-radius: 50%;
+      transform: translate(-15%, -70%);
+      z-index: 0;
+    }
+
+    /* ==============================================
+       General Sections (except section 1) – apply global padding
+    ============================================== */
+    .section {
+      width: 100%;
+      background-color: #fff;
+      padding-left: var(--global-section-padding);
+      padding-right: var(--global-section-padding);
+    }
+    .section-content {
+      padding: 3rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .section-title {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 2rem;
+      text-align: left;
+    }
+    /* Example: change "AcademicAndPersonalProjects" to "Academic & Personal Projects" */
+    /* (Make similar manual changes in the HTML below for each section title) */
+    .section-title .def {
+      color: var(--light-color);
+    }
+    .section-title .function-name {
+      color: var(--dark-color);
+    }
+    .section-title .parens {
+      color: var(--light-color);
+    }
+    .section-tagline {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1rem;
+      color: var(--dark-color);
+      line-height: 1.6;
+      max-width: 800px;
+    }
+
+    /* Divider line – now with global side padding */
+    .divider {
+      width: calc(100% - (2 * var(--global-section-padding)));
+      height: var(--line-thickness);
+      background-color: var(--line-color);
+      margin: 2rem auto;
+    }
+
+    /* ==============================================
+       AI News Section
+    ============================================== */
+    .ai-news-banner {
+  width: 100%;
+  border: 4px solid transparent; /* Ensures the space for border */
+  border-radius: 1rem;
+  background-color: #fff18d;
+  display: flex;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color var(--transition-speed) ease,
+              border-color var(--transition-speed) ease,
+              filter 0.3s ease;
+  margin-top: 1rem;
+}
+
+.ai-news-banner:hover {
+  background-color: #fbe96e;
+  border-color: #f7bd03; /* Yellow border */
+  filter: brightness(1.05);
+}
+
+    .banner-left {
+      width: 33.33%;
+      min-height: 180px;
+      background-size: cover;
+      background-position: center;
+      flex-shrink: 0;
+    }
+    .banner-right {
+      width: 66.67%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 2.5rem;
+      gap: 0.5rem;
+    }
+    .banner-right h3 {
+      font-family: 'Archivo Black', sans-serif;
+      font-weight: 700;
+      color: var(--primary-bg);
+      font-size: 1.6rem; /* a little bigger */
+      margin-bottom: 0.3rem;
+    }
+    .banner-right p {
+      font-family: 'Roboto', sans-serif;
+      font-size: 0.9rem;
+      color: var(--dark-color);
+      line-height: 1.4;
+    }
+
+    /* ==============================================
+       Projects Section (Tiles)
+    ============================================== */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .project-tile {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: #fff;
+  border: 4px solid transparent; /* Reserve space for border */
+  cursor: pointer;
+  transition: background-color var(--transition-speed) ease,
+              border-color var(--transition-speed) ease,
+              filter 0.3s ease;
+  height: 300px;
+}
+
+.project-tile:hover {
+  border-color: #5398b0; /* Blue border */
+  filter: brightness(0.95);
+}
+
+    .tile-image {
+      flex: 2;
+      background-size: cover;
+      background-position: center;
+    }
+    .tile-content {
+      flex: 1;
+      background-color: var(--section-bg-alt);
+      padding: 1rem;
+      padding-top: 0.8rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    .tile-content h4 {
+      font-family: 'Archivo', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--dark-color);
+      margin-bottom: 0.5rem;
+    }
+    .tile-content h6 {
+      font-family: 'Archivo', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--light-color);
+    }
+    .tile-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.2rem;
+    }
+    .tile-tag {
+      background-color: var(--accent-color);
+      color: var(--dark-color);
+      border-radius: 999px;
+      padding: 0.2rem 0.6rem;
+      font-family: 'Archivo', sans-serif;
+      font-weight: 600;
+      font-size: 0.8rem;
+    }
+    .tile-tool-tags {
+      background-color: var(--primary-bg);
+      color: white;
+      border-radius: 999px;
+      padding: 0.6rem;
+      padding-top: 0.2rem;
+      padding-bottom: 0.3rem;
+      font-family: 'Archivo', sans-serif;
+      font-weight: 600;
+      font-size: 0.7rem;
+    }
+
+    /* ==============================================
+       Education Section
+    ============================================== */
+    .education-container {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+    .education-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.education-left img {
+  width: auto; /* Let the height determine the width */
+  height: 100%; /* Match the height of the right division */
+  aspect-ratio: 1 / 1; /* Maintain a square aspect ratio */
+  object-fit: cover; /* Ensure it covers the square without distortion */
+  border-radius: 1rem;
+  max-width: 100%; /* Ensure it doesn't overflow */
+  max-height: 100%; /* Prevent overflow issues */
+}
+    .education-right {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      justify-content: center;
+      padding-left: 2rem;
+    }
+    .edu-entry {
+      font-family: 'Roboto', sans-serif;
+      color: var(--dark-color);
+      margin-bottom: 1.5rem;
+    }
+    .edu-entry .edu-title {
+      font-size: 1.3rem;
+      margin-bottom: 0.3rem;
+    }
+    .edu-degree {
+      color: var(--dark-color);
+      font-weight: bold;
+    }
+    .edu-university {
+      color: #544bb6;
+      font-weight: bold;
+      margin-left: 0.5rem;
+    }
+    .edu-dates {
+      font-size: 1rem;
+      color: var(--dark-color);
+      margin-top: 0.2rem;
+    }
+    .edu-grade {
+      font-weight: bold;
+      font-style: italic;
+      color: var(--dark-color);
+      background-color: var(--highlight-bg);
+      padding: 0 4px;
+      margin-left: 0.5rem;
+    }
+    .edu-details ul {
+      list-style-type: disc;
+      margin-left: 1.5rem;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+    .edu-details ul li {
+      margin-bottom: 0.3rem;
+    }
+
+    /* ==============================================
+       Work Experience (Timeline)
+    ============================================== */
+    .timeline {
+      position: relative;
+      margin: 2rem 0;
+    }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: var(--line-thickness);
+      height: 100%;
+      background-color: var(--timeline-line-color);
+      transform: translateX(-50%);
+    }
+    .timeline-item {
+      position: relative;
+      width: 50%;
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+      padding-top: 1rem;
+      box-sizing: border-box;
+    }
+    .timeline-item:nth-child(odd) {
+      float: left;
+      text-align: right;
+      clear: both;
+    }
+    .timeline-item:nth-child(even) {
+      float: right;
+      text-align: left;
+      clear: both;
+    }
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      top: 1rem;
+      width: 15px;
+      height: 15px;
+      background-color: var(--timeline-circle-color);
+      border-radius: 50%;
+    }
+    .timeline-item:nth-child(odd)::before {
+      right: -8px;
+    }
+    .timeline-item:nth-child(even)::before {
+      left: -8px;
+    }
+    .timeline-content {
+      display: inline-block;
+      max-width: 90%;
+      text-align: left; /* ensure bullet points are left aligned */
+    }
+    .company-title {
+      font-family: 'Archivo', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--dark-color);
+      margin-bottom: 0.2rem;
+    }
+    .role-title {
+      font-family: 'Archivo', sans-serif;
+      font-weight: 700;
+      color: var(--primary-bg);
+      font-size: 0.95rem;
+      margin-bottom: 0.3rem;
+    }
+    .timeline-dates {
+      font-size: 0.8rem;
+      font-style: italic;
+      color: var(--dark-color);
+      margin-bottom: 0.5rem;
+    }
+    .timeline-content ul {
+      list-style-type: disc;
+      margin-left: 1.5rem;
+      font-family: 'Roboto', sans-serif;
+      font-size: 0.9rem;
+      line-height: 1.4;
+      color: var(--dark-color);
+    }
+
+    /* ==============================================
+       Skills Section – Rebuilt per SKILL PROMPT REF
+    ============================================== */
+    .skills-section {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      min-height: 400px;
+    }
+    /* (a) Left-most block */
+    .skills-left {
+      width: 32%;
+      background-color: var(--section-bg-alt);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 2rem;
+      text-align: right;
+    }
+    .skills-left .section-title {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 1.8rem;
+    }
+    .skills-left .section-title .def,
+    .skills-left .section-title .parens {
+      color: var(--light-color);
+    }
+    .skills-left .section-title .function-name {
+      color: var(--dark-color);
+    }
+    .skills-left .section-tagline {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1rem;
+      color: var(--dark-color);
+      margin-top: 0.5rem;
+    }
+    /* Right side container */
+    .skills-right {
+      width: 68%;
+      display: flex;
+      flex-direction: column;
+    }
+    /* Top row: technical (b) and soft (c) */
+    .skills-top-row {
+      display: flex;
+      flex: 1;
+    }
+    .skills-b, .skills-c {
+      flex: 1;
+      background-color: #fff;
+      padding: 2rem;
+      display: flex;
+                      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .skills-b .section-subtitle,
+    .skills-c .section-subtitle {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    .skills-b .section-subtitle .if,
+    .skills-c .section-subtitle .elif,
+    .skills-b .section-subtitle .colon,
+    .skills-d .section-subtitle .else,
+    .skills-c .section-subtitle .colon {
+      color: var(--light-color);
+    }
+    .skills-b .section-subtitle .keyword,
+    .skills-c .section-subtitle .keyword {
+      color: var(--dark-color);
+    }
+    .skills-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+    .skills-tag {
+      background-color: #f7bd03;
+      color: var(--dark-color);
+      border-radius: 999px;
+      padding: 0.3rem 0.7rem;
+      font-family: 'Archivo', sans-serif;
+      font-weight: bold;
+      font-size: 0.85rem;
+    }
+    /* Small vertical line between (b) and (c) */
+    .skills-divider-vertical {
+      width: 2px;
+      background-color: var(--skills-divider-color);
+    }
+    /* Bottom row: (d) Other skills */
+    .skills-bottom-row {
+      display: flex;
+      flex: 1;
+      position: relative;
+      margin-top: 1rem;
+    }
+    /* Horizontal line between top row and bottom row */
+    .skills-divider-horizontal {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 50%;
+      height: 2px;
+      background-color: var(--skills-divider-color);
+      transform: translateX(-50%);
+    }
+    .skills-d {
+      flex: 1;
+      background-color: #fff;
+      padding: 2rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+    .skills-d-left {
+      margin-right: 1rem;
+      white-space: nowrap;
+      text-align: right;
+    }
+    .skills-d-right {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .skills-d-right .skills-d-tag {
+      background-color: var(--other-skill-bg);
+      color: var(--other-skill-text);
+      border-radius: 999px;
+      padding: 0.3rem 0.7rem;
+      font-family: 'Archivo', sans-serif;
+      font-weight: bold;
+      font-size: 0.85rem;
+    }
+    .skills-d-left .else {
+      font-family: 'Archivo', sans-serif;
+      font-weight: bold;
+      color: var(--light-color)
+    }
+
+    /* ==============================================
+       Volunteering & Other Work
+    ============================================== */
+    .volunteer-section {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      background-color: #fff;
+      padding: 0rem var(--global-section-padding);
+      box-sizing: border-box;
+    }
+
+    .volunteer-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: right;
+  padding-left:2rem;
+}
+
+    .volunteer-left .section-title {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 1.8rem;
+    }
+    .volunteer-left .entries {
+      text-align: left;
+      margin-top: 1rem;
+      max-width: 80%;
+    }
+    .volunteer-left .entries h4 {
+      font-family: 'Archivo', sans-serif;
+      font-size: 1rem;
+      color: var(--primary-bg);
+      /* Organization names highlighted (not bold) */
+    }
+    .volunteer-left .entries p,
+    .volunteer-left .entries ul,
+    .volunteer-left .entries li {
+      font-family: 'Roboto', sans-serif;
+      font-size: 0.9rem;
+      line-height: 1.4;
+      font-weight: normal;
+    }
+
+    .volunteer-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.volunteer-right img {
+  width: auto; /* Let the height determine the width */
+  height: 60%; /* Match the height of the left division */
+  aspect-ratio: 1 / 1; /* Maintain a square aspect ratio */
+  object-fit: cover; /* Ensure it covers the square without distortion */
+  border-radius: 1rem;
+  max-width: 100%; /* Ensure it doesn't overflow */
+  max-height: 100%; /* Prevent overflow issues */
+}
+
+
+    /* ==============================================
+       Publications & Achievements
+    ============================================== */
+    .pub-section {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      background-color: #fff;
+      padding: 0rem var(--global-section-padding);
+      box-sizing: border-box;
+    }
+    .pub-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pub-left img {
+  width: auto; /* Let the height determine the width */
+  height: 80%; /* Match the height of the right division */
+  aspect-ratio: 1 / 1; /* Maintain a square aspect ratio */
+  object-fit: cover; /* Ensure it covers the square without distortion */
+  border-radius: 1rem;
+  max-width: 100%; /* Ensure it doesn't overflow */
+  max-height: 100%; /* Prevent overflow issues */
+}
+
+.pub-right {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  padding-left: 2rem;
+  gap: 1rem;
+}
+
+    .pub-right .section-title {
+      text-align: left;
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 1.8rem;
+    }
+    .pub-right .entries {
+      text-align: left;
+      margin-top: 1rem;
+    }
+    .pub-right .entries h4 {
+      font-family: 'Archivo', sans-serif;
+      font-size: 1rem;
+      color: var(--dark-color);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .pub-right .entries a {
+      font-weight: bold;
+      color: #304c99;
+    }
+    .pub-right .entries ul {
+      list-style-type: disc;
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    /* ==============================================
+       Creative Side
+    ============================================== */
+    .creative-section {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      background-color: #fff;
+      padding: 0rem var(--global-section-padding);
+      box-sizing: border-box;
+    }
+    .creative-left {
+      flex: 1;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    .creative-left .section-title {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 1.8rem;
+      color: var(--dark-color);
+      margin-bottom: 0.5rem;
+    }
+    .creative-left .entries {
+      font-family: 'Roboto', sans-serif;
+      font-size: 0.9rem;
+      color: var(--dark-color);
+      line-height: 1.4;
+      margin-top: 1rem;
+    }
+    .creative-left .entries a {
+      font-weight: bold;
+      color: #304c99;
+    }
+    .creative-left .entries ul {
+      list-style-type: disc;
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .creative-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.creative-right img {
+  width: auto; /* Let the height determine the width */
+  height: 60%; /* Match the height of the left division */
+  aspect-ratio: 1 / 1; /* Maintain a square aspect ratio */
+  object-fit: cover; /* Ensure it covers the square without distortion */
+  border-radius: 1rem;
+  max-width: 100%; /* Ensure it doesn't overflow */
+  max-height: 100%; /* Prevent overflow issues */
+}
+
+    /* ==============================================
+       Footer
+    ============================================== */
+    footer {
+      background-color: var(--primary-bg);
+      color: var(--highlight-bg);
+      padding: 2rem var(--global-section-padding);
+      text-align: center;
+      font-style: normal;
+    }
+    footer .footer-text {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 700;
+      font-style: italic;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+    footer .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+    footer .social-links a {
+      font-family: 'Archivo', sans-serif;
+      font-weight: 700;
+      color: var(--light-color);
+      transition: color var(--transition-speed) ease;
+    }
+    footer .social-links a:hover {
+      color: var(--accent-color);
+    }
+
+    .education-left img,
+.volunteer-right img,
+.pub-left img,
+.creative-right img {
+  border: 4px solid;
+  border-radius: 1rem;
+  border-color: var(--accent-color);
+}
+  </style>
+</head>
+<body>
+
+  <!-- =============================================
+       SECTION 1: Intro Split Screen
+  ============================================= -->
+  <section class="section-intro">
+    <!-- Left Side -->
+    <div class="intro-left">
+      <div class="typing-container">
+        <div class="static-text">{ "Hey, I'm":</div>
+        <div class="typing-text">
+          <span id="typing-effect"></span><span class="cursor">_</span>
+        </div>
+      </div>
+      <!-- Social Logos and Kaggle Button -->
+      <div class="icon-row">
+        <!-- Email Icon -->
+        <a href="mailto:tarunpmishra2001@gmail.com" target="_blank" rel="noopener noreferrer" class="logo-button" title="Email">
+          <svg viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
+            <title>Email</title>
+            <path d="M101.3 141.6v228.9h308.4V141.6H101.3zM375.7 167.8l-119.7 91.5-119.6-91.5h239.3z"/>
+          </svg>
+        </a>
+        <!-- LinkedIn Icon -->
+        <a href="https://www.linkedin.com/in/tarunpmishra/" target="_blank" rel="noopener noreferrer" class="logo-button" title="LinkedIn">
+          <svg viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
+            <title>LinkedIn</title>
+            <path d="M186.4 142.4c0 19-15.3 34.5-34.2 34.5-18.9 0-34.2-15.4-34.2-34.5 0-19 15.3-34.5 34.2-34.5C171.1 107.9 186.4 123.4 186.4 142.4zM181.4 201.3h-57.8V388.1h57.8V201.3zM273.8 201.3h-55.4V388.1h55.4c0 0 0-69.3 0-98 0-26.3 12.1-41.9 35.2-41.9 21.3 0 31.5 15 31.5 41.9 0 26.9 0 98 0 98h57.5c0 0 0-68.2 0-118.3 0-50-28.3-74.2-68-74.2-39.6 0-56.3 30.9-56.3 30.9v-25.2H273.8z"/>
+          </svg>
+        </a>
+        <!-- GitHub Icon -->
+        <a href="https://github.com/tarundirector" target="_blank" rel="noopener noreferrer" class="logo-button" title="GitHub">
+          <svg viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
+            <title>GitHub</title>
+            <path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9-8.4-21.5-20.6-27.2-20.6-27.2-16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9-41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9-1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/>
+          </svg>
+        </a>
+        <!-- Kaggle Button -->
+        <a href="https://www.kaggle.com/tarundirector/code" target="_blank" rel="noopener noreferrer" class="kaggle-btn" title="Kaggle Expert">
+          <i class="fab fa-kaggle"></i> Kaggle Expert
+        </a>
+      </div>
+    </div>
+
+    <!-- Right Side -->
+    <div class="intro-right">
+      <div class="tagline-box">
+        <div class="circle-bg"></div>
+        <p class="tagline">
+          A results-driven Data Scientist who extracts insights faster than AI evolves—constantly learning, adapting, and staying ahead in the ever-accelerating world of tech.
+        </p>
+        <a href="#projects" class="about-btn">About Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Typing Script -->
+  <script>
+    const text = " Tarun Mishra }";
+    const speed = 100; // ms per character
+    const delayBeforeErase = 10000; // show full text for 10 seconds
+    const eraseSpeed = 50; // ms per character erase
+    let i = 0;
+    let isErasing = false;
+
+    function typeEffect() {
+  const typingElement = document.getElementById("typing-effect");
+  if (!isErasing && i < text.length) {
+    let currentText = text.substring(0, i + 1);
+    if (currentText.includes("}")) {
+      const bracketIndex = currentText.indexOf("}");
+      const namePart = currentText.slice(0, bracketIndex);
+      typingElement.innerHTML = `<span class="yellow-text">${namePart}</span><span style="color: var(--light-color);}">}</span>`;
+    } else {
+      typingElement.innerHTML = `<span class="yellow-text">${currentText}</span>`;
+    }
+    i++;
+    setTimeout(typeEffect, speed);
+  } else if (isErasing && i > 0) {
+    let currentText = text.substring(0, i - 1);
+    if (currentText.includes("}")) {
+      const bracketIndex = currentText.indexOf("}");
+      const namePart = currentText.slice(0, bracketIndex);
+      typingElement.innerHTML = `<span class="yellow-text">${namePart}</span><span style="color: var(--light-color);}">}</span>`;
+    } else {
+      typingElement.innerHTML = `<span class="yellow-text">${currentText}</span>`;
+    }
+    i--;
+    setTimeout(typeEffect, eraseSpeed);
+  } else {
+    // When text is fully typed, wait 10 seconds before erasing.
+    if (!isErasing && i === text.length) {
+      setTimeout(() => {
+        isErasing = true;
+        typeEffect();
+      }, delayBeforeErase);
+    }
+    // When text is fully erased, start typing immediately.
+    else if (isErasing && i === 0) {
+      isErasing = false;
+      typeEffect();
+    }
+  }
+}
+
+    typeEffect();
+  </script>
+
+  <!-- =============================================
+       2: AI News Section
+  ============================================= -->
+  <section class="section fade-element">
+    <div class="section-content">
+      <h2 class="section-title">
+        📰 <span class="def">def</span> <span class="function-name">My AI World</span><span class="parens">():</span>
+      </h2>
+      <p class="section-tagline">
+        Always staying on top of the latest <strong>AI breakthroughs</strong> and <strong>innovations</strong>—here’s a quick glimpse of what’s buzzing!
+      </p>
+      <a href="#" class="ai-news-banner">
+        <div class="banner-left" style="background-image: url('https://github.com/user-attachments/assets/733e8546-2ef6-4b0c-9f2f-2c62117ba402');"></div>
+        <div class="banner-right">
+          <h3><span class="highlight">🤖 This Month in AI</span></h3>
+          <p>
+            Explore my take on current AI happenings—covering the hottest topics and where I think they're headed.
+          </p>
+          <p>
+            (for the month of March 2025)
+          </p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <div class="divider fade-element"></div>
+
+  <!-- =============================================
+       3: Projects Section
+       ============================================= -->
+  <section class="section fade-element" id="projects">
+    <div class="section-content">
+      <h2 class="section-title">
+        💻 <span class="def">def</span> <span class="function-name">Academic & Personal Projects</span><span class="parens">():</span>
+      </h2>
+      <p class="section-tagline">
+        I love diving into new domains, experimenting with cutting-edge technologies, and turning data into <strong>actionable insights</strong>—here are a few highlights!
+      </p>
+      <div class="projects-grid">
+        <!-- Example Project Tile 1 -->
+        <a href="#" class="project-tile">
+          <div class="tile-image" style="background-image: url('https://github.com/user-attachments/assets/d38f9017-ad1a-47b3-bfca-b0b6471c4ec5');"></div>
+          <div class="tile-content">
+            <h6>case:</h6>
+            <h4>Sales Analysis & Customer Segmentation</h4>
+            <div class="tile-tags">
+              <h6>return </h6>
+              <span class="tile-tag">PowerBI</span>
+              <span class="tile-tag">Python</span>
+              <span class="tile-tool-tags">🔗Dashboard</span>
+              <span class="tile-tool-tags">🔗Kaggle</span>
+            </div>
+          </div>
+        </a>
+        <!-- Project Tile 2 -->
+        <a href="#" class="project-tile">
+          <div class="tile-image" style="background-image: url('https://github.com/user-attachments/assets/5e39a693-0968-4a9e-967e-54ebbb5fd4c2');"></div>
+          <div class="tile-content">
+            <h6>case:</h6>
+            <h4>Student Model Dashboard (Manchester SU)</h4>
+            <div class="tile-tags">
+              <h6>return</h6>
+              <span class="tile-tag">PowerBI</span>
+              <span class="tile-tag">Research</span>
+              <span class="tile-tool-tags">🔗Report</span>
+              <span class="tile-tool-tags">🔗Dashboard</span>
+            </div>
+          </div>
+        </a>
+        <!-- Project Tile 3 -->
+        <a href="#" class="project-tile">
+          <div class="tile-image" style="background-image: url('https://github.com/user-attachments/assets/58557455-d8e9-419d-b1ea-dc85ec54b032');"></div>
+          <div class="tile-content">
+            <h6>case:</h6>
+            <h4>Revenue Insights & Sales Analytics</h4>
+            <div class="tile-tags">
+              <h6>return</h6>
+              <span class="tile-tag">Tableau</span>
+              <span class="tile-tag">SQL</span>
+              <span class="tile-tool-tags">🔗Report</span>
+              <span class="tile-tool-tags">🔗Dashboard</span>
+            </div>
+          </div>
+        </a>
+        <!-- Project Tile 4 -->
+        <a href="#" class="project-tile">
+          <div class="tile-image" style="background-image: url('https://github.com/user-attachments/assets/42e150c0-c2d3-4c42-b236-d33acdf07b6b');"></div>
+          <div class="tile-content">
+            <h6>case:</h6>
+            <h4>Sustainable MCR Dashboard (Manchester SU)</h4>
+            <div class="tile-tags">
+              <h6>return</h6>
+              <span class="tile-tag">PowerBI</span>
+              <span class="tile-tag">Research</span>
+              <span class="tile-tool-tags">🔗Report</span>
+              <span class="tile-tool-tags">🔗Dashboard</span>
+            </div>
+          </div>
+        </a>
+        <!-- More tiles will automatically wrap into new rows -->
+        <a href="#" class="project-tile">
+          <div class="tile-image" style="background-image: url('https://github.com/user-attachments/assets/57869c91-171d-4d1a-b9fb-c3112112e5a4');"></div>
+          <div class="tile-content">
+            <h6>case:</h6>
+            <h4>Predictive Price Modeling for Airbnb Listings with Deployment</h4>
+            <div class="tile-tags">
+              <h6>return</h6>
+              <span class="tile-tag">Python</span>
+              <span class="tile-tag">CI/CD</span>
+              <span class="tile-tag">Deployment</span>
+              <span class="tile-tool-tags">🔗Report</span>
+              <span class="tile-tool-tags">🔗Github</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider fade-element"></div>
+
+  <!-- =============================================
+       4: Education Section
+  ============================================= -->
+  <section class="section fade-element">
+    <div class="section-content">
+      <div class="education-container">
+        <!-- Education Pointer 1 -->
+        <div class="education-left">
+          <img src="assests/IMG_Education.jpg" alt="My Photo" />
+        </div>
+        <div class="education-right">
+          <h2 class="section-title">
+            🎓 <span class="def">def</span> <span class="function-name">My Education</span><span class="parens">():</span>
+          </h2>
+          <div class="edu-entry">
+            <div class="edu-title">
+              <span class="edu-degree">MSc Data Science</span>
+              <span class="edu-university">@ The University of Manchester</span>
+            </div>
+            <div class="edu-dates">
+              (09/2023 - 09/2024) <span class="highlight">Grade Achieved: <strong>Distinction</strong></span>
+            </div>
+            <div class="edu-details">
+              <ul>
+                <li><strong>Courses:</strong> Statistics & Machine Learning (Supervised & Unsupervised Learning), Data Engineering, Text Mining, Understanding Databases (SQL & NoSQL), Data & Their Environment, Cognitive Robotics and Computer Vision.</li>
+                <li><strong>Dissertation:</strong> MRI Reconstruction using Untrained Neural Networks.</li>
+                <li><strong>Industrial Project:</strong> Implemented & deployed a resource planning system, achieving an accuracy of 94% in predicting resources for construction projects.</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Education Pointer 2 -->
+          <div class="edu-entry">
+            <div class="edu-title">
+              <span class="edu-degree">BEng Computer Engineering</span>
+              <span class="edu-university">@ Mumbai University</span>
+            </div>
+            <div class="edu-dates">
+              (04/2019 - 04/2023) <span class="highlight">CGPA - 9.45/10 <strong>(First Class Honours with Distinction)</strong></span>
+            </div>
+            <div class="edu-details">
+              <ul>
+                <li><strong>Relevant Courses:</strong> Big Data Analytics, Data Warehousing & Mining, Project Management, Social Media Analytics.</li>
+                <li><strong>Industrial Project:</strong> Python-based RSS Scraper for gathering news data and a recommendation model for Techshots.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider fade-element"></div>
+
+  <!-- =============================================
+       5: Work Experience Section (Timeline)
+  ============================================= -->
+  <section class="section fade-element">
+    <div class="section-content">
+      <h2 class="section-title">
+        💼 <span class="def">def</span> <span class="function-name">Work Experience</span><span class="parens">():</span>
+      </h2>
+      <div class="timeline">
+        <!-- Timeline item 1 -->
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="company-title">Siemens Digital Industries Software | London, UK</div>
+            <div class="role-title">Data Analyst Intern</div>
+            <div class="timeline-dates">09/2024 - Present</div>
+            <ul>
+              <li>Designed ETL workflows using AWS Lambda, Glue, S3 & Python.</li>
+              <li>Developed interactive dashboards with Plotly & JS.</li>
+              <li>Engineered AI agents to automate analytics & drive data-driven actions.</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Timeline item 2 -->
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="company-title">Student’s Union | University of Manchester</div>
+            <div class="role-title">Student Data Analyst</div>
+            <div class="timeline-dates">02/2024 - 08/2024</div>
+            <ul>
+              <li>Optimized dashboards using PowerBI & DAX for 7,000+ survey responses.</li>
+              <li>Collaborated with stakeholders to manage data from multiple sources.</li>
+              <li>Delivered insights impacting student satisfaction & sustainability initiatives.</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Timeline item 3 -->
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="company-title">Zeno Health | Mumbai, India</div>
+            <div class="role-title">Data Science Intern</div>
+            <div class="timeline-dates">05/2023 - 08/2023</div>
+            <ul>
+              <li>Leveraged Python & SQL to analyze customer data from 100+ stores.</li>
+              <li>Boosted sales by 1.5L INR through targeted marketing strategies.</li>
+              <li>Automated complex sales reports, reducing manual effort by 50%.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider fade-element"></div>
+
+  <!-- =============================================
+       6: Skills Section
+  ============================================= -->
+  <section class="section fade-element">
+    <div class="skills-section">
+      <!-- (a) Left-most block -->
+      <div class="skills-left">
+        <h2 class="section-title">
+          <span class="def">def</span> <span class="function-name">My Skillset</span><span class="parens">():</span>
+        </h2>
+        <p class="section-tagline">
+          A list of my skills—but <strong>I’m not limited to these. I’m a fast learner, eager to pick up new technologies</strong> as the world evolves.
+        </p>
+      </div>
+      <!-- Right side with two rows -->
+      <div class="skills-right">
+        <div class="skills-top-row">
+          <!-- (b) Technical Skills -->
+          <div class="skills-b">
+            <div class="section-subtitle">
+              <span class="if">if</span> <span class="keyword">Technical Skills</span>:
+            </div>
+            <div class="skills-tags">
+              <span class="skills-tag">Python</span>
+              <span class="skills-tag">SQL</span>
+              <span class="skills-tag">PowerBI</span>
+              <span class="skills-tag">Tableau</span>
+              <span class="skills-tag">Scikit-learn</span>
+              <span class="skills-tag">PyTorch</span>
+              <span class="skills-tag">AWS</span>
+              <span class="skills-tag">Docker</span>
+              <span class="skills-tag">Pandas</span>
+              <span class="skills-tag">NumPy</span>
+            </div>
+          </div>
+          <div class="skills-divider-vertical"></div>
+          <!-- (c) Soft Skills -->
+          <div class="skills-c">
+            <div class="section-subtitle">
+              <span class="elif">elif</span> <span class="keyword">Soft Skills</span>:
+            </div>
+            <div class="skills-tags">
+              <span class="skills-tag">Collaboration</span>
+              <span class="skills-tag">Communication</span>
+              <span class="skills-tag">Problem-solving</span>
+              <span class="skills-tag">Adaptability</span>
+              <span class="skills-tag">Time Management</span>
+              <span class="skills-tag">Teamwork</span>
+              <span class="skills-tag">Leadership</span>
+              <span class="skills-tag">Attention to Detail</span>
+            </div>
+          </div>
+        </div>
+        <div class="skills-bottom-row">
+          <div class="skills-divider-horizontal"></div>
+          <!-- (d) Other Skills -->
+          <div class="skills-d">
+            <div class="skills-d-left"><span class="else">else:</span></div>
+            <div class="skills-d-right">
+              <span class="skills-d-tag">Java</span>
+              <span class="skills-d-tag">HTML/CSS</span>
+              <span class="skills-d-tag">R</span>
+              <span class="skills-d-tag">VBA</span>
+              <span class="skills-d-tag">API Integration</span>
+              <span class="skills-d-tag">Git/GitHub</span>
+              <span class="skills-d-tag">Data Cleaning</span>
+              <span class="skills-d-tag">CI/CD</span>
+              <span class="skills-d-tag">Machine Learning</span>
+              <span class="skills-d-tag">Data Visualization</span>
+              <span class="skills-d-tag">ETL</span>
+              <span class="skills-d-tag">Big Data</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider fade-element"></div>
+
+  <!-- =============================================
+       7: Voluntary & Other Work Section
+  ============================================= -->
+  <section class="volunteer-section fade-element">
+    <div class="volunteer-left">
+      <h2 class="section-title">
+        🌱 <span class="def">def</span> <span class="function-name">Voluntary And Other Work</span><span class="parens">():</span>
+      </h2>
+      <div class="entries">
+        <h4 class="highlight">Rotaract District 3142</h4>
+        <p><em>Digital Communications Director</em></p>
+        <ul>
+          <li>Led community service initiatives for 50+ clubs.</li>
+          <li>Promoted literacy and child education projects.</li>
+          <li>Developed leadership and organisational skills while guiding a team of 80+.</li>
+        </ul>
+        <h4 class="highlight">Corridor Cafe, Student’s Union</h4>
+        <p><em>Customer Assistant</em></p>
+        <ul>
+          <li>Ensured efficient order processing and inventory management.</li>
+          <li>Collaborated with team and management to maintain a positive work environment.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="volunteer-right">
+      <img src="assests/IMG_OtherWorkExp.jpg" alt="Volunteering Photo" />
+    </div>
+  </section>
+
+  <div class="divider fade-element"></div>
+
+  <!-- =============================================
+       8: Publications & Achievements
+  ============================================= -->
+  <section class="pub-section fade-element">
+    <div class="pub-left">
+      <img src="assests/IMG_Achievements.jpg" alt="Publications" />
+    </div>
+    <div class="pub-right">
+      <h2 class="section-title">
+        🏆 <span class="def">def</span> <span class="function-name">Publications And Achievements</span><span class="parens">():</span>
+      </h2>
+      <div class="entries">
+        <h4>Publications: Image Outpainting Using WGAN with Gradient Penalty</h4>
+        <ul>
+          <li>
+            Presented at <a href="https://ieeexplore.ieee.org/document/9753713" target="_blank">IEEE Conference</a>—achieved significant improvement in image quality via <strong>Wasserstein GAN</strong>.
+          </li>
+          <li>
+            Reduced RMSE by <strong>over 82%</strong> compared to traditional GAN, achieving a significant improvement in image quality.
+          </li>
+        </ul>
+        <h4>Achievements</h4>
+        <ul>
+          <li><strong>Global Futures Scholarship</strong> at The University of Manchester.</li>
+          <li>Top 10 in <strong>NIT Nagpur's Startup Conclave</strong> among 500 teams.</li>
+          <li>Ranked 2nd in <strong>Peak AI Hackathon</strong> for forecasting model.</li>
+          <li>Runners Up from UK at <strong>Red Bull Can You Make It? Challenge 2024</strong></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider fade-element"></div>
+
+  <!-- =============================================
+       9: Creative Side Section
+  ============================================= -->
+  <section class="creative-section fade-element">
+    <div class="creative-left">
+      <h2 class="section-title">
+        🎥 <span class="def">def</span> <span class="function-name">Creative Side</span><span class="parens">():</span>
+      </h2>
+      <div class="entries">
+        <p>
+          Beyond data science, I have a deep passion for filmmaking, graphic design, video editing, and cinematography. Whether freelancing or as a hobby, I create content that tells stories and inspires. I’ve worked with clients like <a href="https://www.youtube.com/@TarunMotionsFilms" target="_blank">TarunMotionsFilms</a> and <a href="https://www.youtube.com/@MishrajiSmile" target="_blank">MishrajiSmile</a>—producing creative work for social media and beyond.
+        </p>
+        <ul>
+          <li>
+            <strong>Freelance Video Editor</strong> for ONE Cheers Up – Collaborated on mission-driven projects, supporting small businesses during challenging times with creative video editing and graphic design.
+          </li>
+          <li>
+            <strong>Video Editor / Intern</strong> at The Creative Indian & Co. – Gained hands-on experience in video editing and graphic design under expert mentorship, contributing to a diverse range of projects.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="creative-right">
+      <img src="assests/IMG_CreativeSide.png" alt="Creative" />
+    </div>
+  </section>
+
+  <!-- =============================================
+       FOOTER
+  ============================================= -->
+  <footer>
+    <div class="footer-text">
+      That was the end of my portfolio, but there’s much more to know about me—feel free to reach out!
+    </div>
+    <div class="social-links">
+      <a href="mailto:tarunpmishra2001@gmail.com" target="_blank">Email</a>
+      <a href="https://www.linkedin.com/in/tarunpmishra/" target="_blank">LinkedIn</a>
+      <a href="https://www.kaggle.com/tarundirector/code" target="_blank">Kaggle</a>
+      <a href="https://github.com/tarundirector" target="_blank">GitHub</a>
+    </div>
+  </footer>
+
+  <!-- =============================================
+       Minimal Intersection Observer for fade-in
+  ============================================= -->
+  <script>
+    const fadeEls = document.querySelectorAll('.fade-element');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    fadeEls.forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>
