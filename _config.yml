@@ -1,2 +1,5 @@
 include:
   - pages
+  - "*.md"
+
+markdown: kramdown
