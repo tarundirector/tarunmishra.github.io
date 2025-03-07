@@ -1,150 +1,92 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: 'en-US' }}">
-  <head>
-    <meta charset="UTF-8" />
-    <title>🤖tarun.ai🧠</title>
-    {% seo %}
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#157878" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
 
-    <!-- Inline CSS for header and footer (and CSS variables) -->
-    <style>
-      /* ==============================================
-         CSS Variables – Header/Footer
-      ============================================== */
-      :root {
-        --primary-bg: #544bb6; /* Purple */
-        --secondary-bg: #e6e6e6; /* Light Grey BG */
-        --accent-color: #ffdd00; /* Yellow */
-        --dark-color: #1f2626; /* Dark */
-        --light-color: #d9d7cd; /* Light Greyish */
-        --highlight-bg: #ffdd00; /* For highlight effect */
-      }
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">  
+</head>
 
-      /* ==============================================
-         Header Styles
-      ============================================== */
-      .custom-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .header-left,
-      .header-right {
-        flex: 1;
-        padding: 1rem;
-        text-align: center;
-      }
-      .header-left {
-        background-color: var(--primary-bg);
-        font-family: sans-serif;
-        font-size: 1.5rem;
-      }
-      .header-left span.light {
-        color: var(--light-color);
-      }
-      .header-left span.accent {
-        color: var(--accent-color);
-      }
-      .header-right {
-        background-color: var(--secondary-bg);
-        font-family: 'Archivo Black', sans-serif;
-        font-size: 1.2rem;
-      }
-      .header-right a {
-        color: var(--primary-bg);
-        text-decoration: none;
-        margin: 0 0.5rem;
-        transition: background-color 0.3s ease, padding 0.3s ease;
-      }
-      .header-right a:hover {
-        background: linear-gradient(transparent 60%, var(--highlight-bg) 60%);
-        padding: 2px 4px;
-        display: inline-block;
-      }
-
-      /* ==============================================
-         Footer Styles
-      ============================================== */
-      footer.custom-footer {
-        background-color: var(--secondary-bg);
-        color: var(--dark-color);
-        padding: 1rem;
-        text-align: center;
-        font-family: sans-serif;
-      }
-      footer.custom-footer a {
-        color: var(--dark-color);
-        text-decoration: none;
-        margin: 0 0.5rem;
-        transition: color 0.3s ease;
-      }
-      footer.custom-footer a:hover {
-        color: var(--accent-color);
-      }
-    </style>
-  </head>
   <body>
-    <!-- HEADER -->
-    <header class="custom-header">
-      <div class="header-left">
-        <span class="light">{ "Hey I'm":</span>
-        <span class="accent"> Tarun Mishra</span>
-        <span class="light"> }</span>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+    {%- assign default_paths = site.pages | map: "path" -%}
+    {%- assign page_paths = site.minima.nav_pages | default: default_paths -%}
+    {%- assign page_titles = site.pages | map: 'title' | compact %}
+    <a class="site-title" rel="author" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
+
+    {%- unless page_titles == empty %}
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon fas fa-bars fa-lg"></span>
+        </label>
+
+        <div class="drawer-container">
+          <div class="drawer">
+            {%- include nav-items.html paths = page_paths %}
+          </div>
+        </div>
+        <div class="slab">
+          {%- include nav-items.html paths = page_paths %}
+        </div>
+      </nav>
+    {%- endunless %}
+  </div>
+</header>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {{ content }}
       </div>
-      <div class="header-right">
-        <a href="{{ '/' | relative_url }}">Home</a>
-        <a href="pages/news/march_newspage">AI News</a>
-        <a href="{{ '/' | relative_url }}#about">About Me</a>
+    </main>
+
+    <footer class="site-footer h-card">
+  <data class="u-url" href="{{ '/' | relative_url }}"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url }}">
+            <svg class="svg-icon orange">
+              <path d="M12.8 16C12.8 8.978 7.022 3.2 0 3.2V0c8.777 0 16 7.223 16 16h-3.2zM2.194
+                11.61c1.21 0 2.195.985 2.195 2.196 0 1.21-.99 2.194-2.2 2.194C.98 16 0 15.017 0
+                13.806c0-1.21.983-2.195 2.194-2.195zM10.606
+                16h-3.11c0-4.113-3.383-7.497-7.496-7.497v-3.11c5.818 0 10.606 4.79 10.606 10.607z"
+              />
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      {%- if site.author %}
+        <ul class="contact-list">
+          {% if site.author.name -%}
+            <li class="p-name">{{ site.author.name | escape }}</li>
+          {% endif -%}
+          {% if site.author.email -%}
+            <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
+          {%- endif %}
+        </ul>
+      {%- endif %}
       </div>
-    </header>
-
-    <!-- CONTENT: Using Shadow DOM to isolate external styles for .wrapper -->
-    <div id="content-host"></div>
-    <script>
-      (function () {
-        const host = document.getElementById("content-host");
-        // Attach a shadow root to isolate the external CSS
-        const shadow = host.attachShadow({ mode: "open" });
-        // Create a wrapper div for the content
-        const wrapper = document.createElement("div");
-        wrapper.className = "wrapper";
-
-        // Create link elements for external stylesheets (only for the wrapper)
-        const linkFA = document.createElement("link");
-        linkFA.rel = "stylesheet";
-        linkFA.href =
-          "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css";
-
-        const linkStyle = document.createElement("link");
-        linkStyle.rel = "stylesheet";
-        linkStyle.href = "{{ '/assets/css/style.css' | relative_url }}";
-
-        // Append the external CSS links to the shadow root
-        shadow.appendChild(linkFA);
-        shadow.appendChild(linkStyle);
-
-        // Create a container for the Jekyll content and inject it
-        const contentContainer = document.createElement("div");
-        contentContainer.innerHTML = `{{ content }}`;
-        wrapper.appendChild(contentContainer);
-        shadow.appendChild(wrapper);
-      })();
-    </script>
-
-    <!-- FOOTER -->
-    <footer class="custom-footer">
-      <div class="footer-text">
-        - That was the end of my portfolio, but there’s much more to know about me—feel free
-        to reach out! -
+      <div class="footer-col">
+        <p>{{ site.description | escape }}</p>
       </div>
-      <div class="social-links">
-        <a href="mailto:tarunpmishra2001@gmail.com">Email</a>
-        <a href="https://www.linkedin.com/in/tarunpmishra/">LinkedIn</a>
-        <a href="https://www.kaggle.com/tarundirector/code">Kaggle</a>
-        <a href="https://github.com/tarundirector">GitHub</a>
-      </div>
-    </footer>
+    </div>
+
+    <div class="social-links">
+      {%- include social.html -%}
+    </div>
+
+  </div>
+
+</footer>
+
   </body>
+
 </html>
