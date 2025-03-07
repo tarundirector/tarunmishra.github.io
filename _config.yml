@@ -1,18 +1,2 @@
-remote_theme: pages-themes/cayman@v0.2.0
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
-  - jekyll-remote-theme
-  - jekyll-relative-links
-
-author:
-  name: Tarun Pramod Mishra
-  email: tarunpmishra2001@gmail.com
-
-title: tarun.ai
-description: >
-  A results-driven Data Scientist who extracts insights faster than AI evolves—
-  constantly learning, adapting, and staying ahead in the ever-accelerating world of tech.
-
 include:
   - pages
