@@ -1,139 +1,123 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: 'en-US' }}">
-  <head>
-    <meta charset="UTF-8">
-    <title>🤖tarun.ai🧠</title>
-    {% seo %}
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#157878">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <!-- Custom CSS for header and footer only -->
-    <style>
-      /* ---------------------------
-         CSS Variables – adjust as needed
-      ------------------------------ */
-      :root {
-        --primary-bg: #544bb6;       /* Purple (Main) */
-        --secondary-bg: #e6e6e6;     /* Light Grey BG */
-        --accent-color: #ffdd00;     /* Yellow */
-        --dark-color: #1f2626;       /* Dark */
-        --light-color: #d9d7cd;      /* Light Greyish */
-        --highlight-bg: #ffdd00;     /* For highlight effect */
-      }
-      
-      /* ---------------------------
-         Header Styles
-      ------------------------------ */
-      header.custom-header {
-        display: flex;
-        flex-wrap: nowrap;
-      }
-      header.custom-header .header-left,
-      header.custom-header .header-right {
-        flex: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 1rem;
-      }
-      header.custom-header .header-left {
-        background-color: var(--primary-bg);
-        font-family: 'Archivo Black', sans-serif;
-        font-size: 1.5rem;
-      }
-      header.custom-header .header-left .bracket {
-        color: var(--light-color);
-      }
-      header.custom-header .header-left .name {
-        color: var(--accent-color);
-        margin: 0 0.3rem;
-      }
-      header.custom-header .header-right {
-        background-color: var(--secondary-bg);
-      }
-      header.custom-header .header-right .nav-button {
-        font-family: 'Archivo Black', sans-serif;
-        color: var(--primary-bg);
-        margin: 0 1rem;
-        text-decoration: none;
-        transition: background 0.3s, padding 0.3s;
-      }
-      /* On hover, apply a highlight effect similar to .highlight */
-      header.custom-header .header-right .nav-button:hover {
-        background: linear-gradient(transparent 60%, var(--highlight-bg) 60%);
-        padding: 2px 4px;
-      }
-      
-      /* ---------------------------
-         Footer Styles
-      ------------------------------ */
-      footer.custom-footer {
-        background-color: var(--secondary-bg);
-        color: var(--dark-color);
-        padding: 2rem;
-        text-align: center;
-        font-family: 'Roboto', sans-serif;
-      }
-      footer.custom-footer .footer-text {
-        margin-bottom: 1rem;
-      }
-      footer.custom-footer .social-links a {
-        color: var(--dark-color);
-        margin: 0 0.5rem;
-        text-decoration: none;
-        transition: color 0.3s;
-      }
-      footer.custom-footer .social-links a:hover {
-        color: var(--accent-color);
-      }
-    </style>
-    {% include head-custom.html %}
-    <!-- FontAwesome kit (if needed elsewhere) -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <!-- Custom Header -->
-    <header class="custom-header">
-      <div class="header-left">
-        <span class="bracket">{ "Hey I'm":</span>
-        <span class="name">Tarun Mishra</span>
-        <span class="bracket">}</span>
-      </div>
-      <div class="header-right">
-        <a href="/" class="nav-button">Home</a>
-        <a href="pages/news/march_newspage" class="nav-button">AI News</a>
-        <a href="#about-me" class="nav-button">About Me</a>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <title>🤖tarun.ai🧠</title>
+  {% seo %}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#157878">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-    <!-- Shadow DOM Wrapper for content so that external CSS only applies here -->
-    <div id="wrapper-root"></div>
+  <!-- Inline CSS for header and footer ONLY -->
+  <style>
+    :root {
+      --primary-bg: #544bb6;       /* Purple (Main) */
+      --secondary-bg: #e6e6e6;     /* Light Grey BG */
+      --accent-color: #ffdd00;     /* Yellow */
+      --dark-color: #1f2626;       /* Dark */
+      --light-color: #d9d7cd;      /* Light Greyish */
+      --highlight-bg: #ffdd00;     /* For highlight effect */
+    }
+    /* ============================
+         HEADER
+    ============================ */
+    header.custom-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header.custom-header .header-left {
+      background-color: var(--primary-bg);
+      flex: 1;
+      padding: 1rem;
+      text-align: center;
+      font-family: sans-serif;
+      font-size: 1.5rem;
+    }
+    header.custom-header .header-left span.light {
+      color: var(--light-color);
+    }
+    header.custom-header .header-left span.accent {
+      color: var(--accent-color);
+    }
+    header.custom-header .header-right {
+      background-color: var(--secondary-bg);
+      flex: 1;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+    header.custom-header .header-right a {
+      font-family: 'Archivo Black', sans-serif;
+      color: var(--primary-bg);
+      text-decoration: none;
+      padding: 0.5rem;
+      transition: background-color 0.3s ease;
+    }
+    header.custom-header .header-right a:hover {
+      background: linear-gradient(transparent 60%, var(--highlight-bg) 60%);
+    }
 
-    <!-- Custom Footer -->
-    <footer class="custom-footer">
-      <div class="footer-text">
-        - That was the end of my portfolio, but there’s much more to know about me—feel free to reach out! -
-      </div>
-      <div class="social-links">
-        <a href="mailto:tarunpmishra2001@gmail.com" target="_blank">Email</a>
-        <a href="https://www.linkedin.com/in/tarunpmishra/" target="_blank">LinkedIn</a>
-        <a href="https://www.kaggle.com/tarundirector/code" target="_blank">Kaggle</a>
-        <a href="https://github.com/tarundirector" target="_blank">GitHub</a>
-      </div>
-    </footer>
+    /* ============================
+         FOOTER
+    ============================ */
+    footer.custom-footer {
+      background-color: var(--secondary-bg);
+      padding: 1rem;
+      text-align: center;
+      font-family: sans-serif;
+    }
+    footer.custom-footer a {
+      color: var(--dark-color);
+      text-decoration: none;
+      margin: 0 0.5rem;
+      transition: color 0.3s ease;
+    }
+    footer.custom-footer a:hover {
+      color: var(--accent-color);
+    }
+  </style>
+</head>
+<body>
+  <!-- Notice: "Skip to content" link has been removed -->
 
-    <!-- Script to attach a Shadow DOM to the content wrapper -->
-    <script>
-      // Create a shadow DOM for the wrapper so that the external CSS affects only this section.
-      const wrapperRoot = document.getElementById('wrapper-root');
-      const shadow = wrapperRoot.attachShadow({ mode: 'open' });
-      shadow.innerHTML = `
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css">
-        <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-        <div class="wrapper">
-          {{ content }}
-        </div>
-      `;
-    </script>
-  </body>
+  <!-- HEADER with two parts -->
+  <header class="custom-header">
+    <!-- Left side: the introductory text -->
+    <div class="header-left">
+      <span class="light">{ "Hey I'm":</span>
+      <span class="accent"> Tarun Mishra</span>
+      <span class="light"> }</span>
+    </div>
+    <!-- Right side: Navigation buttons -->
+    <div class="header-right">
+      <a href="{{ '/' | relative_url }}">Home</a>
+      <a href="{{ '/pages/news/march_newspage' | relative_url }}">AI News</a>
+      <a href="{{ '/' | relative_url }}#about">About Me</a>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT wrapped in a .wrapper -->
+  <div class="wrapper">
+    <!-- These external stylesheets only affect the .wrapper and its children -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    
+    {{ content }}
+  </div>
+
+  <!-- FOOTER styled as per the reference -->
+  <footer class="custom-footer">
+    <div class="footer-text">
+      - That was the end of my portfolio, but there’s much more to know about me—feel free to reach out! -
+    </div>
+    <div class="social-links">
+      <a href="mailto:tarunpmishra2001@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/tarunpmishra/">LinkedIn</a>
+      <a href="https://www.kaggle.com/tarundirector/code">Kaggle</a>
+      <a href="https://github.com/tarundirector">GitHub</a>
+    </div>
+  </footer>
+</body>
 </html>
