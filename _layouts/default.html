@@ -1,120 +1,192 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: 'en-US' }}">
 <head>
-    <meta charset="UTF-8">
-    <title>🤖tarun.ai🧠</title>
-    {% seo %}
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#157878">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    {% include head-custom.html %}
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- FontAwesome for icons -->
-    <style>
-      /* --- New Header & Footer Styles --- */
-      header.page-header {
-          display: flex;
-          flex-wrap: wrap;
-          align-items: center;
-          justify-content: space-between;
-          padding: 1rem var(--global-section-padding);
-      }
-      /* Left header: branding text on primary-bg */
-      .header-left {
-          background-color: var(--primary-bg);
-          flex: 1 1 50%;
-          padding: 1rem;
-          text-align: right;
-          font-family: 'Archivo Black', sans-serif;
-          color: var(--light-color);
-      }
-      .header-left .branding {
-          font-size: 2rem;
-      }
-      /* Right header: navigation buttons on secondary-bg */
-      .header-right {
-          background-color: var(--secondary-bg);
-          flex: 1 1 50%;
-          padding: 1rem;
-          text-align: center;
-      }
-      .nav-btn {
-          font-family: 'Archivo Black', sans-serif;
-          font-size: 1.1rem;
-          color: var(--primary-bg);
-          padding: 0.5rem 1rem;
-          margin: 0 0.5rem;
-          transition: color var(--transition-speed) ease;
-      }
-      .nav-btn:hover {
-          /* Using .highlight effect */
-          color: var(--accent-color);
-      }
-      /* Footer styling per new reference */
-      footer.site-footer {
-          background-color: var(--primary-bg);
-          color: var(--light-color);
-          padding: 2rem var(--global-section-padding);
-          text-align: center;
-          font-family: 'Roboto', sans-serif;
-      }
-      footer .footer-text {
-          font-weight: bold;
-          font-style: italic;
-          font-size: 1.1rem;
-          margin-bottom: 1rem;
-      }
-      footer .social-links {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          gap: 1rem;
-      }
-      footer .social-links a {
-          font-family: 'Archivo', sans-serif;
-          font-weight: 700;
-          color: var(--light-color);
-          transition: color var(--transition-speed) ease;
-      }
-      footer .social-links a:hover {
-          color: var(--accent-color);
-      }
-    </style>
+  <meta charset="UTF-8">
+  <title>{{ page.title | default: site.title | default: "TarunMishra" }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Preload or define your fonts here if needed -->
+  <!-- Example: Archivo Black + Archivo + Roboto -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@700&family=Roboto:wght@400&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- No external CSS needed - all styling below -->
+  <style>
+    /* ================== CSS VARIABLES ================== */
+    :root {
+      --primary-bg: #544bb6;       /* Purple */
+      --secondary-bg: #e6e6e6;     /* Light Grey */
+      --accent-color: #ffdd00;     /* Yellow */
+      --dark-color: #1f2626;       /* Dark Grey */
+      --light-color: #d9d7cd;      /* Lighter Grey */
+      --highlight-bg: #ffdd00;     /* For highlight effect */
+      --transition-speed: 0.3s;    /* For hover transitions */
+      --max-content-width: 800px;  /* Max width for rendered content */
+    }
+
+    /* ================== RESETS & GLOBALS ================== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: var(--dark-color);
+      background-color: #fff;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: color var(--transition-speed) ease;
+    }
+
+    /* The .highlight effect class you referenced */
+    .highlight {
+      background: linear-gradient(transparent 60%, var(--highlight-bg) 60%);
+      padding: 2px 4px;
+      display: inline-block;
+    }
+
+    /* ================== HEADER ================== */
+    header {
+      display: flex;
+      width: 100%;
+      height: auto; /* adjust as needed */
+    }
+    /* Left half */
+    .header-left {
+      flex: 1 1 50%;
+      background-color: var(--primary-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--light-color);
+      text-align: right;
+      padding: 2rem;
+      font-family: 'Archivo Black', sans-serif;
+    }
+    .header-left .hey-text {
+      font-size: 1.3rem;
+      margin-right: 0.5rem;
+    }
+    .header-left .tm-text {
+      font-size: 1.6rem;
+      color: var(--accent-color);
+    }
+    /* Right half */
+    .header-right {
+      flex: 1 1 50%;
+      background-color: var(--secondary-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+    .nav-links a {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 1rem;
+      color: var(--primary-bg);
+      position: relative; /* for highlight hover effect */
+    }
+    /* On hover, we apply the highlight effect */
+    .nav-links a:hover span {
+      background: linear-gradient(transparent 60%, var(--highlight-bg) 60%);
+      padding: 2px 4px;
+      display: inline-block;
+    }
+
+    /* ========== MAIN CONTENT AREA ========== */
+    .main-content {
+      max-width: var(--max-content-width);
+      margin: 0 auto;
+      padding: 2rem 1rem; /* top/bottom, left/right */
+    }
+
+    /* ========== FOOTER ========== */
+    footer {
+      background-color: var(--secondary-bg);
+      color: var(--dark-color);
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    footer p {
+      margin-bottom: 1rem;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .footer-links a {
+      font-family: 'Archivo', sans-serif;
+      font-weight: 700;
+      color: var(--dark-color);
+      transition: color var(--transition-speed) ease;
+    }
+    .footer-links a:hover {
+      color: var(--accent-color);
+    }
+
+  </style>
 </head>
+
 <body>
-    <!-- NEW HEADER -->
-    <header class="page-header" role="banner">
-      <!-- Left part: Branding with intro text -->
-      <div class="header-left">
-        <div class="branding">
-          { "Hey, I'm": Tarun Mishra }
-        </div>
-      </div>
-      <!-- Right part: Navigation buttons -->
-      <div class="header-right">
-        <a href="{{ site.baseurl }}/" class="nav-btn">Home</a>
-        <a href="{{ site.baseurl }}/pages/news/march_newspage.md" class="nav-btn">AI News</a>
-        <a href="#about" class="nav-btn">About Me</a>
-      </div>
-    </header>
 
-    <!-- Main Content -->
-    <main id="content" class="main-content" role="main">
-        {{ content }}
+  <!-- ====== HEADER with two halves ====== -->
+  <header>
+    <!-- Left Half -->
+    <div class="header-left">
+      <span class="hey-text">{"Hey I'm":</span>
+      <span class="tm-text">Tarun Mishra</span>
+      <span class="hey-text">}</span>
+    </div>
 
-        <!-- NEW FOOTER -->
-        <footer class="site-footer">
-          <div class="footer-text">
-            - That was the end of my portfolio, but there’s much more to know about me—feel free to reach out! -
-          </div>
-          <div class="social-links">
-            <a href="mailto:tarunpmishra2001@gmail.com" target="_blank">Email</a>
-            <a href="https://www.linkedin.com/in/tarunpmishra/" target="_blank">LinkedIn</a>
-            <a href="https://www.kaggle.com/tarundirector/code" target="_blank">Kaggle</a>
-            <a href="https://github.com/tarundirector" target="_blank">GitHub</a>
-          </div>
-        </footer>
-    </main>
+    <!-- Right Half -->
+    <div class="header-right">
+      <nav class="nav-links">
+        <!-- Home link -->  
+        <a href="https://YOUR_GITHUB_USERNAME.github.io" target="_self">
+          <span>Home</span>
+        </a>
+        <!-- AI News link -->
+        <a href="pages/news/march_newspage.md" target="_self">
+          <span>AI News</span>
+        </a>
+        <!-- About Me anchor link to homepage (about me section) -->
+        <a href="https://YOUR_GITHUB_USERNAME.github.io#projects" target="_self">
+          <span>About Me</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ====== MAIN CONTENT (MarkDown rendered here) ====== -->
+  <main class="main-content">
+    {{ content }}
+  </main>
+
+  <!-- ====== FOOTER (From your new reference) ====== -->
+  <footer>
+    <p>
+      That was the end of my portfolio, but there’s much more to know about me—feel free to reach out!
+    </p>
+    <div class="footer-links">
+      <a href="mailto:tarunpmishra2001@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/tarunpmishra/" target="_blank">LinkedIn</a>
+      <a href="https://www.kaggle.com/tarundirector/code" target="_blank">Kaggle</a>
+      <a href="https://github.com/tarundirector" target="_blank">GitHub</a>
+    </div>
+  </footer>
+
 </body>
 </html>
