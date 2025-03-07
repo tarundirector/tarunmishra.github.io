@@ -1,120 +1,59 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: 'en' }}">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  </head>
+  <body>
+    <!-- Custom Header -->
+    <header class="site-header" style="display: flex;">
+      <!-- Left half: Text with primary-bg -->
+      <div class="header-left" style="flex: 1; background-color: var(--primary-bg); display: flex; align-items: center; justify-content: center;">
+        <h1 style="font-family: 'Archivo Black', sans-serif; margin: 0; font-size: 1.5rem;">
+          <span style="color: var(--light-color);">{ "Hey I'm":</span>
+          <span style="color: var(--accent-color);"> Tarun Mishra</span>
+          <span style="color: var(--light-color);"> }</span>
+        </h1>
+      </div>
+      <!-- Right half: Navigation buttons with secondary-bg -->
+      <div class="header-right" style="flex: 1; background-color: var(--secondary-bg); display: flex; align-items: center; justify-content: center;">
+        <nav class="site-nav">
+          <a href="{{ '/' | relative_url }}" class="nav-button" style="font-family: 'Archivo Black', sans-serif; color: var(--primary-bg); margin: 0 1rem; text-decoration: none;">
+            Home
+          </a>
+          <a href="{{ '/pages/news/march_newspage' | relative_url }}" class="nav-button" style="font-family: 'Archivo Black', sans-serif; color: var(--primary-bg); margin: 0 1rem; text-decoration: none;">
+            AI News
+          </a>
+          <a href="{{ '/#projects' | relative_url }}" class="nav-button" style="font-family: 'Archivo Black', sans-serif; color: var(--primary-bg); margin: 0 1rem; text-decoration: none;">
+            About Me
+          </a>
+        </nav>
+      </div>
+    </header>
 
-  <!-- Inline CSS for header and footer only -->
-  <style>
-    :root {
-      --primary-bg: #544bb6;      /* Purple (for header left) */
-      --secondary-bg: #e6e6e6;    /* Light grey (for header right & footer) */
-      --accent-color: #ffdd00;    /* Yellow */
-      --dark-color: #1f2626;      /* Dark */
-      --light-color: #d9d7cd;     /* Light color */
-      --highlight-bg: #ffdd00;    /* For highlight effect */
-    }
-    /* ==========================
-       Header Styles
-       ========================== */
-    header.custom-header {
-      display: flex;
-      width: 100%;
-      overflow: hidden;
-    }
-    header.custom-header .header-part {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 1rem;
-    }
-    /* Left part: primary background with custom text */
-    header.custom-header .left-part {
-      background: var(--primary-bg);
-      color: var(--light-color);
-      font-family: 'Archivo Black', sans-serif;
-      font-size: 1.5rem;
-    }
-    header.custom-header .left-part span.name {
-      color: var(--accent-color);
-    }
-    /* Right part: secondary background with nav buttons */
-    header.custom-header .right-part {
-      background: var(--secondary-bg);
-    }
-    header.custom-header .right-part a {
-      font-family: 'Archivo Black', sans-serif;
-      color: var(--primary-bg);
-      margin: 0 0.5rem;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
-    header.custom-header .right-part a:hover {
-      /* highlight effect */
-      background: linear-gradient(transparent 60%, var(--highlight-bg) 60%);
-      padding: 2px 4px;
-      display: inline-block;
-    }
+    <!-- Main Content wrapped in .wrapper -->
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
 
-    /* ==========================
-       Footer Styles
-       ========================== */
-    footer.custom-footer {
-      background: var(--secondary-bg);
-      color: var(--dark-color);
-      padding: 2rem;
-      text-align: center;
-    }
-    footer.custom-footer a {
-      color: var(--dark-color);
-      margin: 0 0.5rem;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-    footer.custom-footer a:hover {
-      color: var(--accent-color);
-    }
-  </style>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css">
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-</head>
-<body>
-
-  <!-- Customized Header -->
-  <header class="custom-header">
-    <!-- Left side: custom greeting -->
-    <div class="header-part left-part">
-      { "Hey I'm": <span class="name">Tarun Mishra</span> }
-    </div>
-    <!-- Right side: navigation buttons -->
-    <div class="header-part right-part">
-      <a href="{{ '/' | relative_url }}">Home</a>
-      <a href="{{ '/pages/news/march_newspage' | relative_url }}">AI News</a>
-      <a href="{{ '/' | relative_url }}#about">About Me</a>
-    </div>
-  </header>
-
-  <!-- Main content wrapped in .wrapper so external CSS applies here -->
-  <main>
-    <div class="wrapper">
-      {{ content }}
-    </div>
-  </main>
-
-  <!-- Customized Footer (using reference from index.html) -->
-  <footer class="custom-footer">
-    <div class="footer-text">
-      - That was the end of my portfolio, but there’s much more to know about me—feel free to reach out! -
-    </div>
-    <div class="social-links">
-      <a href="mailto:tarunpmishra2001@gmail.com">Email</a>
-      <a href="https://www.linkedin.com/in/tarunpmishra/">LinkedIn</a>
-      <a href="https://www.kaggle.com/tarundirector/code">Kaggle</a>
-      <a href="https://github.com/tarundirector">GitHub</a>
-    </div>
-  </footer>
-
-</body>
+    <!-- Custom Footer -->
+    <footer class="site-footer" style="background-color: var(--secondary-bg);">
+      <div class="wrapper">
+        <div class="footer-text" style="font-family: 'Roboto', sans-serif; font-weight: 700; font-style: italic; font-size: 1.1rem; margin-bottom: 1rem; color: var(--dark-color);">
+          - That was the end of my portfolio, but there’s much more to know about me—feel free to reach out! -
+        </div>
+        <div class="social-links">
+          <a href="mailto:tarunpmishra2001@gmail.com" style="color: var(--dark-color); text-decoration: none; margin: 0 0.5rem;">Email</a>
+          <a href="https://www.linkedin.com/in/tarunpmishra/" style="color: var(--dark-color); text-decoration: none; margin: 0 0.5rem;">LinkedIn</a>
+          <a href="https://www.kaggle.com/tarundirector/code" style="color: var(--dark-color); text-decoration: none; margin: 0 0.5rem;">Kaggle</a>
+          <a href="https://github.com/tarundirector" style="color: var(--dark-color); text-decoration: none; margin: 0 0.5rem;">GitHub</a>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
