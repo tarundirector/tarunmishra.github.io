@@ -1,3 +1,8 @@
+---
+layout: default
+title: "🤖March @ MonthinAI"
+---
+
 ### [28.02.25] 🚀 **GPT-4.5: The Biggest, Smartest… and Most Persuasive AI Yet?**  
 
 OpenAI recently launched **GPT-4.5**, the largest and most advanced model in its chatbot lineup. But is it really a game-changer? While it **outperforms GPT-4o** in benchmarks, it surprisingly lags behind **o3-mini** in reasoning. Why? Because **GPT-4.5 lacks chain-of-thought reasoning**, making it the last model from OpenAI without this capability.  
