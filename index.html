@@ -232,25 +232,24 @@
     .intro-right .about-btn:hover {
       background-color: #e5c900;
     }
-    /* The big circle behind text – its size and position can be controlled */
-        .intro-right .circle-bg {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  width: var(--circle-size);
-  height: var(--circle-size);
-  background-color: var(--accent-color);
-  border-radius: 50%;
-  transform: translate(-10%, -70%); /* centers the circle vertically */
-  z-index: 0;
-}
 
-/* Optional: Adjust circle size on smaller screens */
-@media (max-width: 768px) {
-  .intro-right .circle-bg {
-    width: 50vh; /* or any size you prefer */
-    height: 50vh;
-  }
+    .intro-right .circle-bg {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: var(--circle-size);
+      height: var(--circle-size);
+      background-color: var(--accent-color);
+      border-radius: 50%;
+      transform: translate(-10%, -70%); /* centers the circle vertically */
+      z-index: 0;
+    }
+
+    @media (max-width: 768px) {
+      .intro-right .circle-bg {
+        width: 50vh; /* or any size you prefer */
+        height: 50vh;
+      }
 
     /* ==============================================
        General Sections (except section 1) – apply global padding
