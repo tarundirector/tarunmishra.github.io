@@ -6,7 +6,7 @@ date:  2025-02-25
 ---
 
 [🔽 [02.03.25] Alibaba Drops a Bombshell: The Best Open-Source Video AI Is Now Free!](#🚀-020325-alibaba-drops-a-bombshell-the-best-open-source-video-ai-is-now-free)  
-[🔽 *GPT-4.5: The Biggest, Smartest… and Most Persuasive AI Yet?](#-280225-🚀-gpt-45-the-biggest-smartest-and-most-persuasive-ai-yet)
+[🔽 GPT-4.5: The Biggest, Smartest… and Most Persuasive AI Yet?](#-280225-🚀-gpt-45-the-biggest-smartest-and-most-persuasive-ai-yet)
 
 ## 🚀 [02.03.25] **Alibaba Drops a Bombshell: The Best Open-Source Video AI Is Now Free!**  
 
