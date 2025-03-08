@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "🤖This Month in AI - March"
+title: "🤖This Month in AI - March '25"
 modified_date: 2025-03-03
 date:  2025-02-25
 ---
