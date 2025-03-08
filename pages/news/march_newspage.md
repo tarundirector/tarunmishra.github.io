@@ -13,6 +13,9 @@ date:  2025-02-25
 ## 🚀 [02.03.25] **Alibaba Drops a Bombshell: The Best Open-Source Video AI Is Now Free!**  
 {:#alibaba-drops-a-bombshell-the-best-open-source-video-ai-is-now-free}
 
+<div style="position: relative; height: 200px; background-image: url('https://miro.medium.com/v2/resize:fit:1400/1*RAuBXVrwaX-rBmcEt8FLQA.png'); background-size: cover; background-position: center; border-radius: 15px; overflow: hidden;">
+</div>
+
 Move over, OpenAI—Alibaba just threw down the gauntlet! The Chinese tech giant has **open-sourced** its most advanced **video generation AI**, Wan2.1, and it’s nothing short of *insanely impressive*.  
 
 This move puts **cutting-edge AI video generation** into the hands of researchers, developers, and businesses worldwide—**for free**. Yep, you read that right. While other companies are locking their AI models behind paywalls, Alibaba is making them **open-source**. But why? And just how powerful is this AI? Let’s dive in.  
