@@ -2,6 +2,7 @@
 layout: default
 title: "🤖This Month in AI - March"
 modified_date: 2025-03-03
+published_date:  2025-02-25
 ---
 
 ### [28.02.25] 🚀 **GPT-4.5: The Biggest, Smartest… and Most Persuasive AI Yet?**  
