@@ -1,6 +1,7 @@
 ---
 layout: default
-title: "🤖March @ MonthinAI"
+title: "🤖This Month in AI - March"
+modified_date: 2025-03-03
 ---
 
 ### [28.02.25] 🚀 **GPT-4.5: The Biggest, Smartest… and Most Persuasive AI Yet?**  
