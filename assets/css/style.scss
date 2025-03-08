@@ -1,7 +1,163 @@
----
-# Only the main Sass file needs front matter (the dashes are enough)
----
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-@import
-  "minima/skins/{{ site.minima.skin | default: 'classic' }}",
-  "minima/initialize";
+  <!-- Import Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* CSS Variables */
+    :root {
+      --primary-bg: #544bb6;
+      --secondary-bg: #e6e6e6;
+      --accent-color: #ffdd00;
+      --dark-color: #1f2626;
+      --light-color: #d9d7cd;
+      --highlight-bg: #ffdd00;
+    }
+    /* Global Base */
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #fff;
+      color: var(--dark-color);
+    }
+    .wrapper {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    /* Header Styles */
+    .site-header {
+      margin-bottom: 2rem; /* space between header and main content */
+    }
+    .header-container {
+      display: flex;
+    }
+    .header-left, .header-right {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .header-left {
+      background-color: var(--primary-bg);
+    }
+    .header-right {
+      background-color: var(--secondary-bg);
+    }
+    .header-text {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 1.5rem;
+    }
+    .header-text .light-text {
+      color: var(--light-color);
+    }
+    .header-text .accent-text {
+      color: var(--accent-color);
+    }
+    .header-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 1rem;
+    }
+    .header-nav a {
+      font-family: 'Archivo Black', sans-serif;
+      color: var(--primary-bg);
+      text-decoration: none;
+      padding: 0.5em 1em;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .header-nav a:hover {
+      background: linear-gradient(transparent 60%, var(--highlight-bg) 60%);
+    }
+    /* Main Content Spacing */
+    main {
+      margin: 2rem 0;
+    }
+    /* Footer Styles */
+    .site-footer {
+      background-color: var(--secondary-bg);
+      padding: 2rem 0;
+      margin-top: 2rem; /* space between main content and footer */
+      text-align: center;
+    }
+    .footer-content {
+      font-family: 'Roboto', sans-serif;
+    }
+    .footer-text {
+      color: var(--dark-color);
+      margin-bottom: 1rem;
+    }
+    .footer-links a {
+      font-family: 'Archivo Black', sans-serif;
+      color: var(--dark-color);
+      margin: 0 0.5rem;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .footer-links a:hover {
+      color: var(--accent-color);
+    }
+  </style>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"> -->
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <!-- Left Part: Branding -->
+      <div class="header-left">
+        <div class="header-text">
+          <span class="light-text">{ "Hey I'm":</span>
+          <span class="accent-text">Tarun Mishra</span>
+          <span class="light-text">}</span>
+        </div>
+      </div>
+      <!-- Right Part: Navigation -->
+      <div class="header-right">
+        <nav class="header-nav">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/pages/news/march_newspage">AI News</a></li>
+            <li><a href="#about">About Me</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="wrapper">
+      {{ content }}
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="wrapper footer-content">
+      <p class="footer-text">
+        - That was the end of my portfolio, but there’s much more to know about me—feel free to reach out! -
+      </p>
+      <div class="footer-links">
+        <a href="mailto:tarunpmishra2001@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/tarunpmishra/" target="_blank">LinkedIn</a>
+        <a href="https://www.kaggle.com/tarundirector/code" target="_blank">Kaggle</a>
+        <a href="https://github.com/tarundirector" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
