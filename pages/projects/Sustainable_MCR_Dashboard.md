@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "# **🌱Sustainable MCR dashboard**"
+title: "🌱Sustainable MCR dashboard"
 ---
 
 The Sustainable MCR dashboard serves as a comprehensive tool for tracking and promoting environmental sustainability initiatives within the Students' Union (SU) at the University of Manchester. As a Student Data Analyst, my role in developing this dashboard was pivotal in harnessing data-driven insights to drive impactful sustainability actions throughout the university community.
