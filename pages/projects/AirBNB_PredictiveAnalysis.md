@@ -1,3 +1,8 @@
+---
+layout: default
+title: "🏠Airbnb Rental Rate Prediction📈"
+---
+
 # **🏠Airbnb Rental Rate Prediction📈**
 
 For more details visit this [Github Project](https://github.com/tarundirector/airbnb-predictive-analysis)
