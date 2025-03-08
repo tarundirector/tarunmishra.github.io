@@ -3,8 +3,6 @@ layout: default
 title: "🏠Airbnb Rental Rate Prediction📈"
 ---
 
-# **🏠Airbnb Rental Rate Prediction📈**
-
 For more details visit this [Github Project](https://github.com/tarundirector/airbnb-predictive-analysis)
 
 This project aims to forecast the pricing of Airbnb listings based on various features. It encompasses phases such as delving into the data for exploratory analysis, preprocessing the data, selecting pertinent features, fitting models, comparing them, and ultimately deploying a containerized web application on Heroku. This deployment is facilitated through a continuous integration and continuous deployment (CI/CD) pipeline, employing Docker and GitHub Actions.
