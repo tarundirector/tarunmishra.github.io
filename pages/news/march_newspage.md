@@ -5,10 +5,11 @@ modified_date: 2025-03-03
 date:  2025-02-25
 ---
 
-[🔽 [02.03.25] Alibaba Drops a Bombshell: The Best Open-Source Video AI Is Now Free!](#🚀-020325-alibaba-drops-a-bombshell-the-best-open-source-video-ai-is-now-free)  
-[🔽 GPT-4.5: The Biggest, Smartest… and Most Persuasive AI Yet?](#-280225-🚀-gpt-45-the-biggest-smartest-and-most-persuasive-ai-yet)
+[🔽 Alibaba Drops a Bombshell: The Best Open-Source Video AI Is Now Free!](#alibaba-drops-a-bombshell-the-best-open-source-video-ai-is-now-free)  
+[🔽 GPT-4.5: The Biggest, Smartest… and Most Persuasive AI Yet?](#gpt-45-the-biggest-smartest-and-most-persuasive-ai-yet)
 
 ## 🚀 [02.03.25] **Alibaba Drops a Bombshell: The Best Open-Source Video AI Is Now Free!**  
+{:#alibaba-drops-a-bombshell-the-best-open-source-video-ai-is-now-free}
 
 Move over, OpenAI—Alibaba just threw down the gauntlet! The Chinese tech giant has **open-sourced** its most advanced **video generation AI**, Wan2.1, and it’s nothing short of *insanely impressive*.  
 
@@ -77,6 +78,7 @@ This isn’t just about video AI—this is about the **power of open-source AI v
 ---
 
 ## [28.02.25] 🚀 **GPT-4.5: The Biggest, Smartest… and Most Persuasive AI Yet?**  
+{:#gpt-45-the-biggest-smartest-and-most-persuasive-ai-yet}
 
 OpenAI recently launched **GPT-4.5**, the largest and most advanced model in its chatbot lineup. But is it really a game-changer? While it **outperforms GPT-4o** in benchmarks, it surprisingly lags behind **o3-mini** in reasoning. Why? Because **GPT-4.5 lacks chain-of-thought reasoning**, making it the last model from OpenAI without this capability.  
 
