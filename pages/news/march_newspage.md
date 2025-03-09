@@ -5,10 +5,13 @@ modified_date: 2025-03-09
 date:  2025-02-25
 ---
 
-[🔽 Alibaba Shakes Things Up Again: Meet QwQ-32B, the Small but Mighty AI That Challenges Giants!](#09-03-25-alibaba-shakes-things-up-again-meet-qwq-32b-the-small-but-mighty-ai-that-challenges-giants)
-[🔽 Sesame's AI Voices: Are We Finally Crossing the 'Uncanny Valley'?](#06-03-25-sesames-ai-voices-are-we-finally-crossing-the-uncanny-valley)
+[🔽 Alibaba Shakes Things Up Again: Meet QwQ-32B, the Small but Mighty AI That Challenges Giants!](#09-03-25-alibaba-shakes-things-up-again-meet-qwq-32b-the-small-but-mighty-ai-that-challenges-giants)  
+
+[🔽 Sesame's AI Voices: Are We Finally Crossing the 'Uncanny Valley'?](#06-03-25-sesames-ai-voices-are-we-finally-crossing-the-uncanny-valley)  
+
 [🔽 Alibaba Drops a Bombshell: The Best Open-Source Video AI Is Now Free!](#alibaba-drops-a-bombshell-the-best-open-source-video-ai-is-now-free)  
-[🔽 GPT-4.5: The Biggest, Smartest… and Most Persuasive AI Yet?](#gpt-45-the-biggest-smartest-and-most-persuasive-ai-yet)
+
+[🔽 GPT-4.5: The Biggest, Smartest… and Most Persuasive AI Yet?](#gpt-45-the-biggest-smartest-and-most-persuasive-ai-yet)  
 
 ---
 
