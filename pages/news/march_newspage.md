@@ -1,12 +1,88 @@
 ---
 layout: default
 title: "🤖This Month in AI - March '25"
-modified_date: 2025-03-03
+modified_date: 2025-03-09
 date:  2025-02-25
 ---
 
+[🔽 Alibaba Shakes Things Up Again: Meet QwQ-32B, the Small but Mighty AI That Challenges Giants!](#09-03-25-alibaba-shakes-things-up-again-meet-qwq-32b-the-small-but-mighty-ai-that-challenges-giants)
+[🔽 Sesame's AI Voices: Are We Finally Crossing the 'Uncanny Valley'?](#06-03-25-sesames-ai-voices-are-we-finally-crossing-the-uncanny-valley)
 [🔽 Alibaba Drops a Bombshell: The Best Open-Source Video AI Is Now Free!](#alibaba-drops-a-bombshell-the-best-open-source-video-ai-is-now-free)  
 [🔽 GPT-4.5: The Biggest, Smartest… and Most Persuasive AI Yet?](#gpt-45-the-biggest-smartest-and-most-persuasive-ai-yet)
+
+---
+
+##  [09.03.25] 🚀 Alibaba Shakes Things Up Again: Meet QwQ-32B, the Small but Mighty AI That Challenges Giants!
+
+<div style="position: relative; height: 200px; background-image: url('https://github.com/user-attachments/assets/f69e8899-f3b0-4328-988c-436a3854dce8'); background-size: cover; background-position: center; border-radius: 15px; overflow: hidden;">
+
+🌟 Alibaba Cloud has just unveiled **QwQ-32B**, a groundbreaking AI reasoning model that's compact yet punches way above its weight, competing head-to-head with industry giants. The AI community is buzzing as Alibaba proves once again: **size isn't everything!** 🤯
+
+### 🚀 **Tiny Model, Big Brains**
+Despite having just **32 billion parameters**—much lighter than rival models like DeepSeek-R1 (with a whopping 671 billion parameters)—QwQ-32B delivers impressive results in math, coding, and logical reasoning.
+
+Here's how QwQ-32B stacks up:
+
+- 🧮 **AIME 24 (Mathematics):** Matches the mighty DeepSeek-R1 (671B parameters).
+- 💻 **Live CodeBench (Coding):** Nearly identical performance to industry leaders, significantly outperforming smaller competitors.
+- 🎯 **LiveBench (Logic and Reasoning):** Holds its own against heavyweights, slightly trailing but still impressive.
+- 📜 **IFEval (Instruction-Following):** Tops the leaderboard, showing exceptional user alignment.
+- 🔧 **BFCL (Function Calling):** Dominates, proving superior in executing tasks in Python, Java, JavaScript, and SQL.
+
+### 🔥 **Power of Scaled Reinforcement Learning (RL)**
+Alibaba’s secret sauce? **Scaled Reinforcement Learning**. By training QwQ-32B with targeted RL, Alibaba has enhanced the model’s reasoning, coding, and even general problem-solving skills without ballooning its size.
+
+### 🧠 **Agent Capabilities: Critical Thinking Unlocked**
+QwQ-32B doesn't just execute—it thinks. By integrating advanced agent capabilities, the AI adapts dynamically, utilizes tools efficiently, and can critically reason its way through complex problems.
+
+### 🌐 **Open-Source & Affordable Deployment**
+QwQ-32B is **completely open-source**, freely downloadable, and impressively runs on consumer-grade hardware. This drastically lowers deployment costs, making cutting-edge AI accessible for startups, researchers, and even hobbyists.
+
+### 📢 **What Does This Mean?**
+Alibaba isn’t just disrupting the market—it’s redefining the rules. QwQ-32B challenges the conventional wisdom that bigger models are always better. This compact powerhouse suggests that smarter, targeted AI training can deliver **world-class results without expensive infrastructure**.
+
+### 🔮 **Looking Forward: A Leap Towards AGI?**
+The Qwen team at Alibaba believes this scaled RL approach combined with stronger foundational models will edge them closer to **Artificial General Intelligence (AGI)**. Could this be the blueprint for future AI advancements?
+
+---
+# 🎙️ [06.03.25] **Sesame's AI Voices: Are We Finally Crossing the 'Uncanny Valley'?**
+
+<div style="position: relative; height: 200px; background-image: url('https://github.com/user-attachments/assets/7994f1a5-2ab2-4a68-a040-5cdd7f4141f1'); background-size: cover; background-position: center; border-radius: 15px; overflow: hidden;">
+
+</div>
+Imagine chatting casually with an AI, and instead of hearing a cold, robotic voice, you get responses so natural you’d swear it was human—welcome to the future of AI conversations, brought to you by **Sesame**. 🤖💬
+
+### 🌟 **What’s the Buzz?**
+Sesame recently unveiled their revolutionary **Conversational Speech Model (CSM)**, an AI that generates voices so realistic, it’s turning heads (and ears). This innovative approach doesn't just synthesise sound—it genuinely understands context, emotion, and conversational dynamics. Yep, it's eerily close to that charming AI in *"Her"*.
+
+### 🎙️ **Why Is This a Big Deal?**
+
+Unlike traditional text-to-speech tech, Sesame’s new **CSM** can:
+- 🔥 **Capture emotional nuance**, sensing context and adjusting tone accordingly.
+- 🎯 **Deliver natural conversation flows**, even managing real-time pauses and interruptions.
+- 🗣️ **Generate speech with personality**, optimised explicitly for friendliness and expressivity.
+
+### 🚧 **Breaking the Bottleneck**
+Previously, voice models struggled to generate speech quickly and contextually. Sesame solved this with:
+- **Single-stage multimodal transformers** for real-time context-aware conversations.
+- **Compute amortization**, optimising memory usage and speeding up audio production.
+
+### 🚦 **But, Is It Actually Human-Like?**
+
+Early tests show:
+- ✅ **Near-human accuracy** on traditional metrics (speaker similarity and word error rate).
+- 🔍 However, human listeners still slightly preferred genuine speech when context mattered, indicating room for growth in capturing conversational subtleties.
+
+### 🎧 **Sesame Goes Open Source!**
+
+And here's the kicker—Sesame plans to **open-source** key parts of their groundbreaking AI, inviting developers everywhere to collaborate and improve upon their work. 🌍🔓
+
+### 🎬 **Elsewhere in AI Voices:**
+- 🎤 **Podcast-ready in seconds:** New voice-training tech from Podcast startups (still a bit robotic, but improving).
+- 📞 **Accent magic:** Call centres using "Accent Translation" to change workers' accents instantly for global clarity.
+- 🎥 **AI dubbing, anyone?** Amazon Prime experiments with seamless AI-generated dubbing for global TV and movies.
+
+Sesame just set a new bar in conversational AI. It's not perfect yet—but it's getting eerily close. Could your next best friend be an AI? Perhaps it’s closer than you think.
 
 ---
 
