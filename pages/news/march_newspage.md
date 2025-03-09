@@ -15,7 +15,7 @@ date:  2025-02-25
 
 ---
 
-##  [09.03.25] 🚀 Alibaba Shakes Things Up Again: Meet QwQ-32B, the Small but Mighty AI That Challenges Giants!
+##  [09.03.25] 🚀 **Alibaba Shakes Things Up Again: Meet QwQ-32B, the Small but Mighty AI That Challenges Giants!**
 
 <div style="position: relative; height: 200px; background-image: url('https://github.com/user-attachments/assets/f69e8899-f3b0-4328-988c-436a3854dce8'); background-size: cover; background-position: center; border-radius: 15px; overflow: hidden;">
 </div>
@@ -49,7 +49,7 @@ Alibaba isn’t just disrupting the market—it’s redefining the rules. QwQ-32
 The Qwen team at Alibaba believes this scaled RL approach combined with stronger foundational models will edge them closer to **Artificial General Intelligence (AGI)**. Could this be the blueprint for future AI advancements?
 
 ---
-# 🎙️ [06.03.25] **Sesame's AI Voices: Are We Finally Crossing the 'Uncanny Valley'?**
+## 🎙️ [06.03.25] **Sesame's AI Voices: Are We Finally Crossing the 'Uncanny Valley'?**
 
 <div style="position: relative; height: 200px; background-image: url('https://github.com/user-attachments/assets/7994f1a5-2ab2-4a68-a040-5cdd7f4141f1'); background-size: cover; background-position: center; border-radius: 15px; overflow: hidden;">
 </div>
@@ -90,7 +90,7 @@ Sesame just set a new bar in conversational AI. It's not perfect yet—but it's 
 
 ---
 
-## 🚀 [02.03.25] **Alibaba Drops a Bombshell: The Best Open-Source Video AI Is Now Free!**  
+## 🚀 [02.03.25] **Alibaba Drops a Bombshell: The Best Open-Source Video AI Is Now Free!** 
 {:#alibaba-drops-a-bombshell-the-best-open-source-video-ai-is-now-free}
 
 <div style="position: relative; height: 200px; background-image: url('https://miro.medium.com/v2/resize:fit:1400/1*RAuBXVrwaX-rBmcEt8FLQA.png'); background-size: cover; background-position: center; border-radius: 15px; overflow: hidden;">
