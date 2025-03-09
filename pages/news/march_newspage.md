@@ -5,9 +5,9 @@ modified_date: 2025-03-09
 date:  2025-02-25
 ---
 
-[🔽 Alibaba Shakes Things Up Again: Meet QwQ-32B, the Small but Mighty AI That Challenges Giants!](#09-03-25-alibaba-shakes-things-up-again-meet-qwq-32b-the-small-but-mighty-ai-that-challenges-giants)  
+[🔽 Alibaba Shakes Things Up Again: Meet QwQ-32B, the Small but Mighty AI That Challenges Giants!](#alibaba-shakes-things-up-again-meet-qwq-32b-the-small-but-mighty-ai-that-challenges-giants)  
 
-[🔽 Sesame's AI Voices: Are We Finally Crossing the 'Uncanny Valley'?](#06-03-25-sesames-ai-voices-are-we-finally-crossing-the-uncanny-valley)  
+[🔽 Sesame's AI Voices: Are We Finally Crossing the 'Uncanny Valley'?](#sesames-ai-voices-are-we-finally-crossing-the-uncanny-valley)  
 
 [🔽 Alibaba Drops a Bombshell: The Best Open-Source Video AI Is Now Free!](#alibaba-drops-a-bombshell-the-best-open-source-video-ai-is-now-free)  
 
@@ -16,7 +16,7 @@ date:  2025-02-25
 ---
 
 ##  [09.03.25] 🚀 **Alibaba Shakes Things Up Again: Meet QwQ-32B, the Small but Mighty AI That Challenges Giants!**
-{:#09-03-25-alibaba-shakes-things-up-again-meet-qwq-32b-the-small-but-mighty-ai-that-challenges-giants}
+{:#alibaba-shakes-things-up-again-meet-qwq-32b-the-small-but-mighty-ai-that-challenges-giants}
 
 <div style="position: relative; height: 200px; background-image: url('https://github.com/user-attachments/assets/f69e8899-f3b0-4328-988c-436a3854dce8'); background-size: cover; background-position: center; border-radius: 15px; overflow: hidden;">
 </div>
@@ -51,7 +51,7 @@ The Qwen team at Alibaba believes this scaled RL approach combined with stronger
 
 ---
 ## 🎙️ [06.03.25] **Sesame's AI Voices: Are We Finally Crossing the 'Uncanny Valley'?**
-{:#06-03-25-sesames-ai-voices-are-we-finally-crossing-the-uncanny-valley}
+{:#sesames-ai-voices-are-we-finally-crossing-the-uncanny-valley}
 
 <div style="position: relative; height: 200px; background-image: url('https://github.com/user-attachments/assets/7994f1a5-2ab2-4a68-a040-5cdd7f4141f1'); background-size: cover; background-position: center; border-radius: 15px; overflow: hidden;">
 </div>
