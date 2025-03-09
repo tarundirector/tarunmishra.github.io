@@ -48,5 +48,3 @@ Moving forward, this project sets the stage for further research into:
 - Enhanced DL models capable of handling even larger scaling factors.
 - Integration of multi-modal medical imaging data to expand the clinical utility of SR.
 - Optimizing algorithms for resource-limited healthcare environments.
-
-**In summary**, the study highlights the powerful capability of deep learning to revolutionize medical imaging, paving the way for faster, clearer, and more reliable MRI diagnostics. 📈🧠✨
