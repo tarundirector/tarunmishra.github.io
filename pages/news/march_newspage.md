@@ -15,6 +15,7 @@ date:  2025-02-25
 ##  [09.03.25] 🚀 Alibaba Shakes Things Up Again: Meet QwQ-32B, the Small but Mighty AI That Challenges Giants!
 
 <div style="position: relative; height: 200px; background-image: url('https://github.com/user-attachments/assets/f69e8899-f3b0-4328-988c-436a3854dce8'); background-size: cover; background-position: center; border-radius: 15px; overflow: hidden;">
+</div>
 
 🌟 Alibaba Cloud has just unveiled **QwQ-32B**, a groundbreaking AI reasoning model that's compact yet punches way above its weight, competing head-to-head with industry giants. The AI community is buzzing as Alibaba proves once again: **size isn't everything!** 🤯
 
@@ -48,8 +49,8 @@ The Qwen team at Alibaba believes this scaled RL approach combined with stronger
 # 🎙️ [06.03.25] **Sesame's AI Voices: Are We Finally Crossing the 'Uncanny Valley'?**
 
 <div style="position: relative; height: 200px; background-image: url('https://github.com/user-attachments/assets/7994f1a5-2ab2-4a68-a040-5cdd7f4141f1'); background-size: cover; background-position: center; border-radius: 15px; overflow: hidden;">
-
 </div>
+
 Imagine chatting casually with an AI, and instead of hearing a cold, robotic voice, you get responses so natural you’d swear it was human—welcome to the future of AI conversations, brought to you by **Sesame**. 🤖💬
 
 ### 🌟 **What’s the Buzz?**
