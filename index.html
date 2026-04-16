@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>Tarun Mishra - Portfolio</title>
@@ -8,8 +9,7 @@
   <!-- Font Links -->
   <link
     href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap"
-    rel="stylesheet"
-  />
+    rel="stylesheet" />
   <!-- Font Awesome is no longer used for icons -->
 
   <style>
@@ -17,25 +17,44 @@
        CSS Variables – adjust these for quick theme changes!
     ============================================== */
     :root {
-      --primary-bg: #544bb6; /* Purple (Main) */
-      --secondary-bg: #e6e6e6; /* Light Grey BG */
-      --accent-color: #ffdd00; /* Yellow */
-      --dark-color: #1f2626; /* Dark */
-      --light-color: #d9d7cd; /* Light Greyish */
-      --highlight-bg: #ffdd00; /* For highlight effect rectangles */
-      --section-bg-alt: #dbf1f1; /* Light Teal */
-      --line-color:  #d9d7cd; /* For horizontal dividing lines */
-      --line-thickness: 2px; /* Thickness for dividing lines */
-      --timeline-line-color: #dbf1f1; /* For timeline vertical line */
-      --timeline-circle-color: #ffdd00; /* For timeline circles */
-      --skills-divider-color: #dbf1f1; /* For small lines between skills blocks */
-      --other-skill-bg: #fff18d; /* For "else" skill tags */
-      --other-skill-text: #595956; /* Text color for "else" skill tags */
-      --section-padding-lr: 3vw; /* Consistent left-right padding for sections (except section 1) */
-      --circle-size: 35vh; /* Circle behind text in section 1 */
-      --transition-speed: 0.3s; /* Speed for hover transitions */
-      --global-section-padding: 4vw; /* Global left/right padding for sections (except section 1) */
-      --icon-size: 50px; /* Diameter for circular logo buttons */
+      --primary-bg: #544bb6;
+      /* Purple (Main) */
+      --secondary-bg: #e6e6e6;
+      /* Light Grey BG */
+      --accent-color: #ffdd00;
+      /* Yellow */
+      --dark-color: #1f2626;
+      /* Dark */
+      --light-color: #d9d7cd;
+      /* Light Greyish */
+      --highlight-bg: #ffdd00;
+      /* For highlight effect rectangles */
+      --section-bg-alt: #dbf1f1;
+      /* Light Teal */
+      --line-color: #d9d7cd;
+      /* For horizontal dividing lines */
+      --line-thickness: 2px;
+      /* Thickness for dividing lines */
+      --timeline-line-color: #dbf1f1;
+      /* For timeline vertical line */
+      --timeline-circle-color: #ffdd00;
+      /* For timeline circles */
+      --skills-divider-color: #dbf1f1;
+      /* For small lines between skills blocks */
+      --other-skill-bg: #fff18d;
+      /* For "else" skill tags */
+      --other-skill-text: #595956;
+      /* Text color for "else" skill tags */
+      --section-padding-lr: 3vw;
+      /* Consistent left-right padding for sections (except section 1) */
+      --circle-size: 35vh;
+      /* Circle behind text in section 1 */
+      --transition-speed: 0.3s;
+      /* Speed for hover transitions */
+      --global-section-padding: 4vw;
+      /* Global left/right padding for sections (except section 1) */
+      --icon-size: 50px;
+      /* Diameter for circular logo buttons */
     }
 
     /* ==============================================
@@ -46,25 +65,34 @@
       padding: 0;
       box-sizing: border-box;
     }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: 'Roboto', sans-serif;
       background-color: #fff;
       color: var(--dark-color);
       overflow-x: hidden;
     }
+
     a {
       color: inherit;
       text-decoration: none;
       transition: background-color var(--transition-speed) ease,
         color var(--transition-speed) ease;
     }
+
     ul {
       list-style-type: disc;
       margin-left: 1.5em;
     }
+
     li {
       margin-bottom: 0.5em;
     }
+
     .highlight {
       background: linear-gradient(transparent 60%, var(--highlight-bg) 60%);
       padding: 2px 4px;
@@ -79,6 +107,7 @@
       transform: translateY(20px);
       transition: opacity 0.6s ease, transform 0.6s ease;
     }
+
     .fade-element.visible {
       opacity: 1;
       transform: translateY(0);
@@ -92,6 +121,7 @@
       width: 100%;
       height: 75vh;
     }
+
     .intro-left,
     .intro-right {
       flex: 1;
@@ -100,12 +130,14 @@
       justify-content: center;
       position: relative;
     }
+
     .intro-left {
       background-color: var(--primary-bg);
       flex-direction: column;
       text-align: right;
       padding: 2rem;
     }
+
     /* Updated icons row to use SVG logos */
     .icon-row {
       margin-top: 2rem;
@@ -115,6 +147,7 @@
       gap: 1rem;
       flex-wrap: wrap;
     }
+
     .icon-row a.logo-button {
       display: flex;
       justify-content: center;
@@ -125,15 +158,18 @@
       background-color: var(--dark-color);
       transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
     }
+
     .icon-row a.logo-button:hover {
       background-color: #444;
       transform: scale(1.1);
     }
+
     .icon-row a.logo-button svg {
       width: 32px;
       height: 32px;
       fill: #ffffff;
     }
+
     /* Kaggle button: height equal to circle button (i.e. 50px) */
     .icon-row a.kaggle-btn {
       display: inline-flex;
@@ -151,12 +187,15 @@
       cursor: pointer;
       transition: background-color var(--transition-speed) ease;
     }
+
     .icon-row a.kaggle-btn i {
       margin-right: 0.4rem;
     }
+
     .icon-row a.kaggle-btn:hover {
       background-color: #444;
     }
+
     /* Typing container on left */
     .typing-container {
       color: var(--light-color);
@@ -164,17 +203,21 @@
       font-size: 2rem;
       line-height: 1.4;
     }
+
     .typing-container .static-text {
       color: var(--light-color);
       font-size: 2rem;
     }
+
     .typing-container .typing-text {
       font-size: 3rem;
       white-space: nowrap;
     }
+
     .typing-container .yellow-text {
       color: var(--accent-color);
     }
+
     .typing-container .cursor {
       display: inline-block;
       font-size: 3rem;
@@ -183,9 +226,15 @@
       font-family: 'Archivo Black', sans-serif;
       margin-left: 0.2rem;
     }
+
     @keyframes blink {
-      0% { opacity: 1; }
-      100% { opacity: 0; }
+      0% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
     }
 
     /* Intro right: tagline & background circle */
@@ -198,6 +247,7 @@
       padding: 0;
       overflow: hidden;
     }
+
     .intro-right .tagline-box {
       position: relative;
       max-width: 80%;
@@ -205,19 +255,25 @@
       text-align: left;
       padding: 2rem;
     }
+
     .intro-right .tagline {
       font-family: 'Archivo', sans-serif;
       font-weight: 600;
       color: var(--primary-bg);
-      font-size: 1.2rem; /* reduced font size */
+      font-size: 1.2rem;
+      /* reduced font size */
       line-height: 1.4;
       position: relative;
       z-index: 1;
     }
+
     .intro-right .about-btn {
-      padding: 0 1.5rem; /* Adjust padding */
-      height: var(--icon-size); /* Match Kaggle button height */
-      line-height: var(--icon-size); /* Vertically center text */
+      padding: 0 1.5rem;
+      /* Adjust padding */
+      height: var(--icon-size);
+      /* Match Kaggle button height */
+      line-height: var(--icon-size);
+      /* Vertically center text */
       display: inline-block;
       margin-top: 2rem;
       background-color: var(--accent-color);
@@ -229,21 +285,23 @@
       cursor: pointer;
       transition: background-color var(--transition-speed) ease;
     }
+
     .intro-right .about-btn:hover {
       background-color: #e5c900;
     }
+
     /* The big circle behind text – its size and position can be controlled */
     .intro-right .circle-bg {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  width: var(--circle-size);
-  height: var(--circle-size);
-  background-color: var(--accent-color);
-  border-radius: 50%;
-  transform: translate(-10%, -70%);
-  z-index: 0;
-}
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: var(--circle-size);
+      height: var(--circle-size);
+      background-color: var(--accent-color);
+      border-radius: 50%;
+      transform: translate(-10%, -70%);
+      z-index: 0;
+    }
 
     /* ==============================================
        General Sections (except section 1) – apply global padding
@@ -254,28 +312,34 @@
       padding-left: var(--global-section-padding);
       padding-right: var(--global-section-padding);
     }
+
     .section-content {
       padding: 3rem 0;
       display: flex;
       flex-direction: column;
       gap: 1rem;
     }
+
     .section-title {
       font-family: 'Archivo Black', sans-serif;
       font-size: 2rem;
       text-align: left;
     }
+
     /* Example: change "AcademicAndPersonalProjects" to "Academic & Personal Projects" */
     /* (Make similar manual changes in the HTML below for each section title) */
     .section-title .def {
       color: var(--light-color);
     }
+
     .section-title .function-name {
       color: var(--dark-color);
     }
+
     .section-title .parens {
       color: var(--light-color);
     }
+
     .section-tagline {
       font-family: 'Roboto', sans-serif;
       font-size: 1rem;
@@ -303,29 +367,32 @@
     }
 
     .project-tile {
-  display: flex;
-  flex-direction: column;
-  border-radius: 1rem;
-  overflow: hidden;
-  background-color: #fff;
-  border: 4px solid transparent; /* Reserve space for border */
-  cursor: pointer;
-  transition: background-color var(--transition-speed) ease,
-              border-color var(--transition-speed) ease,
-              filter 0.3s ease;
-  height: 300px;
-}
+      display: flex;
+      flex-direction: column;
+      border-radius: 1rem;
+      overflow: hidden;
+      background-color: #fff;
+      border: 4px solid transparent;
+      /* Reserve space for border */
+      cursor: pointer;
+      transition: background-color var(--transition-speed) ease,
+        border-color var(--transition-speed) ease,
+        filter 0.3s ease;
+      height: 300px;
+    }
 
-.project-tile:hover {
-  border-color: #5398b0; /* Blue border */
-  filter: brightness(0.95);
-}
+    .project-tile:hover {
+      border-color: #5398b0;
+      /* Blue border */
+      filter: brightness(0.95);
+    }
 
     .tile-image {
       flex: 2;
       background-size: cover;
       background-position: center;
     }
+
     .tile-content {
       flex: 1;
       background-color: var(--section-bg-alt);
@@ -336,6 +403,7 @@
       justify-content: center;
       gap: 0.5rem;
     }
+
     .tile-content h4 {
       font-family: 'Archivo', sans-serif;
       font-weight: 700;
@@ -343,17 +411,20 @@
       color: var(--dark-color);
       margin-bottom: 0.5rem;
     }
+
     .tile-content h6 {
       font-family: 'Archivo', sans-serif;
       font-weight: 700;
       font-size: 1rem;
       color: var(--light-color);
     }
+
     .tile-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 0.4rem;
     }
+
     .tile-tag {
       background-color: var(--accent-color);
       color: var(--dark-color);
@@ -363,6 +434,7 @@
       font-weight: 600;
       font-size: 0.8rem;
     }
+
     .tile-tool-tags {
       background-color: var(--primary-bg);
       color: white;
@@ -384,22 +456,30 @@
       gap: 2rem;
       align-items: flex-start;
     }
-    .education-left {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.education-left img {
-  width: auto; /* Let the height determine the width */
-  height: 100%; /* Match the height of the right division */
-  aspect-ratio: 1 / 1; /* Maintain a square aspect ratio */
-  object-fit: cover; /* Ensure it covers the square without distortion */
-  border-radius: 1rem;
-  max-width: 100%; /* Ensure it doesn't overflow */
-  max-height: 100%; /* Prevent overflow issues */
-}
+    .education-left {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .education-left img {
+      width: auto;
+      /* Let the height determine the width */
+      height: 100%;
+      /* Match the height of the right division */
+      aspect-ratio: 1 / 1;
+      /* Maintain a square aspect ratio */
+      object-fit: cover;
+      /* Ensure it covers the square without distortion */
+      border-radius: 1rem;
+      max-width: 100%;
+      /* Ensure it doesn't overflow */
+      max-height: 100%;
+      /* Prevent overflow issues */
+    }
+
     .education-right {
       flex: 2;
       display: flex;
@@ -408,29 +488,35 @@
       justify-content: center;
       padding-left: 2rem;
     }
+
     .edu-entry {
       font-family: 'Roboto', sans-serif;
       color: var(--dark-color);
       margin-bottom: 1.5rem;
     }
+
     .edu-entry .edu-title {
       font-size: 1.3rem;
       margin-bottom: 0.3rem;
     }
+
     .edu-degree {
       color: var(--dark-color);
       font-weight: bold;
     }
+
     .edu-university {
       color: #544bb6;
       font-weight: bold;
       margin-left: 0.5rem;
     }
+
     .edu-dates {
       font-size: 1rem;
       color: var(--dark-color);
       margin-top: 0.2rem;
     }
+
     .edu-grade {
       font-weight: bold;
       font-style: italic;
@@ -439,12 +525,14 @@
       padding: 0 4px;
       margin-left: 0.5rem;
     }
+
     .edu-details ul {
       list-style-type: disc;
       margin-left: 1.5rem;
       font-size: 0.9rem;
       line-height: 1.4;
     }
+
     .edu-details ul li {
       margin-bottom: 0.3rem;
     }
@@ -456,6 +544,7 @@
       position: relative;
       margin: 2rem 0;
     }
+
     .timeline::before {
       content: "";
       position: absolute;
@@ -466,6 +555,7 @@
       background-color: var(--timeline-line-color);
       transform: translateX(-50%);
     }
+
     .timeline-item {
       position: relative;
       width: 50%;
@@ -474,16 +564,19 @@
       padding-top: 1rem;
       box-sizing: border-box;
     }
+
     .timeline-item:nth-child(odd) {
       float: left;
       text-align: right;
       clear: both;
     }
+
     .timeline-item:nth-child(even) {
       float: right;
       text-align: left;
       clear: both;
     }
+
     .timeline-item::before {
       content: "";
       position: absolute;
@@ -493,17 +586,22 @@
       background-color: var(--timeline-circle-color);
       border-radius: 50%;
     }
+
     .timeline-item:nth-child(odd)::before {
       right: -8px;
     }
+
     .timeline-item:nth-child(even)::before {
       left: -8px;
     }
+
     .timeline-content {
       display: inline-block;
       max-width: 90%;
-      text-align: left; /* ensure bullet points are left aligned */
+      text-align: left;
+      /* ensure bullet points are left aligned */
     }
+
     .company-title {
       font-family: 'Archivo', sans-serif;
       font-weight: 700;
@@ -511,6 +609,7 @@
       color: var(--dark-color);
       margin-bottom: 0.2rem;
     }
+
     .role-title {
       font-family: 'Archivo', sans-serif;
       font-weight: 700;
@@ -518,12 +617,14 @@
       font-size: 0.95rem;
       margin-bottom: 0.3rem;
     }
+
     .timeline-dates {
       font-size: 0.8rem;
       font-style: italic;
       color: var(--dark-color);
       margin-bottom: 0.5rem;
     }
+
     .timeline-content ul {
       list-style-type: disc;
       margin-left: 1.5rem;
@@ -542,6 +643,7 @@
       flex-wrap: wrap;
       min-height: 400px;
     }
+
     /* (a) Left-most block */
     .skills-left {
       width: 32%;
@@ -553,49 +655,59 @@
       padding: 2rem;
       text-align: right;
     }
+
     .skills-left .section-title {
       font-family: 'Archivo Black', sans-serif;
       font-size: 1.8rem;
     }
+
     .skills-left .section-title .def,
     .skills-left .section-title .parens {
       color: var(--light-color);
     }
+
     .skills-left .section-title .function-name {
       color: var(--dark-color);
     }
+
     .skills-left .section-tagline {
       font-family: 'Roboto', sans-serif;
       font-size: 1rem;
       color: var(--dark-color);
       margin-top: 0.5rem;
     }
+
     /* Right side container */
     .skills-right {
       width: 68%;
       display: flex;
       flex-direction: column;
     }
+
     /* Top row: technical (b) and soft (c) */
     .skills-top-row {
       display: flex;
       flex: 1;
     }
-    .skills-b, .skills-c {
+
+    .skills-b,
+    .skills-c {
       flex: 1;
       background-color: #fff;
       padding: 2rem;
       display: flex;
-                      flex-direction: column;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
     }
+
     .skills-b .section-subtitle,
     .skills-c .section-subtitle {
       font-family: 'Archivo Black', sans-serif;
       font-size: 1.2rem;
       margin-bottom: 1rem;
     }
+
     .skills-b .section-subtitle .if,
     .skills-c .section-subtitle .elif,
     .skills-b .section-subtitle .colon,
@@ -603,16 +715,19 @@
     .skills-c .section-subtitle .colon {
       color: var(--light-color);
     }
+
     .skills-b .section-subtitle .keyword,
     .skills-c .section-subtitle .keyword {
       color: var(--dark-color);
     }
+
     .skills-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
       justify-content: center;
     }
+
     .skills-tag {
       background-color: #f7bd03;
       color: var(--dark-color);
@@ -622,11 +737,13 @@
       font-weight: bold;
       font-size: 0.85rem;
     }
+
     /* Small vertical line between (b) and (c) */
     .skills-divider-vertical {
       width: 2px;
       background-color: var(--skills-divider-color);
     }
+
     /* Bottom row: (d) Other skills */
     .skills-bottom-row {
       display: flex;
@@ -634,6 +751,7 @@
       position: relative;
       margin-top: 1rem;
     }
+
     /* Horizontal line between top row and bottom row */
     .skills-divider-horizontal {
       position: absolute;
@@ -644,6 +762,7 @@
       background-color: var(--skills-divider-color);
       transform: translateX(-50%);
     }
+
     .skills-d {
       flex: 1;
       background-color: #fff;
@@ -653,16 +772,19 @@
       align-items: center;
       justify-content: center;
     }
+
     .skills-d-left {
       margin-right: 1rem;
       white-space: nowrap;
       text-align: right;
     }
+
     .skills-d-right {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
     }
+
     .skills-d-right .skills-d-tag {
       background-color: var(--other-skill-bg);
       color: var(--other-skill-text);
@@ -672,6 +794,7 @@
       font-weight: bold;
       font-size: 0.85rem;
     }
+
     .skills-d-left .else {
       font-family: 'Archivo', sans-serif;
       font-weight: bold;
@@ -691,30 +814,33 @@
     }
 
     .volunteer-left {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  text-align: right;
-  padding-left:2rem;
-}
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      text-align: right;
+      padding-left: 2rem;
+    }
 
     .volunteer-left .section-title {
       font-family: 'Archivo Black', sans-serif;
       font-size: 1.8rem;
     }
+
     .volunteer-left .entries {
       text-align: left;
       margin-top: 1rem;
       max-width: 80%;
     }
+
     .volunteer-left .entries h4 {
       font-family: 'Archivo', sans-serif;
       font-size: 1rem;
       color: var(--primary-bg);
       /* Organization names highlighted (not bold) */
     }
+
     .volunteer-left .entries p,
     .volunteer-left .entries ul,
     .volunteer-left .entries li {
@@ -725,21 +851,27 @@
     }
 
     .volunteer-right {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-.volunteer-right img {
-  width: auto; /* Let the height determine the width */
-  height: 60%; /* Match the height of the left division */
-  aspect-ratio: 1 / 1; /* Maintain a square aspect ratio */
-  object-fit: cover; /* Ensure it covers the square without distortion */
-  border-radius: 1rem;
-  max-width: 100%; /* Ensure it doesn't overflow */
-  max-height: 100%; /* Prevent overflow issues */
-}
+    .volunteer-right img {
+      width: auto;
+      /* Let the height determine the width */
+      height: 60%;
+      /* Match the height of the left division */
+      aspect-ratio: 1 / 1;
+      /* Maintain a square aspect ratio */
+      object-fit: cover;
+      /* Ensure it covers the square without distortion */
+      border-radius: 1rem;
+      max-width: 100%;
+      /* Ensure it doesn't overflow */
+      max-height: 100%;
+      /* Prevent overflow issues */
+    }
 
 
     /* ==============================================
@@ -753,42 +885,51 @@
       padding: 0rem var(--global-section-padding);
       box-sizing: border-box;
     }
+
     .pub-left {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-.pub-left img {
-  width: auto; /* Let the height determine the width */
-  height: 80%; /* Match the height of the right division */
-  aspect-ratio: 1 / 1; /* Maintain a square aspect ratio */
-  object-fit: cover; /* Ensure it covers the square without distortion */
-  border-radius: 1rem;
-  max-width: 100%; /* Ensure it doesn't overflow */
-  max-height: 100%; /* Prevent overflow issues */
-}
+    .pub-left img {
+      width: auto;
+      /* Let the height determine the width */
+      height: 80%;
+      /* Match the height of the right division */
+      aspect-ratio: 1 / 1;
+      /* Maintain a square aspect ratio */
+      object-fit: cover;
+      /* Ensure it covers the square without distortion */
+      border-radius: 1rem;
+      max-width: 100%;
+      /* Ensure it doesn't overflow */
+      max-height: 100%;
+      /* Prevent overflow issues */
+    }
 
-.pub-right {
-  flex: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 2rem;
-  padding-left: 2rem;
-  gap: 1rem;
-}
+    .pub-right {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2rem;
+      padding-left: 2rem;
+      gap: 1rem;
+    }
 
     .pub-right .section-title {
       text-align: left;
       font-family: 'Archivo Black', sans-serif;
       font-size: 1.8rem;
     }
+
     .pub-right .entries {
       text-align: left;
       margin-top: 1rem;
     }
+
     .pub-right .entries h4 {
       font-family: 'Archivo', sans-serif;
       font-size: 1rem;
@@ -796,10 +937,12 @@
       font-weight: 700;
       margin-bottom: 0.5rem;
     }
+
     .pub-right .entries a {
       font-weight: bold;
       color: #304c99;
     }
+
     .pub-right .entries ul {
       list-style-type: disc;
       margin-left: 1.5rem;
@@ -820,6 +963,7 @@
       box-sizing: border-box;
       padding-bottom: 3rem;
     }
+
     .creative-left {
       flex: 1;
       background-color: #fff;
@@ -832,12 +976,14 @@
       padding-top: 0;
       padding-bottom: 0;
     }
+
     .creative-left .section-title {
       font-family: 'Archivo Black', sans-serif;
       font-size: 1.8rem;
       color: var(--dark-color);
       margin-bottom: 0.5rem;
     }
+
     .creative-left .entries {
       font-family: 'Roboto', sans-serif;
       font-size: 0.9rem;
@@ -845,31 +991,40 @@
       line-height: 1.4;
       margin-top: 1rem;
     }
+
     .creative-left .entries a {
       font-weight: bold;
       color: #304c99;
     }
+
     .creative-left .entries ul {
       list-style-type: disc;
       margin-left: 1.5rem;
       margin-bottom: 1rem;
     }
-    .creative-right {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.creative-right img {
-  width: auto; /* Let the height determine the width */
-  height: 60%; /* Match the height of the left division */
-  aspect-ratio: 1 / 1; /* Maintain a square aspect ratio */
-  object-fit: cover; /* Ensure it covers the square without distortion */
-  border-radius: 1rem;
-  max-width: 100%; /* Ensure it doesn't overflow */
-  max-height: 100%; /* Prevent overflow issues */
-}
+    .creative-right {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .creative-right img {
+      width: auto;
+      /* Let the height determine the width */
+      height: 60%;
+      /* Match the height of the left division */
+      aspect-ratio: 1 / 1;
+      /* Maintain a square aspect ratio */
+      object-fit: cover;
+      /* Ensure it covers the square without distortion */
+      border-radius: 1rem;
+      max-width: 100%;
+      /* Ensure it doesn't overflow */
+      max-height: 100%;
+      /* Prevent overflow issues */
+    }
 
     /* ==============================================
        Footer
@@ -881,6 +1036,7 @@
       text-align: center;
       font-style: normal;
     }
+
     footer .footer-text {
       font-family: 'Roboto', sans-serif;
       font-weight: 700;
@@ -888,33 +1044,394 @@
       font-size: 1.1rem;
       margin-bottom: 1rem;
     }
+
     footer .social-links {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 1rem;
     }
+
     footer .social-links a {
       font-family: 'Archivo', sans-serif;
       font-weight: 700;
       color: var(--light-color);
       transition: color var(--transition-speed) ease;
     }
+
     footer .social-links a:hover {
       color: var(--accent-color);
     }
 
     .education-left img,
-.volunteer-right img,
-.pub-left img,
-.creative-right img {
-  border: 4px solid;
-  border-radius: 1rem;
-  border-color: var(--accent-color);
-}
+    .volunteer-right img,
+    .pub-left img,
+    .creative-right img {
+      border: 4px solid;
+      border-radius: 1rem;
+      border-color: var(--accent-color);
+    }
+
+    /* ==============================================
+       NEW: Glassmorphic Navbar & Mobile Menu Styles
+    ============================================== */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 var(--global-section-padding);
+      background: rgba(255, 255, 255, 0.85);
+      /* Semi-transparent */
+      backdrop-filter: blur(10px);
+      /* Glassmorphism */
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      z-index: 1000;
+      /* Ensure on top */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+      transition: all 0.3s ease;
+    }
+
+    .nav-brand {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 1.5rem;
+      color: var(--primary-bg);
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .navbar.scrolled .nav-brand {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      font-family: 'Archivo', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--dark-color);
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: var(--accent-color);
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary-bg);
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      z-index: 1001;
+      /* Keep above mobile menu */
+    }
+
+    .hamburger .bar {
+      width: 25px;
+      height: 3px;
+      background-color: var(--dark-color);
+      transition: all 0.3s ease;
+    }
+
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      height: 100vh;
+      width: 70vw;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      z-index: 999;
+      transition: right 0.4s ease;
+      box-shadow: -4px 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .mobile-menu.open {
+      right: 0;
+    }
+
+    .mobile-menu a {
+      font-family: 'Archivo', sans-serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: var(--dark-color);
+    }
+
+    /* Padding offset to keep content correctly visible below fixed navbar */
+    .section-intro,
+    .section,
+    .volunteer-section,
+    .pub-section,
+    .creative-section {
+      scroll-margin-top: 80px;
+      /* Leave space to not be hidden by navbar */
+    }
+
+    .section-intro {
+      margin-top: 70px;
+      height: calc(100vh - 70px);
+    }
+
+    /* ==============================================
+       NEW: Mobile & Tablet Responsiveness
+    ============================================== */
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+        /* Hide desktop links */
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      /* Stack Intro */
+      .section-intro {
+        flex-direction: column;
+        height: auto;
+      }
+
+      .intro-left,
+      .intro-right {
+        padding: 4rem 2rem;
+      }
+
+      .circle-bg {
+        width: 15rem;
+        height: 15rem;
+      }
+
+      /* Stack Education */
+      .education-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .education-left img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+      }
+
+      .education-right {
+        padding-left: 0;
+        margin-top: 2rem;
+      }
+
+      /* Skills Section Stack */
+      .skills-section {
+        flex-direction: column;
+      }
+
+      .skills-left {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 2rem;
+      }
+
+      .skills-right {
+        width: 100%;
+      }
+
+      .skills-top-row {
+        flex-direction: column;
+      }
+
+      .skills-divider-vertical {
+        width: 100%;
+        height: 2px;
+      }
+
+      .skills-divider-horizontal {
+        display: none;
+      }
+
+      .skills-bottom-row {
+        margin-top: 0;
+      }
+
+      .skills-d {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .skills-d-left {
+        margin-right: 0;
+        margin-bottom: 1rem;
+      }
+
+      /* Timeline Adjustments */
+      .timeline::before {
+        left: 20px;
+      }
+
+      .timeline-item,
+      .timeline-item:nth-child(odd),
+      .timeline-item:nth-child(even) {
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 0;
+        text-align: left;
+        float: none;
+      }
+
+      .timeline-item::before,
+      .timeline-item:nth-child(odd)::before,
+      .timeline-item:nth-child(even)::before {
+        left: 12px;
+      }
+
+      /* Stack Volunteer, Publications, Creative */
+      .volunteer-section,
+      .pub-section,
+      .creative-section {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .volunteer-left,
+      .pub-right,
+      .creative-left {
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .volunteer-left .entries,
+      .pub-right .entries,
+      .creative-left .entries {
+        text-align: left;
+        max-width: 100%;
+      }
+
+      .volunteer-right img,
+      .pub-left img,
+      .creative-right img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+      }
+
+      .pub-right {
+        order: 1;
+        /* Move text below image */
+      }
+
+      .pub-left {
+        order: 0;
+        /* Move image above text */
+      }
+
+      .volunteer-left {
+        order: 1;
+      }
+
+      .volunteer-right {
+        order: 0;
+      }
+
+      .creative-left {
+        order: 1;
+      }
+
+      .creative-right {
+        order: 0;
+      }
+    }
+
+    /* ==============================================
+       NEW: Enhanced Hover State Adjustments
+    ============================================== */
+    .project-tile {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      /* Softer base shadow */
+    }
+
+    .project-tile:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+      /* More pronounced shadow on hover */
+    }
+
+    .timeline-item {
+      transition: transform 0.3s ease;
+    }
+
+    .timeline-item:hover {
+      transform: scale(1.02);
+    }
   </style>
 </head>
+
 <body>
+
+  <!-- Sticky Navbar -->
+  <nav class="navbar fade-element">
+    <div class="nav-brand" onclick="window.scrollTo(0,0)">Tarun Mishra</div>
+    <!-- Desktop menu -->
+    <div class="nav-links">
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#volunteer">Volunteer</a>
+      <a href="#publications">Publications</a>
+      <a href="#creative">Creative</a>
+    </div>
+    <!-- Hamburger icon for mobile -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#projects" onclick="toggleMenu()">Projects</a>
+    <a href="#education" onclick="toggleMenu()">Education</a>
+    <a href="#experience" onclick="toggleMenu()">Experience</a>
+    <a href="#skills" onclick="toggleMenu()">Skills</a>
+    <a href="#volunteer" onclick="toggleMenu()">Volunteer</a>
+    <a href="#publications" onclick="toggleMenu()">Publications</a>
+    <a href="#creative" onclick="toggleMenu()">Creative</a>
+  </div>
+
 
   <!-- =============================================
        SECTION 1: Intro Split Screen
@@ -931,28 +1448,34 @@
       <!-- Social Logos and Kaggle Button -->
       <div class="icon-row">
         <!-- Email Icon -->
-        <a href="mailto:tarunpmishra2001@gmail.com" target="_blank" rel="noopener noreferrer" class="logo-button" title="Email">
+        <a href="mailto:tarunpmishra2001@gmail.com" target="_blank" rel="noopener noreferrer" class="logo-button"
+          title="Email">
           <svg viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
             <title>Email</title>
-            <path d="M101.3 141.6v228.9h308.4V141.6H101.3zM375.7 167.8l-119.7 91.5-119.6-91.5h239.3z"/>
+            <path d="M101.3 141.6v228.9h308.4V141.6H101.3zM375.7 167.8l-119.7 91.5-119.6-91.5h239.3z" />
           </svg>
         </a>
         <!-- LinkedIn Icon -->
-        <a href="https://www.linkedin.com/in/tarunpmishra/" target="_blank" rel="noopener noreferrer" class="logo-button" title="LinkedIn">
+        <a href="https://www.linkedin.com/in/tarunpmishra/" target="_blank" rel="noopener noreferrer"
+          class="logo-button" title="LinkedIn">
           <svg viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
             <title>LinkedIn</title>
-            <path d="M186.4 142.4c0 19-15.3 34.5-34.2 34.5-18.9 0-34.2-15.4-34.2-34.5 0-19 15.3-34.5 34.2-34.5C171.1 107.9 186.4 123.4 186.4 142.4zM181.4 201.3h-57.8V388.1h57.8V201.3zM273.8 201.3h-55.4V388.1h55.4c0 0 0-69.3 0-98 0-26.3 12.1-41.9 35.2-41.9 21.3 0 31.5 15 31.5 41.9 0 26.9 0 98 0 98h57.5c0 0 0-68.2 0-118.3 0-50-28.3-74.2-68-74.2-39.6 0-56.3 30.9-56.3 30.9v-25.2H273.8z"/>
+            <path
+              d="M186.4 142.4c0 19-15.3 34.5-34.2 34.5-18.9 0-34.2-15.4-34.2-34.5 0-19 15.3-34.5 34.2-34.5C171.1 107.9 186.4 123.4 186.4 142.4zM181.4 201.3h-57.8V388.1h57.8V201.3zM273.8 201.3h-55.4V388.1h55.4c0 0 0-69.3 0-98 0-26.3 12.1-41.9 35.2-41.9 21.3 0 31.5 15 31.5 41.9 0 26.9 0 98 0 98h57.5c0 0 0-68.2 0-118.3 0-50-28.3-74.2-68-74.2-39.6 0-56.3 30.9-56.3 30.9v-25.2H273.8z" />
           </svg>
         </a>
         <!-- GitHub Icon -->
-        <a href="https://github.com/tarundirector" target="_blank" rel="noopener noreferrer" class="logo-button" title="GitHub">
+        <a href="https://github.com/tarundirector" target="_blank" rel="noopener noreferrer" class="logo-button"
+          title="GitHub">
           <svg viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
             <title>GitHub</title>
-            <path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9-8.4-21.5-20.6-27.2-20.6-27.2-16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9-41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9-1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/>
+            <path
+              d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9-8.4-21.5-20.6-27.2-20.6-27.2-16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9-41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9-1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z" />
           </svg>
         </a>
         <!-- Kaggle Button -->
-        <a href="https://www.kaggle.com/tarundirector/code" target="_blank" rel="noopener noreferrer" class="kaggle-btn" title="Kaggle Expert">
+        <a href="https://www.kaggle.com/tarundirector/code" target="_blank" rel="noopener noreferrer" class="kaggle-btn"
+          title="Kaggle Expert">
           <i class="fab fa-kaggle"></i> Kaggle Expert
         </a>
       </div>
@@ -963,7 +1486,9 @@
       <div class="tagline-box">
         <div class="circle-bg"></div>
         <p class="tagline">
-          Data scientist with a Master’s and cross-industry experience, turning complex data into clear, actionable insights. I blend analytics, machine learning, and storytelling to drive smarter business decisions and support real-world health outcomes.
+          Data scientist with a Master’s and cross-industry experience, turning complex data into clear, actionable
+          insights. I blend analytics, machine learning, and storytelling to drive smarter business decisions and
+          support real-world health outcomes.
         </p>
         <a href="#education" class="about-btn">About Me</a>
       </div>
@@ -980,44 +1505,44 @@
     let isErasing = false;
 
     function typeEffect() {
-  const typingElement = document.getElementById("typing-effect");
-  if (!isErasing && i < text.length) {
-    let currentText = text.substring(0, i + 1);
-    if (currentText.includes("}")) {
-      const bracketIndex = currentText.indexOf("}");
-      const namePart = currentText.slice(0, bracketIndex);
-      typingElement.innerHTML = `<span class="yellow-text">${namePart}</span><span style="color: var(--light-color);}">}</span>`;
-    } else {
-      typingElement.innerHTML = `<span class="yellow-text">${currentText}</span>`;
+      const typingElement = document.getElementById("typing-effect");
+      if (!isErasing && i < text.length) {
+        let currentText = text.substring(0, i + 1);
+        if (currentText.includes("}")) {
+          const bracketIndex = currentText.indexOf("}");
+          const namePart = currentText.slice(0, bracketIndex);
+          typingElement.innerHTML = `<span class="yellow-text">${namePart}</span><span style="color: var(--light-color);}">}</span>`;
+        } else {
+          typingElement.innerHTML = `<span class="yellow-text">${currentText}</span>`;
+        }
+        i++;
+        setTimeout(typeEffect, speed);
+      } else if (isErasing && i > 0) {
+        let currentText = text.substring(0, i - 1);
+        if (currentText.includes("}")) {
+          const bracketIndex = currentText.indexOf("}");
+          const namePart = currentText.slice(0, bracketIndex);
+          typingElement.innerHTML = `<span class="yellow-text">${namePart}</span><span style="color: var(--light-color);}">}</span>`;
+        } else {
+          typingElement.innerHTML = `<span class="yellow-text">${currentText}</span>`;
+        }
+        i--;
+        setTimeout(typeEffect, eraseSpeed);
+      } else {
+        // When text is fully typed, wait 10 seconds before erasing.
+        if (!isErasing && i === text.length) {
+          setTimeout(() => {
+            isErasing = true;
+            typeEffect();
+          }, delayBeforeErase);
+        }
+        // When text is fully erased, start typing immediately.
+        else if (isErasing && i === 0) {
+          isErasing = false;
+          typeEffect();
+        }
+      }
     }
-    i++;
-    setTimeout(typeEffect, speed);
-  } else if (isErasing && i > 0) {
-    let currentText = text.substring(0, i - 1);
-    if (currentText.includes("}")) {
-      const bracketIndex = currentText.indexOf("}");
-      const namePart = currentText.slice(0, bracketIndex);
-      typingElement.innerHTML = `<span class="yellow-text">${namePart}</span><span style="color: var(--light-color);}">}</span>`;
-    } else {
-      typingElement.innerHTML = `<span class="yellow-text">${currentText}</span>`;
-    }
-    i--;
-    setTimeout(typeEffect, eraseSpeed);
-  } else {
-    // When text is fully typed, wait 10 seconds before erasing.
-    if (!isErasing && i === text.length) {
-      setTimeout(() => {
-        isErasing = true;
-        typeEffect();
-      }, delayBeforeErase);
-    }
-    // When text is fully erased, start typing immediately.
-    else if (isErasing && i === 0) {
-      isErasing = false;
-      typeEffect();
-    }
-  }
-}
 
     typeEffect();
   </script>
@@ -1028,10 +1553,12 @@
   <section class="section fade-element" id="projects">
     <div class="section-content">
       <h2 class="section-title">
-        💻 <span class="def">switch(</span><span class="function-name">Academic & Personal Projects</span><span class="parens">)</span>
+        💻 <span class="def">switch(</span><span class="function-name">Academic & Personal Projects</span><span
+          class="parens">)</span>
       </h2>
       <p class="section-tagline">
-        I love diving into new domains, experimenting with cutting-edge technologies, and turning data into <strong>actionable insights</strong>—here are a few highlights!
+        I love diving into new domains, experimenting with cutting-edge technologies, and turning data into
+        <strong>actionable insights</strong>—here are a few highlights!
       </p>
       <div class="projects-grid">
         <!-- Example Project Tile 1 -->
@@ -1051,7 +1578,7 @@
             </div>
           </div>
         </a>
-        
+
         <a href="pages/projects/Ecommerce_SalesAnalysis" class="project-tile">
           <div class="tile-image" style="background-image: url('assets/img/projects_cover1.png');"></div>
           <div class="tile-content">
@@ -1066,7 +1593,7 @@
             </div>
           </div>
         </a>
-        
+
         <a href="https://www.kaggle.com/code/tarundirector/rev-rain-pred-eda-time-series-ai-news" class="project-tile">
           <div class="tile-image" style="background-image: url('assets/img/projects_cover3.png');"></div>
           <div class="tile-content">
@@ -1082,7 +1609,8 @@
           </div>
         </a>
 
-        <a href="https://www.kaggle.com/code/tarundirector/sensor-pulse-viz-eda-for-bfrb-detection" class="project-tile">
+        <a href="https://www.kaggle.com/code/tarundirector/sensor-pulse-viz-eda-for-bfrb-detection"
+          class="project-tile">
           <div class="tile-image" style="background-image: url('assets/img/projects_cover10.png');"></div>
           <div class="tile-content">
             <h6>case:</h6>
@@ -1098,7 +1626,8 @@
           </div>
         </a>
 
-        <a href="https://www.kaggle.com/code/tarundirector/histology-eda-spotnet-visual-spatial-dl" class="project-tile">
+        <a href="https://www.kaggle.com/code/tarundirector/histology-eda-spotnet-visual-spatial-dl"
+          class="project-tile">
           <div class="tile-image" style="background-image: url('assets/img/projects_cover9.png');"></div>
           <div class="tile-content">
             <h6>case:</h6>
@@ -1114,7 +1643,8 @@
           </div>
         </a>
 
-        <a href="https://www.kaggle.com/code/tarundirector/adhd-prediction-detailed-eda?scriptVersionId=234074319" class="project-tile">
+        <a href="https://www.kaggle.com/code/tarundirector/adhd-prediction-detailed-eda?scriptVersionId=234074319"
+          class="project-tile">
           <div class="tile-image" style="background-image: url('assets/img/projects_cover2.png');"></div>
           <div class="tile-content">
             <h6>case:</h6>
@@ -1129,7 +1659,7 @@
             </div>
           </div>
         </a>
-        
+
         <!-- Project Tile 2 -->
         <a href="pages/projects/StudentModel_README" class="project-tile">
           <div class="tile-image" style="background-image: url('assets/img/projects_cover5.png');"></div>
@@ -1145,7 +1675,7 @@
             </div>
           </div>
         </a>
-        
+
         <!-- Project Tile 3 -->
         <a href="pages/projects/SalesAnalysis_Pizza" class="project-tile">
           <div class="tile-image" style="background-image: url('assets/img/projects_cover6.png');"></div>
@@ -1161,7 +1691,7 @@
             </div>
           </div>
         </a>
-        
+
         <a href="https://ieeexplore.ieee.org/document/9753713" class="project-tile">
           <div class="tile-image" style="background-image: url('assets/img/projects_cover11.png');"></div>
           <div class="tile-content">
@@ -1192,7 +1722,7 @@
             </div>
           </div>
         </a>
-        
+
         <!-- More tiles will automatically wrap into new rows -->
         <a href="pages/projects/AirBNB_PredictiveAnalysis" class="project-tile">
           <div class="tile-image" style="background-image: url('assets/img/projects_cover8.png');"></div>
@@ -1227,7 +1757,8 @@
         </div>
         <div class="education-right">
           <h2 class="section-title">
-            🎓 <span class="def">def</span> <span class="function-name">My Education</span><span class="parens">():</span>
+            🎓 <span class="def">def</span> <span class="function-name">My Education</span><span
+              class="parens">():</span>
           </h2>
           <div class="edu-entry">
             <div class="edu-title">
@@ -1239,9 +1770,14 @@
             </div>
             <div class="edu-details">
               <ul>
-                <li><strong>Courses:</strong> Statistics & Machine Learning (Supervised & Unsupervised Learning), Data Engineering, Text Mining, Understanding Databases (SQL & NoSQL), Data & Their Environment, Cognitive Robotics and Computer Vision.</li>
-                <li><strong>Dissertation:</strong> Deep Learning with Low-Rank Matrix Completion: Enhancing MRI Image Super-Resolution</li>
-                <li><strong>Industrial Project:</strong> Implemented and deployed a resource planning system for Equans in Manchester, achieving a 94% accuracy in predicting resource requirements for construction projects.</li>
+                <li><strong>Courses:</strong> Statistics & Machine Learning (Supervised & Unsupervised Learning), Data
+                  Engineering, Text Mining, Understanding Databases (SQL & NoSQL), Data & Their Environment, Cognitive
+                  Robotics and Computer Vision.</li>
+                <li><strong>Dissertation:</strong> Deep Learning with Low-Rank Matrix Completion: Enhancing MRI Image
+                  Super-Resolution</li>
+                <li><strong>Industrial Project:</strong> Implemented and deployed a resource planning system for Equans
+                  in Manchester, achieving a 94% accuracy in predicting resource requirements for construction projects.
+                </li>
               </ul>
             </div>
           </div>
@@ -1252,12 +1788,15 @@
               <span class="edu-university">@ Mumbai University</span>
             </div>
             <div class="edu-dates">
-              (04/2019 - 04/2023) <span class="highlight">CGPA - 9.45/10 <strong>(First Class Honours with Distinction)</strong></span>
+              (04/2019 - 04/2023) <span class="highlight">CGPA - 9.45/10 <strong>(First Class Honours with
+                  Distinction)</strong></span>
             </div>
             <div class="edu-details">
               <ul>
-                <li><strong>Relevant Courses:</strong> Big Data Analytics, Data Warehousing & Mining, Project Management, Social Media Analytics.</li>
-                <li><strong>Industrial Project:</strong> Python-based RSS Scraper for gathering news data and a recommendation model for Techshots.</li>
+                <li><strong>Relevant Courses:</strong> Big Data Analytics, Data Warehousing & Mining, Project
+                  Management, Social Media Analytics.</li>
+                <li><strong>Industrial Project:</strong> Python-based RSS Scraper for gathering news data and a
+                  recommendation model for Techshots.</li>
               </ul>
             </div>
           </div>
@@ -1271,10 +1810,11 @@
   <!-- =============================================
        5: Work Experience Section (Timeline)
   ============================================= -->
-  <section class="section fade-element">
+  <section class="section fade-element" id="experience">
     <div class="section-content">
       <h2 class="section-title">
-        💼 <span class="def">def</span> <span class="function-name">Work Experience</span><span class="parens">():</span>
+        💼 <span class="def">def</span> <span class="function-name">Work Experience</span><span
+          class="parens">():</span>
       </h2>
       <div class="timeline">
         <div class="timeline-item">
@@ -1283,10 +1823,19 @@
             <div class="role-title">Data Science Developer</div>
             <div class="timeline-dates">09/2025 - Present</div>
             <ul>
-              <li>Engineered a multi-document retrieval system using Python, clustering (K-means/HDBSCAN/MMR) & LLM APIs (OpenAI, Gemini) to process 500K+ articles across various use cases, successfully automating research workflows while delivering well-documented, production-quality code backed by unit tests and reducing manual analyst workload by 70%.</li>
-              <li>Developed & deployed containerized services for self-hosted models using Docker and AWS (ECS, ECR, SQS), powering semantic search and significantly improving retrieval accuracy and fact integrity for analysis teams.</li>
-              <li>Established & maintained CI/CD pipelines for the automated deployment of API services across internal platforms, ensuring seamless interoperability with frontend interfaces (Javascript) & endpoint exposure for 5+ projects.</li>
-              <li>Collaborated with technical & non-technical stakeholders to translate business requirements into applications, coordinating development via GIT & JIRA to enforce strict adherence to software engineering best practices.</li>
+              <li>Engineered a multi-document retrieval system using Python, clustering (K-means/HDBSCAN/MMR) & LLM APIs
+                (OpenAI, Gemini) to process 500K+ articles across various use cases, successfully automating research
+                workflows while delivering well-documented, production-quality code backed by unit tests and reducing
+                manual analyst workload by 70%.</li>
+              <li>Developed & deployed containerized services for self-hosted models using Docker and AWS (ECS, ECR,
+                SQS), powering semantic search and significantly improving retrieval accuracy and fact integrity for
+                analysis teams.</li>
+              <li>Established & maintained CI/CD pipelines for the automated deployment of API services across internal
+                platforms, ensuring seamless interoperability with frontend interfaces (Javascript) & endpoint exposure
+                for 5+ projects.</li>
+              <li>Collaborated with technical & non-technical stakeholders to translate business requirements into
+                applications, coordinating development via GIT & JIRA to enforce strict adherence to software
+                engineering best practices.</li>
             </ul>
           </div>
         </div>
@@ -1296,11 +1845,21 @@
             <div class="role-title">Data Analyst Intern</div>
             <div class="timeline-dates">09/2024 - 09/2025</div>
             <ul>
-              <li>Designed & implemented ETL workflows for software data of 5+ products, employing AWS Glue, Lambda, Athena, S3 using Python & Pyspark to streamline data preprocessing, enabling continuous monitoring & analysis capabilities.</li>
-              <li>Developed interactive dashboards for 10+ use cases using PowerBI & Mendix, incorporating data visualisations with DAX & Javascript, enabling product teams to monitor KPIs, generate detailed reports, and derive actionable insights.</li>
-              <li>Automated high-volume data extraction from multiple sources (Snowflake SQL, APIs, etc.), complemented by data preprocessing & manipulation pipelines built with Python (Pandas, NumPy), accelerating analysis delivery by 80%.</li>
-              <li>Collaborated with various product teams to translate complex analytics needs into scalable dashboards, aligning solutions with business goals and effectively communicating findings effectively to non-technical audiences.</li>
-              <li>Built & deployed Machine Learning forecasting models with Python for risk identification, alongside customer segmentation pipelines enabling deeper statistical analysis, supporting data-driven strategies & targeted initiatives.</li>
+              <li>Designed & implemented ETL workflows for software data of 5+ products, employing AWS Glue, Lambda,
+                Athena, S3 using Python & Pyspark to streamline data preprocessing, enabling continuous monitoring &
+                analysis capabilities.</li>
+              <li>Developed interactive dashboards for 10+ use cases using PowerBI & Mendix, incorporating data
+                visualisations with DAX & Javascript, enabling product teams to monitor KPIs, generate detailed reports,
+                and derive actionable insights.</li>
+              <li>Automated high-volume data extraction from multiple sources (Snowflake SQL, APIs, etc.), complemented
+                by data preprocessing & manipulation pipelines built with Python (Pandas, NumPy), accelerating analysis
+                delivery by 80%.</li>
+              <li>Collaborated with various product teams to translate complex analytics needs into scalable dashboards,
+                aligning solutions with business goals and effectively communicating findings effectively to
+                non-technical audiences.</li>
+              <li>Built & deployed Machine Learning forecasting models with Python for risk identification, alongside
+                customer segmentation pipelines enabling deeper statistical analysis, supporting data-driven strategies
+                & targeted initiatives.</li>
             </ul>
           </div>
         </div>
@@ -1310,8 +1869,12 @@
             <div class="role-title">Student Data Analyst</div>
             <div class="timeline-dates">02/2024 - 08/2024</div>
             <ul>
-              <li>Developed PowerBI & DAX dashboards to visualise campaign & research data, managing data from multiple sources using M/Power Query and analysing over 7,000+ survey responses to enhance student satisfaction outcomes.</li>
-              <li>Accelerated reporting timelines by 75% by leveraging Advanced Excel for data cleaning and visualisations, directly facilitating stakeholder collaboration through effective communication and impactful data storytelling.</li>
+              <li>Developed PowerBI & DAX dashboards to visualise campaign & research data, managing data from multiple
+                sources using M/Power Query and analysing over 7,000+ survey responses to enhance student satisfaction
+                outcomes.</li>
+              <li>Accelerated reporting timelines by 75% by leveraging Advanced Excel for data cleaning and
+                visualisations, directly facilitating stakeholder collaboration through effective communication and
+                impactful data storytelling.</li>
             </ul>
           </div>
         </div>
@@ -1321,9 +1884,15 @@
             <div class="role-title">Data Science Intern</div>
             <div class="timeline-dates">05/2023 - 08/2023</div>
             <ul>
-              <li>Leveraged Python & SQL with strong attention to detail to analyse vast customer data from 100+ stores, contributing to precise sales strategies through targeted marketing, resulting in a sales boost of over 1.5 lakhs INR.</li>
-              <li>Achieved a 12% reduction in customer churn rate by resolving 8+ business challenges related to inventory management and customer purchases, leveraging an analytical approach and a problem-solving attitude.</li>
-              <li>Optimised Tableau dashboards based on direct stakeholder feedback, incorporating advanced data visualisation techniques such as drill-down charts & custom KPIs, contributing to a 40% improvement in sales team productivity.</li>
+              <li>Leveraged Python & SQL with strong attention to detail to analyse vast customer data from 100+ stores,
+                contributing to precise sales strategies through targeted marketing, resulting in a sales boost of over
+                1.5 lakhs INR.</li>
+              <li>Achieved a 12% reduction in customer churn rate by resolving 8+ business challenges related to
+                inventory management and customer purchases, leveraging an analytical approach and a problem-solving
+                attitude.</li>
+              <li>Optimised Tableau dashboards based on direct stakeholder feedback, incorporating advanced data
+                visualisation techniques such as drill-down charts & custom KPIs, contributing to a 40% improvement in
+                sales team productivity.</li>
             </ul>
           </div>
         </div>
@@ -1336,7 +1905,7 @@
   <!-- =============================================
        6: Skills Section
   ============================================= -->
-  <section class="section fade-element">
+  <section class="section fade-element" id="skills">
     <div class="skills-section">
       <!-- (a) Left-most block -->
       <div class="skills-left">
@@ -1344,7 +1913,8 @@
           <span class="def">def</span> <span class="function-name">My Skillset</span><span class="parens">():</span>
         </h2>
         <p class="section-tagline">
-          A list of my skills—but <strong>I’m not limited to these. I’m a fast learner, eager to pick up new technologies</strong> as the world evolves.
+          A list of my skills—but <strong>I’m not limited to these. I’m a fast learner, eager to pick up new
+            technologies</strong> as the world evolves.
         </p>
       </div>
       <!-- Right side with two rows -->
@@ -1420,10 +1990,11 @@
   <!-- =============================================
        7: Voluntary & Other Work Section
   ============================================= -->
-  <section class="volunteer-section fade-element">
+  <section class="volunteer-section fade-element" id="volunteer">
     <div class="volunteer-left">
       <h2 class="section-title">
-        🌱 <span class="def">def</span> <span class="function-name">Voluntary And Other Work</span><span class="parens">():</span>
+        🌱 <span class="def">def</span> <span class="function-name">Voluntary And Other Work</span><span
+          class="parens">():</span>
       </h2>
       <div class="entries">
         <h4 class="highlight">Rotaract District 3142</h4>
@@ -1451,22 +2022,25 @@
   <!-- =============================================
        8: Publications & Achievements
   ============================================= -->
-  <section class="pub-section fade-element">
+  <section class="pub-section fade-element" id="publications">
     <div class="pub-left">
       <img src="assets/img/IMG_Achievements.jpg" alt="Publications" />
     </div>
     <div class="pub-right">
       <h2 class="section-title">
-        🏆 <span class="def">def</span> <span class="function-name">Publications And Achievements</span><span class="parens">():</span>
+        🏆 <span class="def">def</span> <span class="function-name">Publications And Achievements</span><span
+          class="parens">():</span>
       </h2>
       <div class="entries">
         <h4>Publications: Image Outpainting Using WGAN with Gradient Penalty</h4>
         <ul>
           <li>
-            Presented at <a href="https://ieeexplore.ieee.org/document/9753713" target="_blank">IEEE Conference</a>—achieved significant improvement in image quality via <strong>Wasserstein GAN</strong>.
+            Presented at <a href="https://ieeexplore.ieee.org/document/9753713" target="_blank">IEEE
+              Conference</a>—achieved significant improvement in image quality via <strong>Wasserstein GAN</strong>.
           </li>
           <li>
-            Reduced RMSE by <strong>over 82%</strong> compared to traditional GAN, achieving a significant improvement in image quality.
+            Reduced RMSE by <strong>over 82%</strong> compared to traditional GAN, achieving a significant improvement
+            in image quality.
           </li>
         </ul>
         <h4>Achievements</h4>
@@ -1492,14 +2066,21 @@
       </h2>
       <div class="entries">
         <p>
-          Beyond data science, I have a deep passion for filmmaking, graphic design, video editing, and cinematography. Whether freelancing or as a hobby, I create content that tells stories and inspires. I actively produce and share creative work on my YouTube channels, <a href="https://www.youtube.com/@TarunMotionsFilms" target="_blank">TarunMotionsFilms</a> and <a href="https://www.youtube.com/@MishrajiSmile" target="_blank">MishrajiSmile</a>, showcasing my skills in <strong>video editing, cinematography, and storytelling</strong>.
+          Beyond data science, I have a deep passion for filmmaking, graphic design, video editing, and cinematography.
+          Whether freelancing or as a hobby, I create content that tells stories and inspires. I actively produce and
+          share creative work on my YouTube channels, <a href="https://www.youtube.com/@TarunMotionsFilms"
+            target="_blank">TarunMotionsFilms</a> and <a href="https://www.youtube.com/@MishrajiSmile"
+            target="_blank">MishrajiSmile</a>, showcasing my skills in <strong>video editing, cinematography, and
+            storytelling</strong>.
         </p>
         <ul>
           <li>
-            <strong>Freelance Video Editor</strong> for ONE Cheers Up – Collaborated on mission-driven projects, supporting small businesses during challenging times with creative video editing and graphic design.
+            <strong>Freelance Video Editor</strong> for ONE Cheers Up – Collaborated on mission-driven projects,
+            supporting small businesses during challenging times with creative video editing and graphic design.
           </li>
           <li>
-            <strong>Video Editor / Intern</strong> at The Creative Indian & Co. – Gained hands-on experience in video editing and graphic design under expert mentorship, contributing to a diverse range of projects.
+            <strong>Video Editor / Intern</strong> at The Creative Indian & Co. – Gained hands-on experience in video
+            editing and graphic design under expert mentorship, contributing to a diverse range of projects.
           </li>
         </ul>
       </div>
@@ -1539,5 +2120,35 @@
     }, { threshold: 0.1 });
     fadeEls.forEach((el) => observer.observe(el));
   </script>
+
+  <!-- =============================================
+       NEW: Mobile Menu Toggle Script
+  ============================================= -->
+  <script>
+    window.addEventListener('scroll', () => {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > window.innerHeight * 0.6) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('open');
+      const hamburger = document.querySelector('.hamburger');
+      if (menu.classList.contains('open')) {
+        hamburger.children[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+        hamburger.children[1].style.opacity = '0';
+        hamburger.children[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+      } else {
+        hamburger.children[0].style.transform = 'none';
+        hamburger.children[1].style.opacity = '1';
+        hamburger.children[2].style.transform = 'none';
+      }
+    }
+  </script>
 </body>
+
 </html>
