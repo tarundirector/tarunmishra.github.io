@@ -19,19 +19,19 @@
     :root {
       --primary-bg: #544bb6;
       /* Purple (Main) */
-      --secondary-bg: #e6e6e6;
+      --secondary-bg: #f2f2f4;
       /* Light Grey BG */
       --accent-color: #ffdd00;
       /* Yellow */
-      --dark-color: #1f2626;
-      /* Dark */
-      --light-color: #d9d7cd;
-      /* Light Greyish */
+      --dark-color: #1a1e1e;
+      /* Darker slate */
+      --light-color: #b5b7a8;
+      /* Warmer Light Greyish */
       --highlight-bg: #ffdd00;
       /* For highlight effect rectangles */
-      --section-bg-alt: #dbf1f1;
-      /* Light Teal */
-      --line-color: #d9d7cd;
+      --section-bg-alt: #f8f8fb;
+      /* Clean Light Slate/Grey */
+      --line-color: #e2e2df;
       /* For horizontal dividing lines */
       --line-thickness: 2px;
       /* Thickness for dividing lines */
@@ -369,22 +369,22 @@
     .project-tile {
       display: flex;
       flex-direction: column;
-      border-radius: 1rem;
+      border-radius: 1.2rem;
       overflow: hidden;
       background-color: #fff;
-      border: 4px solid transparent;
-      /* Reserve space for border */
+      border: 2px solid transparent;
+      /* Thinner border for a cleaner look */
       cursor: pointer;
       transition: background-color var(--transition-speed) ease,
         border-color var(--transition-speed) ease,
-        filter 0.3s ease;
+        filter 0.3s ease, transform 0.3s ease;
       height: 300px;
     }
 
     .project-tile:hover {
       border-color: #5398b0;
       /* Blue border */
-      filter: brightness(0.95);
+      filter: brightness(0.98);
     }
 
     .tile-image {
@@ -1379,14 +1379,14 @@
        NEW: Enhanced Hover State Adjustments
     ============================================== */
     .project-tile {
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
       /* Softer base shadow */
     }
 
     .project-tile:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
-      /* More pronounced shadow on hover */
+      transform: translateY(-6px);
+      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.12);
+      /* More elegant shadow on hover */
     }
 
     .timeline-item {
@@ -1561,6 +1561,22 @@
         <strong>actionable insights</strong>—here are a few highlights!
       </p>
       <div class="projects-grid">
+        <!-- Delishes Chatbot Project Tile -->
+        <a href="https://github.com/tarundirector/delishes-chatbot" class="project-tile" target="_blank" rel="noopener noreferrer">
+          <div class="tile-image" style="background-image: url('assets/img/projects_cover_delishes.png');"></div>
+          <div class="tile-content">
+            <h6>case:</h6>
+            <h4>Delishes Chatbot: AI-Powered Data Analytics</h4>
+            <div class="tile-tags">
+              <h6>return </h6>
+              <span class="tile-tag">LangGraph</span>
+              <span class="tile-tag">Streamlit</span>
+              <span class="tile-tag">SQL</span>
+              <span class="tile-tool-tags">🔗Github</span>
+            </div>
+          </div>
+        </a>
+
         <!-- Example Project Tile 1 -->
 
         <a href="pages/projects/MRISuperResolution_Dissertation" class="project-tile">
