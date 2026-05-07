@@ -1,1 +1,26 @@
-// Placeholder to allow overriding predefined variables smoothly.
+// Override minima theme variables for dark modern theme
+$brand-color:          #9d97ff !default;
+$brand-color-light:    #6c63ff !default;
+$brand-color-dark:     #c4c0ff !default;
+
+$site-title-color:     #e8e8f0 !default;
+
+$text-color:           #c8c8d8 !default;
+$background-color:     #0a0a0f !default;
+$code-background-color:#16161f !default;
+
+$link-base-color:      #9d97ff !default;
+$link-visited-color:   #7c74ff !default;
+$link-hover-color:     #00d4aa !default;
+
+$border-color-01:      rgba(255, 255, 255, 0.06) !default;
+$border-color-02:      rgba(255, 255, 255, 0.08) !default;
+$border-color-03:      rgba(255, 255, 255, 0.12) !default;
+
+$table-text-color:     #c8c8d8 !default;
+$table-zebra-color:    #16161f !default;
+$table-header-bg-color:#1a1a26 !default;
+$table-header-border:  rgba(108, 99, 255, 0.2) !default;
+$table-border-color:   rgba(255, 255, 255, 0.08) !default;
+
+$base-font-family:     'Inter', -apple-system, system-ui, BlinkMacSystemFont, sans-serif !default;

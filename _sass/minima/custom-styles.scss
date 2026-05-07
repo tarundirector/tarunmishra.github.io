@@ -1,2 +1,287 @@
-// Placeholder to allow defining custom styles that override everything else.
-// (Use `_sass/minima/custom-variables.scss` to override variable defaults)
+// Custom style overrides for dark modern theme
+// These override both _base.scss and _layout.scss defaults
+
+// =============================================
+//   Global Base Overrides
+// =============================================
+body {
+  background-color: #0a0a0f !important;
+  color: #c8c8d8;
+  font-family: 'Inter', -apple-system, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// =============================================
+//   Typography
+// =============================================
+h1, h2, h3, h4, h5, h6 {
+  color: #e8e8f0;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+h1 { font-weight: 800; }
+
+h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+p {
+  color: #a0a0b4;
+  line-height: 1.75;
+}
+
+// =============================================
+//   Links
+// =============================================
+a {
+  color: #9d97ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #00d4aa;
+    text-decoration: none;
+  }
+
+  &:visited {
+    color: #7c74ff;
+  }
+}
+
+// =============================================
+//   Lists
+// =============================================
+ul, ol {
+  color: #a0a0b4;
+}
+
+li {
+  color: #a0a0b4;
+  line-height: 1.7;
+  margin-bottom: 0.4em;
+}
+
+// =============================================
+//   Emphasis & Strong
+// =============================================
+strong {
+  color: #d0d0e0;
+  font-weight: 600;
+}
+
+em {
+  color: #b0b0c4;
+}
+
+// =============================================
+//   Code Blocks
+// =============================================
+code {
+  background-color: #16161f !important;
+  color: #00d4aa;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 6px;
+  padding: 0.15em 0.4em;
+  font-size: 0.88em;
+}
+
+pre {
+  background-color: #12121c !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  border-radius: 12px !important;
+  padding: 1.2rem 1.5rem;
+  overflow-x: auto;
+
+  code {
+    background: none !important;
+    border: none !important;
+    padding: 0;
+    color: #c8c8d8;
+  }
+}
+
+.highlight {
+  background: #12121c !important;
+  border-radius: 12px;
+}
+
+// =============================================
+//   Blockquotes
+// =============================================
+blockquote {
+  border-left: 3px solid rgba(108, 99, 255, 0.4) !important;
+  color: #8888a0 !important;
+  padding-left: 1.2rem;
+  font-style: italic;
+  background: rgba(108, 99, 255, 0.04);
+  border-radius: 0 8px 8px 0;
+  padding: 1rem 1.2rem;
+  margin: 1.5rem 0;
+}
+
+// =============================================
+//   Horizontal Rules
+// =============================================
+hr {
+  border: none !important;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(108, 99, 255, 0.15), rgba(0, 212, 170, 0.1), transparent);
+  margin: 2rem 0;
+}
+
+// =============================================
+//   Images
+// =============================================
+.post-content img, .e-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  margin: 1.5rem 0;
+  display: block;
+}
+
+// =============================================
+//   Tables
+// =============================================
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background: #12121c !important;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+th {
+  background: #1a1a26 !important;
+  color: #e8e8f0;
+  font-weight: 600;
+  padding: 0.8rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(108, 99, 255, 0.2) !important;
+  border: 1px solid rgba(108, 99, 255, 0.2) !important;
+}
+
+td {
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.04) !important;
+  color: #a0a0b4;
+}
+
+tr:nth-child(even) {
+  background-color: #16161f !important;
+}
+
+tr:last-child td {
+  border-bottom: none !important;
+}
+
+// =============================================
+//   Layout Overrides (_layout.scss)
+// =============================================
+
+// Override the 15rem side margins that make content too narrow
+.post-header {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding: 3rem 6vw 2rem;
+  max-width: 1200px;
+  margin: 0 auto !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.post-title,
+.post-content h1 {
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 800;
+  color: #e8e8f0;
+  letter-spacing: -0.02em;
+}
+
+.post-meta {
+  color: #6b6b80 !important;
+
+  .meta-label {
+    color: #6b6b80;
+    font-weight: 500;
+  }
+
+  .bullet-divider {
+    color: #6b6b80;
+  }
+}
+
+.post-content {
+  margin: 0 auto !important;
+  padding: 2.5rem 6vw 4rem;
+  max-width: 1200px;
+}
+
+// Page content wrapper
+.page-content {
+  padding-top: 0 !important;
+  background-color: #0a0a0f;
+}
+
+// Site footer override
+.site-footer {
+  background: linear-gradient(160deg, #111118, #0d0d14) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.footer-col-wrapper,
+.social-links {
+  color: #6b6b80 !important;
+}
+
+// =============================================
+//   Selection Color
+// =============================================
+::selection {
+  background: rgba(108, 99, 255, 0.3);
+  color: #fff;
+}
+
+// =============================================
+//   Scrollbar (Webkit)
+// =============================================
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(108, 99, 255, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(108, 99, 255, 0.5);
+}
+
+// =============================================
+//   Responsive
+// =============================================
+@media screen and (max-width: 600px) {
+  .post-header {
+    padding: 2rem 1.5rem 1.5rem !important;
+  }
+
+  .post-content {
+    padding: 1.5rem 1.5rem 3rem !important;
+  }
+
+  .post-title {
+    font-size: 1.6rem !important;
+  }
+}

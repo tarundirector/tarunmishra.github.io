@@ -6,111 +6,229 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Import Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
-    /* CSS Variables */
+    /* CSS Variables — Dark Modern Theme (matches index.html) */
     :root {
-      --primary-bg: #544bb6;
-      --secondary-bg: #e6e6e6;
-      --accent-color: #ffdd00;
-      --dark-color: #1f2626;
-      --light-color: #d9d7cd;
-      --highlight-bg: #ffdd00;
+      --primary-bg: #6c63ff;
+      --secondary-bg: #111118;
+      --accent-color: #6c63ff;
+      --accent-secondary: #00d4aa;
+      --dark-color: #e8e8f0;
+      --light-color: #6b6b80;
+      --surface-color: #0d0d14;
+      --surface-elevated: #1a1a26;
+      --border-subtle: rgba(255, 255, 255, 0.08);
     }
+
     /* Global Base */
-    body {
+    * {
       margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background-color: #fff;
-      color: var(--dark-color);
+      padding: 0;
+      box-sizing: border-box;
     }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0a0a0f;
+      color: var(--dark-color);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
     .wrapper {
       width: 90%;
-      max-width: 1200px;
+      max-width: 900px;
       margin: 0 auto;
     }
+
     /* Header Styles */
     .site-header {
-      margin-bottom: 2rem; /* space between header and main content */
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10, 10, 15, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-subtle);
     }
+
     .header-container {
       display: flex;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 6vw;
     }
+
     .header-left, .header-right {
       flex: 1;
       display: flex;
       align-items: center;
-      justify-content: center;
-      padding: 1rem;
+      padding: 0.8rem 0;
     }
+
     .header-left {
-      background-color: var(--primary-bg);
+      justify-content: flex-start;
     }
+
     .header-right {
-      background-color: var(--secondary-bg);
+      justify-content: flex-end;
     }
+
     .header-text {
-      font-family: 'Archivo Black', sans-serif;
-      font-size: 1.5rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      font-size: 1.2rem;
+      letter-spacing: -0.02em;
     }
+
     .header-text .light-text {
       color: var(--light-color);
+      font-weight: 400;
     }
+
     .header-text .accent-text {
-      color: var(--accent-color);
+      background: linear-gradient(135deg, #6c63ff, #00d4aa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
+
     .header-nav ul {
       list-style: none;
       margin: 0;
       padding: 0;
       display: flex;
-      gap: 1rem;
+      gap: 0.5rem;
     }
+
     .header-nav a {
-      font-family: 'Archivo Black', sans-serif;
-      color: var(--primary-bg);
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 0.85rem;
+      color: var(--light-color);
       text-decoration: none;
-      padding: 0.5em 1em;
-      transition: background-color 0.3s, color 0.3s;
+      padding: 0.4em 0.8em;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      letter-spacing: 0.02em;
     }
+
     .header-nav a:hover {
-      background: linear-gradient(transparent 60%, var(--highlight-bg) 60%);
+      color: var(--dark-color);
+      background: rgba(108, 99, 255, 0.1);
     }
+
     /* Main Content Spacing */
-    main {
-      margin: 2rem 0;
+    main, article {
+      margin: 0;
     }
+
+    .post-header {
+      padding: 3rem 6vw 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .post-title {
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      font-size: 2.2rem;
+      letter-spacing: -0.02em;
+      color: var(--dark-color);
+      line-height: 1.3;
+    }
+
+    .post-meta {
+      margin-top: 0.8rem;
+      font-size: 0.85rem;
+      color: var(--light-color);
+      font-weight: 400;
+    }
+
+    .post-meta .meta-label {
+      color: var(--light-color);
+      font-weight: 500;
+    }
+
+    .post-meta .bullet-divider {
+      margin: 0 0.5rem;
+      color: var(--light-color);
+    }
+
+    .post-content {
+      padding: 2.5rem 6vw 4rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
     /* Footer Styles */
     .site-footer {
-      background-color: var(--secondary-bg);
-      padding: 2rem 0;
-      margin-top: 2rem; /* space between main content and footer */
+      background: linear-gradient(160deg, #111118, #0d0d14);
+      border-top: 1px solid var(--border-subtle);
+      padding: 3rem 0;
       text-align: center;
     }
+
     .footer-content {
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Inter', sans-serif;
     }
+
     .footer-text {
-      color: var(--dark-color);
-      margin-bottom: 1rem;
+      color: #a0a0b4;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 1rem;
     }
+
     .footer-links a {
-      font-family: 'Archivo Black', sans-serif;
-      color: var(--dark-color);
-      margin: 0 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--light-color);
+      margin: 0 0.75rem;
       text-decoration: none;
       transition: color 0.3s;
     }
+
     .footer-links a:hover {
-      color: var(--accent-color);
+      color: #9d97ff;
+    }
+
+    /* Responsive */
+    @media (max-width: 700px) {
+      .header-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+        padding: 0 1.5rem;
+      }
+
+      .header-left, .header-right {
+        justify-content: center;
+      }
+
+      .header-nav ul {
+        justify-content: center;
+      }
+
+      .post-header {
+        padding: 2rem 1.5rem 1.5rem;
+      }
+
+      .post-title {
+        font-size: 1.6rem;
+      }
+
+      .post-content {
+        padding: 1.5rem 1.5rem 3rem;
+      }
     }
   </style>
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"> -->
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
@@ -130,7 +248,7 @@
         <nav class="header-nav">
           <ul>
             <li><a href="https://tarundirector.github.io/tarunmishra.github.io/">Home</a></li>
-            <li><a href="https://tarundirector.github.io/tarunmishra.github.io/#ainews">AI News</a></li>
+            <li><a href="https://tarundirector.github.io/tarunmishra.github.io/#projects">Projects</a></li>
             <li><a href="https://tarundirector.github.io/tarunmishra.github.io/#education">About Me</a></li>
           </ul>
         </nav>
@@ -180,7 +298,7 @@
   <footer class="site-footer">
     <div class="wrapper footer-content">
       <p class="footer-text">
-        - That was the end of my portfolio, but there’s much more to know about me—feel free to reach out! -
+        - That was the end of my portfolio, but there's much more to know about me; feel free to reach out! -
       </p>
       <div class="footer-links">
         <a href="mailto:tarunpmishra2001@gmail.com">Email</a>
