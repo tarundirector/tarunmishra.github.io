@@ -185,7 +185,7 @@
       height: var(--icon-size);
       cursor: pointer;
       transition: all var(--transition-speed) ease;
-      letter-spacing: 0.02em;
+      letter-spacing: 0;
     }
 
     .icon-row a.kaggle-btn i {
@@ -211,7 +211,7 @@
       color: var(--light-color);
       font-size: 1.8rem;
       font-weight: 400;
-      letter-spacing: 0.02em;
+      letter-spacing: 0;
     }
 
     .typing-container .typing-text {
@@ -259,21 +259,26 @@
 
     .intro-right .tagline-box {
       position: relative;
-      max-width: 80%;
+      max-width: min(690px, 84%);
       margin: 0 auto;
       text-align: left;
-      padding: 2rem;
+      padding: 2.75rem;
     }
 
     .intro-right .tagline {
       font-family: 'Inter', sans-serif;
-      font-weight: 400;
-      color: #a0a0b4;
-      font-size: 1.1rem;
-      line-height: 1.7;
+      font-weight: 500;
+      color: #d7d7e7;
+      font-size: 1.18rem;
+      line-height: 1.78;
       position: relative;
       z-index: 1;
-      letter-spacing: 0.01em;
+      letter-spacing: 0;
+    }
+
+    .intro-right .tagline strong {
+      color: #ffffff;
+      font-weight: 800;
     }
 
     .intro-right .about-btn {
@@ -281,6 +286,8 @@
       height: var(--icon-size);
       line-height: var(--icon-size);
       display: inline-block;
+      position: relative;
+      z-index: 1;
       margin-top: 2rem;
       background: linear-gradient(135deg, #6c63ff, #5a52e0);
       color: #fff;
@@ -291,7 +298,7 @@
       border-radius: 999px;
       cursor: pointer;
       transition: all var(--transition-speed) ease;
-      letter-spacing: 0.03em;
+      letter-spacing: 0;
     }
 
     .intro-right .about-btn:hover {
@@ -312,6 +319,63 @@
       transform: translate(-10%, -70%);
       z-index: 0;
       filter: blur(40px);
+    }
+
+    .intro-right::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at center, rgba(255, 255, 255, 0.28) 0 1px, transparent 1.7px),
+        linear-gradient(115deg, transparent 0%, rgba(108, 99, 255, 0.14) 43%, rgba(0, 212, 170, 0.16) 50%, transparent 60%);
+      background-size: 28px 28px, 240% 240%;
+      background-position: 0 0, 100% 50%;
+      opacity: 0.52;
+      z-index: 0;
+      pointer-events: none;
+      animation: heroGridSweep 18s ease-in-out infinite;
+    }
+
+    .intro-right::after {
+      content: "";
+      position: absolute;
+      inset: 12% -20%;
+      background: radial-gradient(ellipse at 70% 55%, rgba(0, 212, 170, 0.18), rgba(108, 99, 255, 0.1) 36%, transparent 58%);
+      opacity: 0.72;
+      z-index: 0;
+      pointer-events: none;
+      animation: heroGlowBreathe 12s ease-in-out infinite;
+    }
+
+    @keyframes heroGridSweep {
+      0%,
+      100% {
+        background-position: 0 0, 100% 50%;
+      }
+
+      50% {
+        background-position: 12px 10px, 0% 50%;
+      }
+    }
+
+    @keyframes heroGlowBreathe {
+      0%,
+      100% {
+        transform: translate3d(0, 0, 0) scale(1);
+        opacity: 0.35;
+      }
+
+      50% {
+        transform: translate3d(-2%, -2%, 0) scale(1.08);
+        opacity: 0.58;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .intro-right::before,
+      .intro-right::after {
+        animation: none;
+      }
     }
 
     /* ==============================================
@@ -336,7 +400,8 @@
       font-weight: 800;
       font-size: 2rem;
       text-align: left;
-      letter-spacing: -0.02em;
+      letter-spacing: 0;
+      line-height: 1.25;
     }
 
     .section-title .def {
@@ -419,6 +484,7 @@
       font-family: 'Inter', sans-serif;
       font-weight: 600;
       font-size: 1rem;
+      line-height: 1.35;
       color: var(--dark-color);
       margin-bottom: 0.3rem;
     }
@@ -446,6 +512,7 @@
       font-family: 'Inter', sans-serif;
       font-weight: 500;
       font-size: 0.75rem;
+      line-height: 1.4;
     }
 
     .tile-tool-tags {
@@ -457,6 +524,7 @@
       font-family: 'Inter', sans-serif;
       font-weight: 500;
       font-size: 0.7rem;
+      line-height: 1.4;
     }
 
     /* ==============================================
@@ -537,7 +605,7 @@
       list-style-type: disc;
       margin-left: 1.5rem;
       font-size: 0.9rem;
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
     .edu-details ul li {
@@ -550,7 +618,7 @@
     ============================================== */
     .timeline {
       position: relative;
-      margin: 2rem 0;
+      margin: 2.4rem 0 1rem;
     }
 
     .timeline::before {
@@ -570,7 +638,8 @@
       width: 50%;
       padding-left: 2.5rem;
       padding-right: 2.5rem;
-      padding-top: 1rem;
+      padding-top: 1.25rem;
+      padding-bottom: 1.25rem;
       box-sizing: border-box;
     }
 
@@ -589,7 +658,7 @@
     .timeline-item::before {
       content: "";
       position: absolute;
-      top: 1rem;
+      top: 2rem;
       width: 12px;
       height: 12px;
       background: var(--accent-color);
@@ -607,8 +676,13 @@
 
     .timeline-content {
       display: inline-block;
-      max-width: 90%;
+      max-width: 94%;
       text-align: left;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.02));
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 1.3rem;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
     }
 
     .company-title {
@@ -616,7 +690,23 @@
       font-weight: 700;
       font-size: 1rem;
       color: var(--dark-color);
-      margin-bottom: 0.2rem;
+      margin-bottom: 0.35rem;
+      line-height: 1.35;
+    }
+
+    .company-subtitle {
+      color: #8f8fa5;
+      font-size: 0.82rem;
+      line-height: 1.55;
+      margin-bottom: 0.75rem;
+    }
+
+    .role-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.45rem 0.75rem;
+      margin-bottom: 0.85rem;
     }
 
     .role-title {
@@ -624,43 +714,71 @@
       font-weight: 600;
       color: #9d97ff;
       font-size: 0.95rem;
-      margin-bottom: 0.3rem;
+      line-height: 1.4;
     }
 
     .timeline-dates {
       font-size: 0.8rem;
       font-style: italic;
       color: var(--light-color);
-      margin-bottom: 0.5rem;
+      line-height: 1.4;
     }
 
     .timeline-content ul {
-      list-style-type: disc;
-      margin-left: 1.5rem;
+      list-style-type: none;
+      margin-left: 0;
       font-family: 'Inter', sans-serif;
-      font-size: 0.88rem;
-      line-height: 1.6;
+      font-size: 0.9rem;
+      line-height: 1.65;
       color: #a0a0b4;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .timeline-content li {
+      position: relative;
+      margin-bottom: 0;
+      padding-left: 1rem;
+      color: #b4b4c8;
+    }
+
+    .timeline-content li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.72em;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--accent-secondary);
+    }
+
+    .timeline-content li strong {
+      color: #ffffff;
+      font-weight: 800;
     }
 
     /* ==============================================
        Skills Section
     ============================================== */
     .skills-section {
-      display: flex;
+      display: grid;
+      grid-template-columns: minmax(260px, 0.32fr) 1fr;
       width: 100%;
-      flex-wrap: wrap;
-      min-height: 400px;
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--border-subtle);
     }
 
     .skills-left {
-      width: 32%;
       background-color: var(--section-bg-alt);
       display: flex;
       flex-direction: column;
       align-items: flex-end;
       justify-content: center;
-      padding: 2rem;
+      padding: 2.25rem;
       text-align: right;
     }
 
@@ -668,6 +786,8 @@
       font-family: 'Inter', sans-serif;
       font-size: 1.8rem;
       font-weight: 800;
+      line-height: 1.25;
+      text-align: right;
     }
 
     .skills-left .section-title .def,
@@ -683,70 +803,69 @@
     .skills-left .section-tagline {
       font-family: 'Inter', sans-serif;
       font-size: 1rem;
+      line-height: 1.7;
       color: #a0a0b4;
-      margin-top: 0.5rem;
+      margin-top: 0.75rem;
+      max-width: 24rem;
+      text-align: right;
     }
 
     .skills-right {
-      width: 68%;
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1px;
+      background: var(--border-subtle);
     }
 
-    .skills-top-row {
-      display: flex;
-      flex: 1;
-    }
-
-    .skills-b,
-    .skills-c {
-      flex: 1;
+    .skill-category {
       background-color: #0a0a0f;
-      padding: 2rem;
+      padding: 1.55rem;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      gap: 1rem;
     }
 
-    .skills-b .section-subtitle,
-    .skills-c .section-subtitle {
+    .skill-category-wide {
+      grid-column: 1 / -1;
+    }
+
+    .skill-category .section-subtitle {
       font-family: 'Inter', sans-serif;
       font-weight: 800;
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
+      font-size: 1rem;
+      line-height: 1.35;
+      color: #ffffff;
     }
 
-    .skills-b .section-subtitle .if,
-    .skills-c .section-subtitle .elif,
-    .skills-b .section-subtitle .colon,
-    .skills-d .section-subtitle .else,
-    .skills-c .section-subtitle .colon {
-      color: var(--light-color);
-      font-weight: 400;
+    .skill-category .section-subtitle .syntax,
+    .skill-category .section-subtitle .colon {
+      color: #ffffff;
     }
 
-    .skills-b .section-subtitle .keyword,
-    .skills-c .section-subtitle .keyword {
-      color: var(--dark-color);
+    .skill-category .section-subtitle .keyword {
+      color: #9d97ff;
     }
 
     .skills-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
-      justify-content: center;
+      justify-content: flex-start;
+      align-content: flex-start;
     }
 
     .skills-tag {
       background: rgba(108, 99, 255, 0.1);
-      color: #9d97ff;
+      color: #aaa5ff;
       border: 1px solid rgba(108, 99, 255, 0.25);
       border-radius: 999px;
-      padding: 0.3rem 0.8rem;
+      padding: 0.35rem 0.75rem;
       font-family: 'Inter', sans-serif;
-      font-weight: 600;
-      font-size: 0.82rem;
+      font-weight: 700;
+      font-size: 0.8rem;
+      line-height: 1.35;
+      max-width: 100%;
+      overflow-wrap: anywhere;
       transition: all 0.3s ease;
     }
 
@@ -755,71 +874,15 @@
       border-color: rgba(108, 99, 255, 0.5);
     }
 
-    .skills-divider-vertical {
-      width: 1px;
-      background: linear-gradient(180deg, transparent, var(--border-subtle), transparent);
-    }
-
-    .skills-bottom-row {
-      display: flex;
-      flex: 1;
-      position: relative;
-      margin-top: 1rem;
-    }
-
-    .skills-divider-horizontal {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      width: 50%;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--border-subtle), transparent);
-      transform: translateX(-50%);
-    }
-
-    .skills-d {
-      flex: 1;
-      background-color: #0a0a0f;
-      padding: 2rem;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .skills-d-left {
-      margin-right: 1rem;
-      white-space: nowrap;
-      text-align: right;
-    }
-
-    .skills-d-right {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-
-    .skills-d-right .skills-d-tag {
+    .skills-tag.secondary {
       background-color: var(--other-skill-bg);
       color: var(--other-skill-text);
-      border: 1px solid rgba(0, 212, 170, 0.2);
-      border-radius: 999px;
-      padding: 0.3rem 0.8rem;
-      font-family: 'Inter', sans-serif;
-      font-weight: 600;
-      font-size: 0.82rem;
-      transition: all 0.3s ease;
+      border-color: rgba(0, 212, 170, 0.2);
     }
 
-    .skills-d-right .skills-d-tag:hover {
+    .skills-tag.secondary:hover {
       background: rgba(0, 212, 170, 0.2);
       border-color: rgba(0, 212, 170, 0.4);
-    }
-
-    .skills-d-left .else {
-      font-family: 'Inter', sans-serif;
-      font-weight: 400;
-      color: var(--light-color);
     }
 
     /* ==============================================
@@ -868,7 +931,7 @@
     .volunteer-left .entries li {
       font-family: 'Inter', sans-serif;
       font-size: 0.9rem;
-      line-height: 1.6;
+      line-height: 1.65;
       font-weight: normal;
       color: #a0a0b4;
     }
@@ -965,7 +1028,7 @@
       margin-left: 1.5rem;
       margin-bottom: 1rem;
       font-size: 0.9rem;
-      line-height: 1.6;
+      line-height: 1.65;
       color: #a0a0b4;
     }
 
@@ -1007,7 +1070,7 @@
       font-family: 'Inter', sans-serif;
       font-size: 0.9rem;
       color: #a0a0b4;
-      line-height: 1.6;
+      line-height: 1.65;
       margin-top: 1rem;
     }
 
@@ -1122,7 +1185,7 @@
       opacity: 0;
       pointer-events: none;
       transition: opacity 0.3s ease;
-      letter-spacing: -0.02em;
+      letter-spacing: 0;
     }
 
     .navbar.scrolled .nav-brand {
@@ -1141,7 +1204,7 @@
       font-size: 0.85rem;
       color: var(--light-color);
       position: relative;
-      letter-spacing: 0.02em;
+      letter-spacing: 0;
       transition: color 0.3s ease;
     }
 
@@ -1283,45 +1346,21 @@
 
       /* Skills Section Stack */
       .skills-section {
-        flex-direction: column;
+        grid-template-columns: 1fr;
       }
 
       .skills-left {
-        width: 100%;
-        align-items: center;
-        text-align: center;
-        padding-bottom: 2rem;
+        align-items: flex-end;
+        text-align: right;
+        padding: 2rem;
       }
 
       .skills-right {
-        width: 100%;
+        grid-template-columns: 1fr;
       }
 
-      .skills-top-row {
-        flex-direction: column;
-      }
-
-      .skills-divider-vertical {
-        width: 100%;
-        height: 1px;
-      }
-
-      .skills-divider-horizontal {
-        display: none;
-      }
-
-      .skills-bottom-row {
-        margin-top: 0;
-      }
-
-      .skills-d {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .skills-d-left {
-        margin-right: 0;
-        margin-bottom: 1rem;
+      .skill-category-wide {
+        grid-column: auto;
       }
 
       /* Timeline Adjustments */
@@ -1507,9 +1546,9 @@
       <div class="tagline-box">
         <div class="circle-bg"></div>
         <p class="tagline">
-          Data scientist with a Master’s and cross-industry experience, turning complex data into clear, actionable
-          insights. I blend analytics, machine learning, and storytelling to drive smarter business decisions and
-          support real-world health outcomes.
+          I build <strong>production AI systems that turn fragmented business evidence into grounded decisions</strong>.
+          My work combines RAG, agentic workflows, NLP, retrieval engineering, and cloud-native ML services to help
+          enterprises move from manual research to fast, citation-backed insight generation.
         </p>
         <a href="#education" class="about-btn">About Me</a>
       </div>
@@ -1578,8 +1617,8 @@
           class="parens">)</span>
       </h2>
       <p class="section-tagline">
-        I love diving into new domains, experimenting with cutting-edge technologies, and turning data into
-        <strong>actionable insights</strong>; here are a few highlights!
+        Selected work across AI, analytics, forecasting, and data products, with an emphasis on turning complex data
+        into <strong>usable decision-support systems</strong>.
       </p>
       <div class="projects-grid">
         <!-- Delishes Chatbot Project Tile -->
@@ -1858,79 +1897,100 @@
         <div class="timeline-item">
           <div class="timeline-content">
             <div class="company-title">Penta Group | London, UK</div>
-            <div class="role-title">Data Science Developer</div>
-            <div class="timeline-dates">09/2025 - Present</div>
+            <div class="company-subtitle">AI-powered stakeholder intelligence &amp; reputation analytics</div>
+            <div class="role-meta">
+              <span class="role-title">Associate Data Science Developer</span>
+              <span class="timeline-dates">09/2025 - Present</span>
+            </div>
             <ul>
-              <li>Engineered a multi-document retrieval system using Python, clustering (K-means/HDBSCAN/MMR) & LLM APIs
-                (OpenAI, Gemini) to process 500K+ articles across various use cases, successfully automating research
-                workflows while delivering well-documented, production-quality code backed by unit tests and reducing
-                manual analyst workload by 70%.</li>
-              <li>Developed & deployed containerized services for self-hosted models using Docker and AWS (ECS, ECR,
-                SQS), powering semantic search and significantly improving retrieval accuracy and fact integrity for
-                analysis teams.</li>
-              <li>Established & maintained CI/CD pipelines for the automated deployment of API services across internal
-                platforms, ensuring seamless interoperability with frontend interfaces (Javascript) & endpoint exposure
-                for 5+ projects.</li>
-              <li>Collaborated with technical & non-technical stakeholders to translate business requirements into
-                applications, coordinating development via GIT & JIRA to enforce strict adherence to software
-                engineering best practices.</li>
+              <li><strong>Production RAG automation:</strong> Architected an enterprise multi-document RAG system that
+                processed 500k+ articles into citation-backed narrative insights, automated 16+ asynchronous research
+                workflows, reduced briefing generation from 20 hours to under 15 minutes, and accelerated research
+                turnaround by 40%.</li>
+              <li><strong>Hybrid retrieval &amp; context engineering:</strong> Unified pgvector, PostgreSQL tsvector,
+                NER, Reciprocal Rank Fusion, database-side ranking, SQLAlchemy query templates, saved-search filters,
+                entity matching, grouped aggregations, full-text search, and vector retrieval for evidence-backed AI
+                workflows.</li>
+              <li><strong>LLM context management &amp; streaming APIs:</strong> Integrated OpenAI, Claude, and Gemini
+                workflows with Python driver analysis, K-means, HDBSCAN, MMR diversity selection, prompt-engineered
+                synthesis, and FastAPI SSE streaming for scalable grounded insight generation.</li>
+              <li><strong>Cloud-native inference &amp; model operations:</strong> Productionised Docker-based embedding
+                and NER inference services using CI/CD, unit tests, integration tests, AWS ECS, EC2, ECR, ASG, SQS, SSM,
+                and CloudWatch, reducing AWS expenditure by 35% through workload-aware autoscaling and resource
+                visibility.</li>
+              <li><strong>High-throughput NLP operations:</strong> Supported ingestion and processing of 4M+
+                unstructured text data points daily, improving retrieval accuracy, evidence grounding, narrative
+                consistency, factual integrity, and hallucination resilience across cloud-hosted ML/NLP services.</li>
+              <li><strong>Multi-agent orchestration:</strong> Engineered LangGraph/LangChain-style conversation
+                workflows with persona-to-persona interaction, document-grounded prompting, and an MCP-compatible tool
+                layer for cited database queries, tag validation, chart rendering, and executive insight generation
+                across 6+ reusable tools and 5+ agentic analytics workflows.</li>
+              <li><strong>AI evaluation &amp; product delivery:</strong> Established evaluation frameworks for
+                hallucination, citation accuracy, answer faithfulness, retrieval grounding, cost per response, and
+                latency, reducing latency by 28-42% while translating ambiguous consulting workflows into scalable AI
+                applications with product and engineering teams.</li>
             </ul>
           </div>
         </div>
         <div class="timeline-item">
           <div class="timeline-content">
-            <div class="company-title">Siemens Digital Industries Software | London, UK</div>
-            <div class="role-title">Data Analyst Intern</div>
-            <div class="timeline-dates">09/2024 - 09/2025</div>
+            <div class="company-title">Siemens Industry Software Limited | London, UK</div>
+            <div class="company-subtitle">Product management analytics, forecasting, and decision-support tooling</div>
+            <div class="role-meta">
+              <span class="role-title">Data Analyst Intern (Product Management)</span>
+              <span class="timeline-dates">09/2024 - 09/2025</span>
+            </div>
             <ul>
-              <li>Designed & implemented ETL workflows for software data of 5+ products, employing AWS Glue, Lambda,
-                Athena, S3 using Python & Pyspark to streamline data preprocessing, enabling continuous monitoring &
-                analysis capabilities.</li>
-              <li>Developed interactive dashboards for 10+ use cases using PowerBI & Mendix, incorporating data
-                visualisations with DAX & Javascript, enabling product teams to monitor KPIs, generate detailed reports,
-                and derive actionable insights.</li>
-              <li>Automated high-volume data extraction from multiple sources (Snowflake SQL, APIs, etc.), complemented
-                by data preprocessing & manipulation pipelines built with Python (Pandas, NumPy), accelerating analysis
-                delivery by 80%.</li>
-              <li>Collaborated with various product teams to translate complex analytics needs into scalable dashboards,
-                aligning solutions with business goals and effectively communicating findings effectively to
-                non-technical audiences.</li>
-              <li>Built & deployed Machine Learning forecasting models with Python for risk identification, alongside
-                customer segmentation pipelines enabling deeper statistical analysis, supporting data-driven strategies
-                & targeted initiatives.</li>
+              <li><strong>ML-ready pipeline engineering:</strong> Designed and automated 8+ high-volume ETL pipelines
+                across 5+ product lines using Python, Pandas, PySpark, Snowflake SQL, REST APIs, AWS Glue, Lambda,
+                Athena, and S3, reducing preprocessing bottlenecks and improving delivery of analytics-ready datasets by
+                80%.</li>
+              <li><strong>Predictive modelling &amp; risk scoring:</strong> Developed production-oriented forecasting,
+                customer segmentation, and risk-identification workflows with feature engineering, validation metrics,
+                reusable scoring outputs, and confidence signals, helping product teams detect issues earlier and
+                safeguard over $300K in revenue.</li>
+              <li><strong>Product intelligence dashboards:</strong> Surfaced predictions, KPIs, confidence signals, and
+                risk flags through JavaScript-based dashboards across 6+ business use cases, turning complex analytics
+                outputs into decision-support products for product teams, stakeholders, and leadership.</li>
+              <li><strong>Analytics-to-business translation:</strong> Converted ambiguous product-management requests
+                into KPI reporting, model-driven insights, customer segmentation outputs, forecasting assets, and
+                risk-monitoring workflows.</li>
             </ul>
           </div>
         </div>
         <div class="timeline-item">
           <div class="timeline-content">
             <div class="company-title">Student’s Union | University of Manchester</div>
-            <div class="role-title">Student Data Analyst</div>
-            <div class="timeline-dates">02/2024 - 08/2024</div>
+            <div class="company-subtitle">Research and Insight | Dashboard examples: Sustainability, Student Model</div>
+            <div class="role-meta">
+              <span class="role-title">Student Data Analyst</span>
+              <span class="timeline-dates">02/2024 - 08/2024</span>
+            </div>
             <ul>
-              <li>Developed PowerBI & DAX dashboards to visualise campaign & research data, managing data from multiple
-                sources using M/Power Query and analysing over 7,000+ survey responses to enhance student satisfaction
-                outcomes.</li>
-              <li>Accelerated reporting timelines by 75% by leveraging Advanced Excel for data cleaning and
-                visualisations, directly facilitating stakeholder collaboration through effective communication and
-                impactful data storytelling.</li>
+              <li><strong>Research data modelling &amp; BI automation:</strong> Developed Power BI and DAX dashboards
+                using multi-source campaign and research data, M/Power Query transformations, and structured reporting
+                logic to analyse 7,000+ survey responses and support data-driven student satisfaction initiatives.</li>
+              <li><strong>Reporting efficiency &amp; insight delivery:</strong> Accelerated reporting timelines by 75%
+                through Advanced Excel-based data cleaning, analysis, and visualisation, translating complex research
+                outputs into clear dashboards, stakeholder-ready insights, and actionable data stories.</li>
             </ul>
           </div>
         </div>
         <div class="timeline-item">
           <div class="timeline-content">
             <div class="company-title">Zeno Health | Mumbai, India</div>
-            <div class="role-title">Data Science Intern</div>
-            <div class="timeline-dates">05/2023 - 08/2023</div>
+            <div class="company-subtitle">Customer analytics, churn analysis, and store performance optimisation</div>
+            <div class="role-meta">
+              <span class="role-title">Data Science Intern</span>
+              <span class="timeline-dates">05/2023 - 08/2023</span>
+            </div>
             <ul>
-              <li>Leveraged Python & SQL with strong attention to detail to analyse vast customer data from 100+ stores,
-                contributing to precise sales strategies through targeted marketing, resulting in a sales boost of over
-                1.5 lakhs INR.</li>
-              <li>Achieved a 12% reduction in customer churn rate by resolving 8+ business challenges related to
-                inventory management and customer purchases, leveraging an analytical approach and a problem-solving
-                attitude.</li>
-              <li>Optimised Tableau dashboards based on direct stakeholder feedback, incorporating advanced data
-                visualisation techniques such as drill-down charts & custom KPIs, contributing to a 40% improvement in
-                sales team productivity.</li>
+              <li><strong>Python &amp; SQL customer analytics:</strong> Analysed customer transactions and store
+                performance across 100+ stores, generating insights for targeted marketing, sales strategy, and local
+                performance optimisation that contributed to over INR 150,000 in sales uplift.</li>
+              <li><strong>Segmentation, churn &amp; purchase patterns:</strong> Addressed 8+ business challenges across
+                customer behaviour, inventory performance, and purchase patterns using customer segmentation and
+                analytical modelling, helping reduce customer churn by 12%.</li>
             </ul>
           </div>
         </div>
@@ -1951,72 +2011,109 @@
           <span class="def">def</span> <span class="function-name">My Skillset</span><span class="parens">():</span>
         </h2>
         <p class="section-tagline">
-          A list of my skills; but <strong>I’m not limited to these. I’m a fast learner, eager to pick up new
-            technologies</strong> as the world evolves.
+          Core skills aligned around building business-facing AI systems: retrieval, modelling, backend services,
+          cloud deployment, and product delivery.
         </p>
       </div>
-      <!-- Right side with two rows -->
+      <!-- Right side with focused skill groups -->
       <div class="skills-right">
-        <div class="skills-top-row">
-          <!-- (b) Technical Skills -->
-          <div class="skills-b">
-            <div class="section-subtitle">
-              <span class="if">if</span> <span class="keyword">Technical Skills</span>:
-            </div>
-            <div class="skills-tags">
-              <span class="skills-tag">Python</span>
-              <span class="skills-tag">Pandas</span>
-              <span class="skills-tag">NumPy</span>
-              <span class="skills-tag">Scikit-learn</span>
-              <span class="skills-tag">PyTorch</span>
-              <span class="skills-tag">SQL</span>
-              <span class="skills-tag">PowerBI (with DAX)</span>
-              <span class="skills-tag">Power Query</span>
-              <span class="skills-tag">Tableau</span>
-              <span class="skills-tag">AWS</span>
-              <span class="skills-tag">Docker</span>
-            </div>
-          </div>
-          <div class="skills-divider-vertical"></div>
-          <!-- (c) Soft Skills -->
-          <div class="skills-c">
-            <div class="section-subtitle">
-              <span class="elif">elif</span> <span class="keyword">Soft Skills</span>:
-            </div>
-            <div class="skills-tags">
-              <span class="skills-tag">Collaboration</span>
-              <span class="skills-tag">Communication</span>
-              <span class="skills-tag">Problem-solving</span>
-              <span class="skills-tag">Adaptability</span>
-              <span class="skills-tag">Time Management</span>
-              <span class="skills-tag">Teamwork</span>
-              <span class="skills-tag">Leadership</span>
-              <span class="skills-tag">Attention to Detail</span>
-            </div>
+        <div class="skill-category">
+          <div class="section-subtitle"><span class="syntax">if</span> <span class="keyword">AI Engineering</span><span class="colon">:</span></div>
+          <div class="skills-tags">
+            <span class="skills-tag">Retrieval-Augmented Generation</span>
+            <span class="skills-tag">LLM Orchestration</span>
+            <span class="skills-tag">Prompt Engineering</span>
+            <span class="skills-tag">Context Engineering</span>
+            <span class="skills-tag">Hybrid Search</span>
+            <span class="skills-tag">Vector Embeddings</span>
+            <span class="skills-tag">Semantic Search</span>
+            <span class="skills-tag">Full-Text Search</span>
+            <span class="skills-tag">Tool Calling</span>
+            <span class="skills-tag">Multi-Agent Orchestration</span>
+            <span class="skills-tag">LangGraph</span>
+            <span class="skills-tag">LangChain</span>
+            <span class="skills-tag">MCP</span>
+            <span class="skills-tag">AI Evaluation</span>
+            <span class="skills-tag">Guardrails</span>
+            <span class="skills-tag">Citation Grounding</span>
           </div>
         </div>
-        <div class="skills-bottom-row">
-          <div class="skills-divider-horizontal"></div>
-          <!-- (d) Other Skills -->
-          <div class="skills-d">
-            <div class="skills-d-left"><span class="else">else:</span></div>
-            <div class="skills-d-right">
-              <span class="skills-d-tag">Microsoft 365 Suite</span>
-              <span class="skills-d-tag">Outlook</span>
-              <span class="skills-d-tag">Confluence</span>
-              <span class="skills-d-tag">Java</span>
-              <span class="skills-d-tag">HTML/CSS</span>
-              <span class="skills-d-tag">R</span>
-              <span class="skills-d-tag">VBA</span>
-              <span class="skills-d-tag">API Integration</span>
-              <span class="skills-d-tag">Git/GitHub</span>
-              <span class="skills-d-tag">Data Cleaning</span>
-              <span class="skills-d-tag">CI/CD</span>
-              <span class="skills-d-tag">Machine Learning / Deep Learning</span>
-              <span class="skills-d-tag">Data Visualization</span>
-              <span class="skills-d-tag">ETL</span>
-              <span class="skills-d-tag">Big Data</span>
-            </div>
+        <div class="skill-category">
+          <div class="section-subtitle"><span class="syntax">elif</span> <span class="keyword">Machine Learning &amp; NLP</span><span class="colon">:</span></div>
+          <div class="skills-tags">
+            <span class="skills-tag">Machine Learning</span>
+            <span class="skills-tag">Natural Language Processing</span>
+            <span class="skills-tag">Named Entity Recognition</span>
+            <span class="skills-tag">Topic Modelling</span>
+            <span class="skills-tag">Text Classification</span>
+            <span class="skills-tag">Clustering</span>
+            <span class="skills-tag">K-Means</span>
+            <span class="skills-tag">HDBSCAN</span>
+            <span class="skills-tag">MMR</span>
+            <span class="skills-tag">Predictive Modelling</span>
+            <span class="skills-tag">Feature Engineering</span>
+            <span class="skills-tag">Model Validation</span>
+            <span class="skills-tag">Time-Series Forecasting</span>
+            <span class="skills-tag">PyTorch</span>
+            <span class="skills-tag">Scikit-Learn</span>
+            <span class="skills-tag">NumPy</span>
+            <span class="skills-tag">Pandas</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="section-subtitle"><span class="syntax">elif</span> <span class="keyword">Backend &amp; Data Systems</span><span class="colon">:</span></div>
+          <div class="skills-tags">
+            <span class="skills-tag">Python</span>
+            <span class="skills-tag">SQL</span>
+            <span class="skills-tag">PostgreSQL</span>
+            <span class="skills-tag">pgvector</span>
+            <span class="skills-tag">tsvector</span>
+            <span class="skills-tag">SQLAlchemy</span>
+            <span class="skills-tag">FastAPI</span>
+            <span class="skills-tag">REST APIs</span>
+            <span class="skills-tag">SSE Streaming</span>
+            <span class="skills-tag">Async Processing</span>
+            <span class="skills-tag">Query Optimisation</span>
+            <span class="skills-tag">CTEs</span>
+            <span class="skills-tag">Joins</span>
+            <span class="skills-tag">Aggregations</span>
+            <span class="skills-tag">ETL Workflows</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="section-subtitle"><span class="syntax">elif</span> <span class="keyword">Cloud, MLOps &amp; DevOps</span><span class="colon">:</span></div>
+          <div class="skills-tags">
+            <span class="skills-tag">Docker</span>
+            <span class="skills-tag">AWS</span>
+            <span class="skills-tag">ECS</span>
+            <span class="skills-tag">EC2</span>
+            <span class="skills-tag">ECR</span>
+            <span class="skills-tag">ASG</span>
+            <span class="skills-tag">SQS</span>
+            <span class="skills-tag">SSM</span>
+            <span class="skills-tag">CloudWatch</span>
+            <span class="skills-tag">Lambda</span>
+            <span class="skills-tag">S3</span>
+            <span class="skills-tag">CI/CD</span>
+            <span class="skills-tag">GitHub Actions</span>
+            <span class="skills-tag">Unit Testing</span>
+            <span class="skills-tag">Integration Testing</span>
+            <span class="skills-tag">Autoscaling</span>
+          </div>
+        </div>
+        <div class="skill-category skill-category-wide">
+          <div class="section-subtitle"><span class="syntax">else</span> <span class="keyword">Product &amp; Delivery</span><span class="colon">:</span></div>
+          <div class="skills-tags">
+            <span class="skills-tag secondary">Cross-Functional Collaboration</span>
+            <span class="skills-tag secondary">Requirement Translation</span>
+            <span class="skills-tag secondary">Technical Documentation</span>
+            <span class="skills-tag secondary">Agile Delivery</span>
+            <span class="skills-tag secondary">Jira</span>
+            <span class="skills-tag secondary">Stakeholder Communication</span>
+            <span class="skills-tag secondary">AI Product Delivery</span>
+            <span class="skills-tag secondary">Problem Solving</span>
+            <span class="skills-tag secondary">Analytical Thinking</span>
+            <span class="skills-tag secondary">Engineering Best Practices</span>
           </div>
         </div>
       </div>
